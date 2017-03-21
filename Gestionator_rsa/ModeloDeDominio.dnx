@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xtools2_universal_type_manager-->
+<?com.ibm.xtools.emf.core.signature <signature id="com.ibm.xtools.mmi.ui.signatures.diagram" version="7.0.0"><feature description="" name="Rational Modeling Platform (com.ibm.xtools.rmp)" url="" version="7.0.0"/></signature>?>
+<umlnotation:UMLDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:umlnotation="http://www.ibm.com/xtools/1.5.3/Umlnotation" xmi:id="_Oo45IA4ZEeeMBoBJ3xV9iA" type="Class" name="ModeloDeDominio.dnx">
+  <children xmi:type="notation:Shape" xmi:id="_mTtIoA4ZEeeMBoBJ3xV9iA" type="rectangle" fontName="Segoe UI" fontHeight="8" bold="true" description="Empleado" fillColor="13956346" transparency="0" lineColor="12632258" lineWidth="1">
+    <children xmi:type="notation:BasicDecorationNode" xmi:id="_mTtIpA4ZEeeMBoBJ3xV9iA" type="DiagramName">
+      <element xsi:nil="true"/>
+    </children>
+    <children xmi:type="notation:BasicDecorationNode" xmi:id="_mT25oA4ZEeeMBoBJ3xV9iA" type="Description">
+      <element xsi:nil="true"/>
+    </children>
+    <styles xmi:type="notation:TextStyle" xmi:id="_mTtIoQ4ZEeeMBoBJ3xV9iA"/>
+    <styles xmi:type="notation:LineTypeStyle" xmi:id="_mTtIog4ZEeeMBoBJ3xV9iA"/>
+    <element xsi:nil="true"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mTtIow4ZEeeMBoBJ3xV9iA" x="1164" y="1031" width="4391" height="2142"/>
+  </children>
+  <element xsi:nil="true"/>
+</umlnotation:UMLDiagram>
