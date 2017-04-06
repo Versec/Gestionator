@@ -1,0 +1,42 @@
+Tareas a realizar para el 18:
+	
+	-Zip  con el diseño en html.
+		-diagramas de clase(lo que hemos hecho).
+		-diagramas de secuencia.
+	
+	-Codigo.
+		-el codigo debe ser coherente con el diseño hecho en los diagramas.
+		-el codigo debe tener una implementacion aproximada de las daos de pedido, 
+		 del businessObject del pedido. 
+
+Elementos de la entrega:
+
+Un zip con la web generada al publicar el diseño del sistema(¡¡¡Hacer!!!)
+La URL del sistema de control de versiones con el código a revisar
+
+En el diseño se pide:
+
+	-No se pide desarrollo de interfaz con el usuario
+	
+	-Un diagrama de casos de uso detallando el alcance del proyecto.
+	 (¡¡¡No lo hemos hecho hay que hacerlo!!!)
+	
+	-El diseño de al menos dos casos de uso complejos, o 5 simples.
+ 	(se refiere a aquella tarea que entregamos tarde, habria que hecharla un ojo para que halla 5 casos de uso
+	 y repasarlos para que concuerden con como hemos planteado la aplicacion tras haber hecho los diagramas).
+
+	-Consultar con el profesor asignado al desdoble de laboratorio.
+	 Cada caso de uso con sus diagramas de actividad.
+	 (¡¡¡Los diagramas de actividad no estan hechos hay que hacerlos!!!).
+
+	-Diagramas de clases para describir las capas de integración y negocio(¡¡¡No Hecho!!!)
+
+	-Diagramas de secuencia para describir el comportamiento esperado de las clases identificadsa
+
+	-La identificación de clases obedecerá en esta entrega como mínimo a los patrones ensayados en clase:
+
+	-Application Service,
+	
+	-Business Object (este puede obviarse en favor de application services más complejos,
+ 	 pero se debe conocer),
+	 DAO, Transfer Object

@@ -1,6 +1,0 @@
-Hola chicos, teniendo en cuenta que tenemos una entrega el día 18 de abril:
-
-Hay que:
-
-- Completar los diagramas de RSA (Bussiness objets, transfer objets y Aplication Service)
-- Comenzar a picar el codigo de. al menos, dos de los casos de uso de la aplicación.
