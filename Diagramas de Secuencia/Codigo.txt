@@ -1,0 +1,84 @@
+-
+---AltaPedido(DS)---
+
+@startuml
+
+title "Alta Pedido - Sequence Diagram"
+
+actor Administrador
+control "<<AplicationService>>GestionPedido" as SC
+entity "<<BuisnessObject>>Pedido" as Pedido
+entity DAOPedido
+entity DAOP.Control
+
+Administrador -> SC : ALtaPedido()
+SC -> Pedido : Alta()
+Pedido -> DAOPedido :Crear()
+DAOPedido -> DAOP.Control : Crear()
+
+DAOP.Control ->> DAOPedido : ¿Creado?T/F
+DAOPedido ->> Pedido :¿Creado?T/F
+Pedido ->> SC : ¿Creado?T/F
+SC  ->> Administrador: Mensaje de Exito/Fallo
+
+
+
+@enduml
+
+---BajaEmpleado(DS)---
+
+@startuml
+
+title "Baja Empleado - Sequence Diagram"
+
+actor Administrador
+control "<<AplicationService>>GestionEmpleado" as SC
+entity "<<BuisnessObject>>Empleado" as Empleado
+entity DAOEmpleado
+
+
+Administrador -> SC :BajaEmpleado()
+SC -> Empleado : Baja()
+Empleado -> DAOEmpleado :Eliminar()
+
+
+
+DAOEmpleado ->> Empleado :¿Eliminado?T/F
+Empleado ->> SC : ¿Eliminado?T/F
+SC  ->> Administrador: Mensaje de Exito/Fallo
+
+
+
+@enduml
+
+
+----Actualizar Pedido(DS)----
+
+@startuml
+
+
+
+title "Actualizar Pedido - Sequence Diagram"
+
+actor Administrador
+control "<<AplicationService>>GestionPedido" as SC
+entity "<<BuisnessObject>>Pedido" as Pedido
+entity DAOPedido
+entity DAOP.Control
+
+Administrador -> SC : ActualizarPedido()
+SC -> Pedido : UpdateP.Control()
+Pedido -> DAOPedido :Actualizar()
+DAOPedido -> DAOP.Control : Actualizar()
+
+DAOP.Control ->> DAOPedido : ¿Actualizar?T/F
+DAOPedido ->> Pedido :¿Actualizar?T/F
+Pedido ->> SC : ¿Actualizar?T/F
+SC  ->> Administrador: Mensaje de Actualizacion
+
+
+
+
+
+
+@enduml
