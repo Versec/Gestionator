@@ -1,0 +1,27 @@
+Las tareas a realizar vienen asignadas acontinuacion:
+
+-Fernando Candelario: Caso de Uso, Actualizar Pedidos
+
+-Alvaro Anton garcía: Caso de Uso, Alta Pedido
+
+-Ernesto: Caso de Uso, Baja Pedidos
+
+-Rubén: Caso de Uso, Baja de Empleados
+
+-Kastor: Caso de Uso, Alta de Empleados 
+
+
+No hay un caso de uso para cada uno asi que estos 2 casos de uso se haran en 
+parejas:
+-Caso de Uso, Codificacion Pedido:
+	-Santi
+	-Javier
+
+-Caso de Uso, Metodo de Pago:
+	-Achraf
+	-Estefania
+
+
+
+Recuerdo que quien no las haga o las haga mal(los test no funcionan) suspendera el proyecto.
+Concretaremos el dia para juntar todo cuando el rprofe anuncie el dia de la presentacion del proyecto final.
