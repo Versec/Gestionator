@@ -23,5 +23,26 @@ parejas:
 
 
 
+Tambien hay que hacer los diagramas de actividad por cada caso de uso asginado usando
+el IBM RSA. El diagrama de caso de uso asignado a: Fernando Candelario Herrero.
+
+Para la realizacion de los diagramas  de actividad mirad la transparencias del tema 12(pag 29).
+
+
 Recuerdo que quien no las haga o las haga mal(los test no funcionan) suspendera el proyecto.
 Concretaremos el dia para juntar todo cuando el rprofe anuncie el dia de la presentacion del proyecto final.
+
+Notas sobre como organizar el trabajo:
+	-Cada uno creara una carpeta con su version del Gestionator Definitivo  que contendra el 
+ 	trabajo de diseño realizado segun la tarea asignada poniendo entre 
+	parentesis su nombre por ejemplo:<"GestionatorDefinitivo(Fernando)">.
+	
+	-Lo mismo explicado anteriormente se aplica a la codificacion del codigo., cada sube 
+	al repositorio su version de la plantilla con lo que tiene que implementar, poniendo su nombre.
+
+
+¡¡¡IMPORTANTE!!! 
+	-HE DECIDIDO QUE LA FECHA PARA INTEGRAR TODO LO QUE TENEMOS SERA EL 25 DE MAYO JUEVES.
+	NOS PONDREMOS A INTEGRARLO TODO A LAS 13:10 MAS O MENOS.
+	
+	-LA TAREA DEBE ESTAR HECHA PARA ESTE DIA, QUIEN NO LA REALIZE SUSPENDE EL PROYECTO.
