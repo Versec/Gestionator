@@ -100,13 +100,6 @@ public class EjemplosUsoBDConPOJO
     	bdCadenas.insert(new EjemploTO("3","4"), "1");		
     	assertTrue("La BD debe tener sólo un elemento.Contenido actual \n"+bdCadenas, bdCadenas.getIds().size()==1);
     	assertTrue("La BD debe tener el último objeto. Contenido actual \n"+bdCadenas, bdCadenas.find("1").getCampo1().equals("3"));
-    	
-    	DAOEjemplo dao=new DAOEjemplo(bdCadenas);
-    	
-    	ApplicationService as=new ApplicationServiceImp(dao);
-    	
-    	as.operacion();
-    	assertTrue("",)
     }
     
     /**
