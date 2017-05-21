@@ -4,6 +4,8 @@ import java.util.List;
 
 public class DAOPedido implements DAO<TPedido>{
 
+	private es.ucm.fdi.datos.BDSucusales<TPedido> BDPedido = es.ucm.fdi.datos.BDSucusales<TPedido>();
+	
 	public void add(TPedido dato) {
 		// TODO Auto-generated method stub
 		

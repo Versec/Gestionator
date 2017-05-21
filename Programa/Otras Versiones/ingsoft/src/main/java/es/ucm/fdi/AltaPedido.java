@@ -1,7 +1,19 @@
 package es.ucm.fdi;
 
+import java.util.Scanner;
+
+import es.ucm.fdi.datos.MetodoDePago;
+import es.ucm.fdi.integracion.MetPago;
+import es.ucm.fdi.integracion.TPControl;
+import es.ucm.fdi.integracion.TSucursal;
+import es.ucm.fdi.integracion.TipoEnvio;
+
 public class AltaPedido
 {
+	
+	
+	
+	
     public static void main( String[] args )
  
     {
@@ -25,16 +37,20 @@ public class AltaPedido
     	// Inicializar presentacion
     	
         // TODO    	
+    	ASAltaPedido.obtencionDeDatos();
     	
-        
-    }
-    public void ValidarDatos(String str)
-    {
-    	if (str.equals(str.toString()))
+    	if (ASAltaPedido.ValidarDatos())
     	{
     		
+    		//llamar a la creacion del codigo; 
+    		
+    		
     	}
-    	
+    	else
+    	{
+    		System.out.println("Datos invalidos");
+    	}
+        
     }
     
 }
