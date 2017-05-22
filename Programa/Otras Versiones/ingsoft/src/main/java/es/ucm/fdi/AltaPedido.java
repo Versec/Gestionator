@@ -27,7 +27,7 @@ public class AltaPedido
     	
     	// Inicializar integración
     	
-    	es.ucm.fdi.datos.DAOPedido DAOAltaPedido = new es.ucm.fdi.datos.DAOPedidoImp();
+    	//es.ucm.fdi.datos.DAOPedido DAOAltaPedido = new es.ucm.fdi.datos.DAOPedidoImp();
         // TODO
     	
     	// Inicializar negocio

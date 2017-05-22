@@ -2,13 +2,18 @@ package es.ucm.fdi.integracion;
 
 import java.util.List;
 
+import es.ucm.fdi.datos.*;
+
+
 public class DAOPedido implements DAO<TPedido>{
 
-	private es.ucm.fdi.datos.BDSucusales<TPedido> BDPedido = es.ucm.fdi.datos.BDSucusales<TPedido>();
 	
-	public void add(TPedido dato) {
+	private BDPedidos<TPedido> BDPedidos = new BDPedidos<TPedido>();
+	
+	public void add(TPedido dato, String cod) 
+	{
 		// TODO Auto-generated method stub
-		
+		BDPedidos.insert(dato, cod);
 	}
 
 	public void eliminar(int ID) {
