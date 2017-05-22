@@ -1,7 +1,13 @@
 package es.ucm.fdi;
 
+import es.ucm.fdi.integracion.MetPago;
+
 public class MetodoPago {
-	   public static void main( String[] args )
+	   
+
+	private static final MetPago TRANSFERENCIA = null;
+
+	public static void main( String[] args )
 	   
 	    {
 		   
@@ -27,18 +33,22 @@ public class MetodoPago {
 	   
 	   public boolean Pagado(){
 		   boolean pagado =false;
-		   if (metodoPago== TRANSFERENCIA){
+		   MetPago metodoPago=TRANSFERENCIA;
+		if (metodoPago== MetPago.TRANSFERENCIA){
 			   pagado=true;
+			   System.out.println("El pago se ha efectuado correctamente");
 			   return pagado;
 		   }
-		   else if (metodoPago == CONTRAREEMBOLSO){
+		   else if (metodoPago == MetPago.CONTRAREEMBOLSO){
 			   pagado = false;
+			   System.out.println("El pago se realizará en la cogida del pedido");
 			   return pagado;
 		   }
-		   else
-			   System.out.println("No hay método de pago");
-		
-		   return pagado;  
+		   else{
+			   pagado=false;
+			   System.err.println("No se ha elegido ningún método de pago");
+				
+		   } return pagado; 
 	   }
 	 
 	   
