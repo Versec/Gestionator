@@ -85,13 +85,13 @@ public class MetodoPago {
 					   while (salidaCad == false){
 						   System.out.println("Introduzca fecha de caducidad de la tarjeta");
 						   cadTj = sc.nextLine().toLowerCase();
-						   boolean caducidadValida = validarFechaCaducidad(cadTj);//funcionInventada(cadTj);
+						   boolean caducidadValida = validarFechaCaducidad(cadTj);
 						   if(caducidadValida == true){
 							   
 							   while (salidaCvc == false){
 								   System.out.println("Introduzca el CVC de la tarjeta");
 								   cvcTj = sc.nextLine().toLowerCase();
-								   boolean cvcValida = validarCvc(cvcTj);//funcionInventada(cvcTj);
+								   boolean cvcValida = validarCvc(cvcTj);
 								   if(cvcValida == true){
 									   salidaCvc = true;
 									   salidaCad = true;
