@@ -1,12 +1,15 @@
 package es.ucm.fdi;
 
-import es.ucm.fdi.integracion.MetPago;
+import java.util.Scanner;
+
+import es.ucm.fdi.datos.MetodoDePago;
+
+
 
 public class MetodoPago {
 	   
-
-	private static final MetPago TRANSFERENCIA = null;
-
+	Scanner sc = new Scanner(System.in);
+	
 	public static void main( String[] args )
 	   
 	    {
@@ -28,20 +31,29 @@ public class MetodoPago {
 	    	
 	    	// Inicializar presentacion  	
 	    	
-	    
 	    }
-	   
-	   public boolean Pagado(){
+	    
+	   public boolean Pagado(MetodoDePago metPago){
 		   boolean pagado =false;
-		   MetPago metodoPago=TRANSFERENCIA;
-		if (metodoPago== MetPago.TRANSFERENCIA){
+		 
+		   if (metPago== MetodoDePago.Efectivo){
+			   System.out.println("¿Se ha efectuado el pago en efectivo?");
+			   //Mostrar un mensaje preguntando  si se ha pagado si es que si se puede poner pagado 
+			   //si es no a false.
+			   pagado=true;
+			   System.out.println("El pago se efectuado correctamente");
+			   return pagado;
+		   }
+		if (metPago== MetodoDePago.Transferencia){
+			//Pedir datos
 			   pagado=true;
 			   System.out.println("El pago se ha efectuado correctamente");
 			   return pagado;
 		   }
-		   else if (metodoPago == MetPago.CONTRAREEMBOLSO){
+		   else if (metPago == MetodoDePago.Contrarembolso){
+			   //Envio lo paga al recibir el envio.
 			   pagado = false;
-			   System.out.println("El pago se realizará en la cogida del pedido");
+			   System.out.println("El pago se realizará en la recogida del pedido");
 			   return pagado;
 		   }
 		   else{
@@ -51,5 +63,5 @@ public class MetodoPago {
 		   } return pagado; 
 	   }
 	 
-	   
+	       
 }

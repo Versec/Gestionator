@@ -1,31 +1,37 @@
 package es.ucm.fdi.integracion;
 
+import es.ucm.fdi.datos.MetodoDePago;
+import es.ucm.fdi.datos.TipoDeEnvio;
+
 public class TPedido {
 
 	private String emisor;
 	private int repartidor;
 	private boolean pagado;
 	private String receptor;
-	private int codigo;//Es el ID.
-	private MetPago metPago;
+	private String codigo;//Es el ID.
+	private MetodoDePago metPago;
 	private TSucursal SucursalSalida;
 	private TSucursal SucursalLlegada;
-	private TipoEnvio tipoDeEnvio;
+	private TipoDeEnvio tipoDeEnvio;
 	private TPControl puntoControl;
 	
 	
-	public TPedido(String emisor,int repartidor,boolean pagado,String receptor,int codigo,MetPago metPago,
-			TSucursal SucursalSalida,TSucursal SucursalLlegada,TipoEnvio tipoDeEnvio,TPControl puntoControl){
+	public TPedido(String emisor,int repartidor,boolean pagado,
+			String receptor,String codigo,MetodoDePago metPago2,
+			TSucursal SucursalSalida,TSucursal SucursalLlegada,
+			TipoDeEnvio urgenciaPaquete,TPControl puntoControl)
+	{
 		this.codigo=codigo;
 		this.repartidor=repartidor;
 		this.emisor=emisor;
-		this.metPago=metPago;
+		this.metPago=metPago2;
 		this.pagado=pagado;
 		this.puntoControl=puntoControl;
 		this.receptor=receptor;
 		this.SucursalLlegada=SucursalLlegada;
 		this.SucursalSalida=SucursalSalida;
-		this.tipoDeEnvio=tipoDeEnvio;
+		this.tipoDeEnvio=urgenciaPaquete;
 	}
 	
 	public void setRepartidor(int repartidor){
@@ -44,11 +50,11 @@ public class TPedido {
 		this.receptor=receptor;
 	}
 	
-	public void setCodigo(int codigo){
+	public void setCodigo(String codigo){
 		this.codigo=codigo;
 	}
 	
-	public void setMetPago(MetPago metPago){
+	public void setMetPago(MetodoDePago metPago){
 		this.metPago=metPago;
 	}
 	
@@ -61,7 +67,7 @@ public class TPedido {
 	
 	}
 	
-	public void setTipoEnvio(TipoEnvio tipoDeEnvio){
+	public void setTipoEnvio(TipoDeEnvio tipoDeEnvio){
 		this.tipoDeEnvio=tipoDeEnvio;
 	}
 	
@@ -83,11 +89,11 @@ public class TPedido {
 		return this.receptor;
 	}	
 	
-	public int getCodigo(){
+	public String getCodigo(){
 		return this.codigo;
 	}
 	
-	public MetPago getMetPago(){
+	public MetodoDePago getMetPago(){
 		return this.metPago;
 	}
 	
@@ -100,7 +106,7 @@ public class TPedido {
 	}
 	
 	
-	public TipoEnvio getTipoEnvio(){
+	public TipoDeEnvio getTipoEnvio(){
 		return this.tipoDeEnvio;
 	}
 	
