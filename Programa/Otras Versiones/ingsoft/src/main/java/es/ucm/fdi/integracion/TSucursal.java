@@ -18,7 +18,7 @@ public class TSucursal {
 	}
 	
 	public void setID(int ID){
-		this.Id=Id;
+		this.Id=ID;
 	}
 	
 	public void setNombre(String nombre){

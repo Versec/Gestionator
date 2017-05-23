@@ -12,7 +12,7 @@ import es.ucm.fdi.integracion.TPedido;
 
 public class GestionPedidos {
  
-	private String emisor;
+	private TCliente emisor;
 	private int repartidor;
 	private boolean pagado;
 	private String receptor;
@@ -25,14 +25,22 @@ public class GestionPedidos {
 	private int pesoPaquete;
 	private es.ucm.fdi.datos.TipoDeEnvio UrgenciaPaquete;
 	private TPControl puntoControl;
+	private int precio;
 	
 	/**
 	 * Obtiene los datos introducidos por el usuario
 	 */
-	public void obtencionDeDatos( )
+	public void obtencionDeDatos()
 	{
 		Scanner sc = new Scanner(System.in);
-		this.emisor = sc.nextLine();
+		String nombreCliente, DNICliente, direccionCliente;
+		
+		nombreCliente = sc.nextLine();
+		DNICliente =sc.nextLine();
+		direccionCliente =sc.nextLine();
+		
+		this.emisor = new TCliente(nombreCliente, DNICliente, direccionCliente);
+		
 		this.receptor = sc.nextLine();
 		int MPago = sc.nextInt();
 		switch(MPago)
@@ -96,7 +104,7 @@ public class GestionPedidos {
 	  *  y su peso
 	  * @return preio del servicio
 	  */
-	 public int CalculoDeTarifas()
+	 public void CalculoDeTarifas()
 	 {
 		 int precio;
 		 int precioUrgencia = 0;
@@ -123,8 +131,8 @@ public class GestionPedidos {
 			 
 		 
 		precio = 6 + precioUrgencia + precioPeso;
-		 
-		return precio;
+		
+		this.precio = precio;
 	 }
 	 /**
 	  * Introduce el pedido en la base de datos
@@ -133,7 +141,10 @@ public class GestionPedidos {
 	 {
 		 es.ucm.fdi.integracion.DAOPedido pedido = new es.ucm.fdi.integracion.DAOPedido();
 		 
-		 es.ucm.fdi.integracion.TPedido newPedido = new es.ucm.fdi.integracion.TPedido(this.emisor, this.repartidor, this.pagado, this.receptor, this.codigo, this.metPago,this.SucursalSalida,this.SucursalLlegada, this.UrgenciaPaquete, this.puntoControl);
+		 es.ucm.fdi.integracion.TPedido newPedido = new es.ucm.fdi.integracion.TPedido(this.emisor, this.repartidor,
+				 this.pagado, this.receptor, this.codigo, this.metPago,
+				 this.SucursalSalida,this.SucursalLlegada, this.UrgenciaPaquete,
+				 this.puntoControl,this.precio);
 		 
 		 pedido.add(newPedido, this.codigo);
 		 

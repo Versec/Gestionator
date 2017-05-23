@@ -1,12 +1,7 @@
 package es.ucm.fdi;
 
-import java.util.Scanner;
-
 import es.ucm.fdi.datos.MetodoDePago;
-import es.ucm.fdi.integracion.MetPago;
-import es.ucm.fdi.integracion.TPControl;
-import es.ucm.fdi.integracion.TSucursal;
-import es.ucm.fdi.integracion.TipoEnvio;
+import es.ucm.fdi.integracion.*;
 
 public class AltaPedido
 {
@@ -17,7 +12,7 @@ public class AltaPedido
     public static void main( String[] args )
  
     {
-        // Inicializar datos
+       /* // Inicializar datos
     	es.ucm.fdi.datos.BDMemoria<es.ucm.fdi.integracion.TPedido> BDPedidos = new es.ucm.fdi.datos.BDMemoria<es.ucm.fdi.integracion.TPedido>();
     	// Esto es un ejemplo
     	es.ucm.fdi.datos.BDMemoria<String> tablaCadena=new es.ucm.fdi.datos.BDMemoria<String>();
@@ -29,7 +24,7 @@ public class AltaPedido
     	
     	//es.ucm.fdi.datos.DAOPedido DAOAltaPedido = new es.ucm.fdi.datos.DAOPedidoImp();
         // TODO
-    	
+    	*/
     	// Inicializar negocio
     	es.ucm.fdi.aplicationservice.GestionPedidos ASAltaPedido =  new es.ucm.fdi.aplicationservice.GestionPedidos();
         // TODO
@@ -43,8 +38,11 @@ public class AltaPedido
     	{
     		
     		//llamar a la creacion del codigo; 
-    		
-    		
+    		ASAltaPedido.CalculoDeTarifas();
+    		ASAltaPedido.buscarSucursal();
+    		ASAltaPedido.crearPuntoControl();
+    		//Comprobar que el pago se ha realizado correctamente(if (correcto) insetro el pedido en la base de datos)
+    		ASAltaPedido.crearPuntoControl();
     	}
     	else
     	{
