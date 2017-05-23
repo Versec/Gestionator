@@ -14,11 +14,11 @@ public class MetodoPago {
 	Scanner sc = new Scanner(System.in);
 
 	
-	/*public static void main( String[] args )
+	 /* public static void main( String[] args )
 	   
 	    {
 		   
-		   // Inicializar datos
+		 // Inicializar datos
 		   es.ucm.fdi.datos.BDMemoria<String> tablaCadena=new es.ucm.fdi.datos.BDMemoria<String>();
 	    	tablaCadena.insert("dato1","1");
 	    	tablaCadena.insert("dato2", "2");    	
@@ -34,14 +34,15 @@ public class MetodoPago {
 	    	 es.ucm.fdi.negocio.BuisnessPedido BuisnessPedido = new es.ucm.fdi.negocio.BuisnessPedido();
 	    	
 	    	// Inicializar presentacion  	
-	    	
-	    }*/
+	   	
+	    } */
 	    
 	   public boolean realizarPago(MetodoDePago metPago){
 		   boolean pagado = false;
 		   boolean salida = false;
 		 
 		   if (metPago== MetodoDePago.Efectivo){
+			   //El encargado pone "si" en la aplicación, si el cliente ha efectuado el pago
 			   System.out.println("¿Se ha efectuado el pago en efectivo?Si/No");
 			
 				while(salida==false){
@@ -64,6 +65,7 @@ public class MetodoPago {
 			  
 			  
 		   }
+		   //De forma bancaria
 		   else if (metPago== MetodoDePago.Transferencia){
 			
 			   String numTj = "";
@@ -142,6 +144,7 @@ public class MetodoPago {
 				
 		   } return pagado; 
 	   }
+	   /*Comprueba si los digitos son correctos*/
 	   private boolean validarTarjeta(String numTj){
 		   
 		   if (numTj.length() == 16)
@@ -151,6 +154,7 @@ public class MetodoPago {
 		   return false;
 		   
 	   }
+	   /*Comprueba la fecha de caducidad de la tarjeta*/
 	   private boolean validarFechaCaducidad(String cadTj){
 		  
 		   String[] fecha = cadTj.split("/");
@@ -166,6 +170,7 @@ public class MetodoPago {
 		   return false;
 		   
 	   }
+	   /*Comprueba que se introduzca 3 digitos de cvc*/
 	   private boolean validarCvc (String cvcTj){
 		  
 		   if (cvcTj.length() == 3)
