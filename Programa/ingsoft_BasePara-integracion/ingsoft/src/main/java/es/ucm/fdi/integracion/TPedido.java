@@ -5,7 +5,7 @@ import es.ucm.fdi.datos.TipoDeEnvio;
 
 public class TPedido {
 
-	private String emisor;
+	private TCliente emisor;
 	private int repartidor;
 	private boolean pagado;
 	private String receptor;
@@ -15,12 +15,13 @@ public class TPedido {
 	private TSucursal SucursalLlegada;
 	private TipoDeEnvio tipoDeEnvio;
 	private TPControl puntoControl;
+	private int precioServicio;
 	
 	
-	public TPedido(String emisor,int repartidor,boolean pagado,
+	public TPedido(TCliente emisor,int repartidor,boolean pagado,
 			String receptor,String codigo,MetodoDePago metPago2,
 			TSucursal SucursalSalida,TSucursal SucursalLlegada,
-			TipoDeEnvio urgenciaPaquete,TPControl puntoControl)
+			TipoDeEnvio urgenciaPaquete,TPControl puntoControl,int precio)
 	{
 		this.codigo=codigo;
 		this.repartidor=repartidor;
@@ -32,16 +33,18 @@ public class TPedido {
 		this.SucursalLlegada=SucursalLlegada;
 		this.SucursalSalida=SucursalSalida;
 		this.tipoDeEnvio=urgenciaPaquete;
+		this.precioServicio = precio;
 	}
 	
 	public void setRepartidor(int repartidor){
 		this.repartidor=repartidor;
 	}
 	
-	public void setEmisor(String emisor){
-		this.emisor=emisor;
+	public void setEmisor(String emisor, String DNI, String Direccion){
+		this.emisor = new TCliente(emisor, DNI, Direccion);
 	}
-	
+
+
 	public void setPagado(boolean pagado){
 		this.pagado=pagado;
 	}
@@ -77,7 +80,7 @@ public class TPedido {
 	
 	
 	//Getters
-	public String getEmisor(){
+	public TCliente getEmisor(){
 		return this.emisor;
 	}
 	
@@ -112,6 +115,10 @@ public class TPedido {
 	
 	public TPControl getPControl(){
 		return this.puntoControl;
+	}
+	public int getPrecioPedido()
+	{
+		return this.precioServicio;
 	}
 	
 }//Class.
