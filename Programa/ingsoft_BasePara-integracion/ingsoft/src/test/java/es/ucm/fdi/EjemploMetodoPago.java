@@ -1,33 +1,16 @@
 package es.ucm.fdi;
 
 import java.io.ByteArrayInputStream;
-import java.io.InputStream;
 
-import es.ucm.fdi.aplicationservice.GestionPedidos;
-import es.ucm.fdi.datos.*;
-import es.ucm.fdi.*;
-import es.ucm.fdi.integracion.DAOPedido;
-import es.ucm.fdi.integracion.EstadoPedido;
-import es.ucm.fdi.integracion.Localizacion;
-import es.ucm.fdi.integracion.TPControl;
-import es.ucm.fdi.integracion.TPedido;
-import es.ucm.fdi.integracion.TSucursal;
-import es.ucm.fdi.integracion.TipoEnvio;
-import es.ucm.fdi.negocio.BuisnessPedido;
-import junit.framework.Test;
 import junit.framework.TestCase;
-import junit.framework.TestSuite;
+import es.ucm.fdi.datos.*;
 
 
 public class EjemploMetodoPago
 	extends TestCase
 {
-	//Prueba de unidad para crear un pedido
-	/**
-	 * Test para la correcta inserccion de datos mediante las DAO
-	 * 
-	 * Comprueba la creacion de una BD vacia, inserta datos comprobando su correcta inserccion
-	 */
+	//Prueba de unidad para metodo de pago
+	
 	public void testCadenaEfectivo()
 	{
 		MetodoPago metodo = new MetodoPago();
@@ -100,7 +83,20 @@ public class EjemploMetodoPago
 		assertFalse("contrarreembolso false. \n", metodo.realizarPago(MetodoDePago.Contrarembolso));
 	}
 	
-	
+	public void testEfectivo()
+	{
+		ByteArrayInputStream in1 = new ByteArrayInputStream("si".getBytes());
+		System.setIn(in1);
+		MetodoPago metodo = new MetodoPago();
+		assertTrue("Efectivo debe salir true. \n", metodo.realizarPago(MetodoDePago.Efectivo));
+		
+		System.setIn(System.in);
+		
+		ByteArrayInputStream in2 = new ByteArrayInputStream("no".getBytes());
+		System.setIn(in2);
+		metodo = new MetodoPago();
+		assertFalse("Eefectivo debe salir false. \n", metodo.realizarPago(MetodoDePago.Efectivo));
+	}
 	//Prueba de unidad DAO
 /*	public void testMetodoPago()
 	{

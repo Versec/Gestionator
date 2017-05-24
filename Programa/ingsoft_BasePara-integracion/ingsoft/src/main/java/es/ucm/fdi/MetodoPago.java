@@ -124,12 +124,15 @@ public class MetodoPago {
 	   /*Comprueba si los digitos son correctos*/
 	   public boolean validarTarjeta(String numTj){
 		   
-		   if (numTj.length() == 16){
+		   if (numTj.length() <= 16){
+			   System.out.println(numTj);
 			   try {
 					Integer.parseInt(numTj);
+					System.out.println(numTj);
 					return true;
 				} catch (NumberFormatException nfe) {
 					return false;
+					
 				}
 		   }
 		   
