@@ -6,10 +6,11 @@ import es.ucm.fdi.*;
 import es.ucm.fdi.integracion.DAOPedido;
 import es.ucm.fdi.integracion.EstadoPedido;
 import es.ucm.fdi.integracion.Localizacion;
+import es.ucm.fdi.integracion.MetodoDePago;
 import es.ucm.fdi.integracion.TPControl;
 import es.ucm.fdi.integracion.TPedido;
 import es.ucm.fdi.integracion.TSucursal;
-import es.ucm.fdi.integracion.TipoEnvio;
+import es.ucm.fdi.integracion.TipoDeEnvio;
 import es.ucm.fdi.negocio.BuisnessPedido;
 import junit.framework.Test;
 import junit.framework.TestCase;
@@ -95,8 +96,10 @@ public class EjemploAltaPedido
 		
 		//Compruebo que el pedido introducio esta en la base de datos mesiante su codigo
 		assertTrue("La base de datos contiene un pedido con codigo '1112'", pedido.find("1112")!= null);
-	}
+		
 	
+	}
+
 	
 	public void testAltaPedidoAñadirGestionPedidos()
 	{
@@ -128,7 +131,10 @@ public class EjemploAltaPedido
 		assertTrue("La base de datos contiene tres elementos",pedido.getIds().size()==3);
 		
 		
+	
 		
 	}
+	
+	//Añadir test fallo por inpago
 		
 }

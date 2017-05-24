@@ -4,6 +4,8 @@ import java.util.Scanner;
 
 
 
+
+
 /*
 import es.ucm.fdi.datos.BDSucusales;
 import es.ucm.fdi.datos.MetodoDePago;
@@ -26,7 +28,7 @@ public class GestionPedidos {
 	private TSucursal SucursalEnvio;
 	private TSucursal SucursalLlegada; 
 	private int pesoPaquete;
-	private es.ucm.fdi.datos.TipoDeEnvio UrgenciaPaquete;
+	private es.ucm.fdi.integracion.TipoDeEnvio UrgenciaPaquete;
 	private TPControl puntoControl;
 	private int precio;
 	private BuisnessPedido BOPedido;
@@ -57,11 +59,11 @@ public class GestionPedidos {
 		switch(MPago)
 		{
 			case 1: 
-				metPago = es.ucm.fdi.datos.MetodoDePago.Efectivo;
+				metPago = es.ucm.fdi.integracion.MetodoDePago.Efectivo;
 			case 2:
-				metPago = es.ucm.fdi.datos.MetodoDePago.Contrarembolso;
+				metPago = es.ucm.fdi.integracion.MetodoDePago.Contrarembolso;
 			case 3:
-				metPago = es.ucm.fdi.datos.MetodoDePago.Transferencia;
+				metPago = es.ucm.fdi.integracion.MetodoDePago.Transferencia;
 		}
 		this.dirSucursalEnvio = dirSEnvio;
 		this.dirSucursalLlegada = dirSLlegada;

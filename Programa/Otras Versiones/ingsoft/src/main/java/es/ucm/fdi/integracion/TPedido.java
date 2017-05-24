@@ -1,7 +1,5 @@
 package es.ucm.fdi.integracion;
 
-import es.ucm.fdi.datos.MetodoDePago;
-import es.ucm.fdi.datos.TipoDeEnvio;
 
 public class TPedido {
 

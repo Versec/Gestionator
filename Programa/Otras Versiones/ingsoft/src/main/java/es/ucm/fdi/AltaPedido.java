@@ -2,7 +2,6 @@ package es.ucm.fdi;
 
 import es.ucm.fdi.aplicationservice.GestionPedidos;
 import es.ucm.fdi.datos.BDMemoria;
-import es.ucm.fdi.datos.MetodoDePago;
 import es.ucm.fdi.integracion.*;
 import es.ucm.fdi.negocio.BuisnessPedido;
 
