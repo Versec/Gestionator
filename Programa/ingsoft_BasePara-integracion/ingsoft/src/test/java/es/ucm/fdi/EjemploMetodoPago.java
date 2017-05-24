@@ -68,17 +68,17 @@ public class EjemploMetodoPago
 	{
 		MetodoPago metodo = new MetodoPago();
 		
-		 assertFalse("Si se introduce en efectivo un valor distinto de Si o no deberia devolver false. \n", metodo.validarFechaCaducidad("1ñ/18"));
+		 assertFalse("Si se introduce alguna letra en la fecha deberia devolver false. \n", metodo.validarFechaCaducidad("1ñ/18"));
 		 
-		 assertTrue("Si se introduce en efectivo la cadena si deberia devolver true. \n", metodo.validarFechaCaducidad("09/17"));
+		 assertTrue("Una fecha mayor a la actual deberia devolver true. \n", metodo.validarFechaCaducidad("09/17"));
 
-		 assertFalse("Si se introduce en efectivo la cadena no deberia devolver true. \n", metodo.validarFechaCaducidad("04/17"));
+		 assertFalse("Una fecha con el mismo año pero mes menor que el actual deberia devolver false. \n", metodo.validarFechaCaducidad("04/17"));
 		 
-		 assertTrue("Si se introduce en efectivo la cadena no deberia devolver true. \n", metodo.validarFechaCaducidad("04/18"));
+		 assertTrue("Una fecha con el mismo mes pero un año mayor que el actual deberia devolver true. \n", metodo.validarFechaCaducidad("04/18"));
 		 
-		 assertFalse("Si se introduce en efectivo la cadena no deberia devolver true. \n", metodo.validarFechaCaducidad("04/16"));
+		 assertFalse("Una fecha menor a la actual deberia devolver false. \n", metodo.validarFechaCaducidad("04/16"));
 		
-		 assertFalse("Si se introduce en efectivo la cadena no deberia devolver true. \n", metodo.validarFechaCaducidad("0417"));
+		 assertFalse("Si se introduce una fecha sin la / para diferenciar mes y año deberia devolver false. \n", metodo.validarFechaCaducidad("0417"));
 		 
 	}
 	
@@ -88,7 +88,7 @@ public class EjemploMetodoPago
 		
 		assertFalse("La tarjeta tiene que tener 3 digitos. \n", metodo.validarCvc("123456"));
 		 
-		assertTrue("Un numero de tarjeta correcto deberia devolver true. \n", metodo.validarCvc("123"));
+		assertTrue("Un numero de cvc correcto de 3 digitos deberia devolver true. \n", metodo.validarCvc("123"));
 
 		assertFalse("Los valores de la tarjeta deben ser numericos. \n", metodo.validarCvc("1g3"));
 		

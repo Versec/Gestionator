@@ -140,21 +140,21 @@ public class MetodoPago {
 	   public boolean validarFechaCaducidad(String cadTj){
 		  
 		   String[] fecha = cadTj.split("/");
-		   Calendar rightNow = Calendar.getInstance();
-		   int mesAct = rightNow.get(Calendar.MONTH)+1;
-		   int agnoAct =rightNow.get(Calendar.YEAR);
+		   Calendar fechaActual = Calendar.getInstance();
+		   int mesAct = fechaActual.get(Calendar.MONTH)+1;
+		   int agnoAct =fechaActual.get(Calendar.YEAR)%100;
 		   
-		   try{
-		   		int agnoFecha  = Integer.parseInt(fecha[1]);
-		   		int mesFecha =	Integer.parseInt(fecha[0]);	
-		   		if ((agnoFecha > agnoAct) || (agnoFecha == agnoAct && mesFecha >= mesAct)){
-		   			
-		   			System.out.println(mesFecha);
-		   			System.out.println(mesAct);
-		   			
-		   			return true;}
-		   } catch (NumberFormatException nfe) {
-			   return false;
+		   if (fecha.length == 2){
+				 
+			   try{
+			   		int agnoFecha  = Integer.parseInt(fecha[1]);
+			   		int mesFecha =	Integer.parseInt(fecha[0]);	
+			   		if ((agnoFecha > agnoAct) || (agnoFecha == agnoAct && mesFecha >= mesAct)){
+			   			
+			   			return true;}
+			   } catch (NumberFormatException nfe) {
+				   return false;
+			   }
 		   }
 		   return false;		   
 	   }
