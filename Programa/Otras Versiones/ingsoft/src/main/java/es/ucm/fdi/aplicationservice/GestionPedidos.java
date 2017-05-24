@@ -12,7 +12,7 @@ import es.ucm.fdi.integracion.TPedido;
 
 public class GestionPedidos {
  
-	private TCliente emisor;
+	private /*TCliente*/ String emisor;
 	private int repartidor;
 	private boolean pagado;
 	private String receptor;
@@ -39,8 +39,8 @@ public class GestionPedidos {
 		DNICliente =sc.nextLine();
 		direccionCliente =sc.nextLine();
 		
-		this.emisor = new TCliente(nombreCliente, DNICliente, direccionCliente);
-		
+		//this.emisor = new TCliente(nombreCliente, DNICliente, direccionCliente);
+		this.emisor = sc.nextLine();
 		this.receptor = sc.nextLine();
 		int MPago = sc.nextInt();
 		switch(MPago)
