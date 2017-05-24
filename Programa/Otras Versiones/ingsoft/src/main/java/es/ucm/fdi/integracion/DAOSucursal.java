@@ -20,7 +20,7 @@ public class DAOSucursal implements DAO<TSucursal>
 		
 	}
 
-	public TSucursal leer(int Id) {
+	public TSucursal leer(String Id) {
 		// TODO Auto-generated method stub
 		return null;
 	}

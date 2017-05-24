@@ -1,8 +1,8 @@
 package es.ucm.fdi;
 
+import es.ucm.fdi.aplicationservice.GestionPedidos;
 import es.ucm.fdi.datos.*;
 import es.ucm.fdi.*;
-import es.ucm.fdi.datos.BDPedidos;
 import es.ucm.fdi.integracion.DAOPedido;
 import es.ucm.fdi.integracion.EstadoPedido;
 import es.ucm.fdi.integracion.Localizacion;
@@ -20,25 +20,31 @@ public class EjemploAltaPedido
 	extends TestCase
 {
 	//Prueba de unidad para crear un pedido
-	
+	/**
+	 * Test para la correcta inserccion de datos mediante las DAO
+	 * 
+	 * Comprueba la creacion de una BD vacia, inserta datos comprobando su correcta inserccion
+	 */
 	public void testVacio()
 	{
-		BDPedidos<TPedido> pedido = new BDPedidos<TPedido>();
+		BDMemoria<TPedido> pedido = new BDMemoria<TPedido>();
 		assertTrue("La BD debía estar vacía y tiene elementos. \n", pedido.getIds().isEmpty());
 	}
 	
+	
+	//Prueba de unidad DAO
 	public void testAltaPedidoDAOPedido()
 	{
-		BDPedidos<TPedido> pedido = new BDPedidos<TPedido>();
-		DAOPedido daoPedido = new DAOPedido();
+		BDMemoria<TPedido> pedido = new BDMemoria<TPedido>();
+		DAOPedido daoPedido = new DAOPedido(pedido);
 		
 		
 		assertTrue("La BD debía estar vacía y tiene elementos. \n", pedido.getIds().isEmpty());
 		
 		//inserto nuevos pedidos
 		
-		TPedido pedidoPrueba = new TPedido("Fulgencio",5, true, "Alvaro", "256877" ,MetodoDePago.Efectivo, new TSucursal(28, "Valencia", "Desconocida" , 26841),
-				new TSucursal(28, "Madrid", "Desconocida" , 24811),TipoDeEnvio.Urgente, new TPControl(EstadoPedido.Almacen, Localizacion.SUCURSAL_INICIO),58);
+		TPedido pedidoPrueba = new TPedido("Fulgencio",5, true, "Alvaro", "256877" ,MetodoDePago.Efectivo, new TSucursal("28", "Valencia", "Desconocida" , 26841),
+				new TSucursal("28", "Madrid", "Desconocida" , 24811),TipoDeEnvio.Urgente, new TPControl(EstadoPedido.Almacen, Localizacion.SUCURSAL_INICIO),58);
 		
 		daoPedido.add(pedidoPrueba, "2897"); //cambiar codigo a un int
 		
@@ -46,9 +52,83 @@ public class EjemploAltaPedido
 		
 		
 		
+	}
+	/**
+	 * Test para comprobar la correcta inserccion de datos mediante los BO
+	 */
+	
+	//Prueba de unidad BO
+	public void testAltaPedidoAñadirBuissnesPedido()
+	{
+		BDMemoria<TPedido> pedido=new BDMemoria<TPedido>();
+		
+		
+		
+		assertTrue("La base de datos deberia estar vacia y tiene elementos. \n", pedido.getIds().isEmpty());
+		
+		TPedido pedido1 = new TPedido("Magdalena", 2, true, "Random", "1111", MetodoDePago.Contrarembolso, new TSucursal("123", "Yo", "Calle Oculta", 1234),
+				new TSucursal("123", "El", "Calle Torrijos", 2345), TipoDeEnvio.Normal, new TPControl(EstadoPedido.Perdido, Localizacion.SUCURSAL_INICIO), 9);	
+		
+		DAOPedido daoPedido1 = new DAOPedido(pedido);
+		
+		
+		BuisnessPedido BOPedido = new BuisnessPedido(daoPedido1);
+		
+		BOPedido.Añadir(pedido1, "1111");
+
+		
+		
+		assertTrue("La BD debe tener al menos un elemento. \n" , pedido.getIds().size()==1);
+		
+		TPedido pedido2 = new TPedido("Magdalena", 2, true, "Random", "1112", MetodoDePago.Contrarembolso, new TSucursal("123", "Yo", "Calle Oculta", 1234),
+				new TSucursal("123", "El", "Calle Torrijos", 2345), TipoDeEnvio.Normal, new TPControl(EstadoPedido.Perdido, Localizacion.SUCURSAL_INICIO), 9);
+		
+		DAOPedido daoPedido2 = new DAOPedido(pedido);
+		
+		BOPedido = new BuisnessPedido(daoPedido2);
+		
+		//Introduzco un segundo elemento
+		
+		BOPedido.Añadir(pedido2, "1112");
+		
+		assertTrue("La base de datos contiene mas de un elemento", pedido.getIds().size() >1);
+		
+		//Compruebo que el pedido introducio esta en la base de datos mesiante su codigo
+		assertTrue("La base de datos contiene un pedido con codigo '1112'", pedido.find("1112")!= null);
+	}
+	
+	
+	public void testAltaPedidoAñadirGestionPedidos()
+	{
+		BDMemoria<TPedido> pedido=new BDMemoria<TPedido>();
+		
+		/*TPedido pedido1 = new TPedido("Magdalena", 2, true, "Random", "1111", MetodoDePago.Contrarembolso, new TSucursal("123", "Yo", "Calle Oculta", 1234),
+				new TSucursal("123", "El", "Calle Torrijos", 2345), TipoDeEnvio.Normal, new TPControl(EstadoPedido.Perdido, Localizacion.SUCURSAL_INICIO), 9);	
+		*/
+		DAOPedido daoPedido2 = new DAOPedido(pedido);
+		BuisnessPedido BOPedido1 = new BuisnessPedido(daoPedido2);
+		
+		GestionPedidos GPedido = new GestionPedidos(BOPedido1);
+		BDMemoria<TSucursal> tablaSucursales = new BDMemoria<TSucursal>();
+		TSucursal sucursal1 = new TSucursal("42", "Madrid", "Madrid", 84569); 
+		TSucursal sucursal2 = new TSucursal("43", "Barcelona", "Barcelona", 84569);
+		
+		tablaSucursales.insert(sucursal1, "42");
+		tablaSucursales.insert(sucursal2, "43");
+		
+		assertTrue("La BD de sucursales tiene dos sucursales", tablaSucursales.getIds().size() == 2);
+		
+		
+		GPedido.AñadirPedido("Manuela", "ALfredo", 2, "42", "43", 40,tablaSucursales,1);
+		
+		assertTrue("La BD debe tener al menos un elemento. \n" , pedido.getIds().size()==1);
+		GPedido.AñadirPedido("Manuela", "nop", 1, "42", "43", 82,tablaSucursales,0);
+		GPedido.AñadirPedido("Manuela", "fredo", 0, "42", "43", 7,tablaSucursales,1);
+		
+		assertTrue("La base de datos contiene tres elementos",pedido.getIds().size()==3);
+		
 		
 		
 	}
-	
 		
 }

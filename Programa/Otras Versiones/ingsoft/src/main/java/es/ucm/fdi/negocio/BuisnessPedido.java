@@ -12,12 +12,12 @@ public class BuisnessPedido {
 		this.daoPedido = daoPedido;
 	}
 	
-	public void Añadir(String id) {
-		this.daoPedido.add(tPedido, id);
+	public void Añadir(TPedido ped,String id) {
+		this.daoPedido.add(ped, id);
 		
 	}
 	
-	public TPedido leer(int id) {
+	public TPedido leer(String id) {
 		return this.daoPedido.leer(id);
 	}
 }

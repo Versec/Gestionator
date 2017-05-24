@@ -2,7 +2,7 @@ package es.ucm.fdi.integracion;
 
 public class TSucursal {
 	
-	private int Id;
+	private String Id;
 	private String nombre;
 	private String direccion;
 	private int codPostal;
@@ -10,14 +10,14 @@ public class TSucursal {
 	
 	
 	
-	public TSucursal(int Id,String nombre,String direccion,int codPostal){
+	public TSucursal(String Id,String nombre,String direccion,int codPostal){
 		this.Id=Id;
 		this.nombre=nombre;
 		this.direccion=direccion;
 		this.codPostal=codPostal;
 	}
 	
-	public void setID(int ID){
+	public void setID(String ID){
 		this.Id=ID;
 	}
 	
@@ -37,7 +37,7 @@ public class TSucursal {
 		return this.nombre;
 	}
 	
-	public int getID(){
+	public String getID(){
 		return this.Id;
 	}
 	

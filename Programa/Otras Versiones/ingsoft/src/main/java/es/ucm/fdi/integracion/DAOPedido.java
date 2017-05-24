@@ -8,12 +8,17 @@ import es.ucm.fdi.datos.*;
 public class DAOPedido implements DAO<TPedido>{
 
 	
-	private BDPedidos<TPedido> BDPedidos = new BDPedidos<TPedido>();
+	private BDMemoria<TPedido> BDPedidos = new BDMemoria<TPedido>();
+	
+	public DAOPedido(BDMemoria<TPedido> BDPedidos)
+	{
+		this.BDPedidos = BDPedidos;
+	}
 	
 	public void add(TPedido dato, String cod) 
 	{
 		// TODO Auto-generated method stub
-		BDPedidos.insert(dato, cod);
+		this.BDPedidos.insert(dato, cod);
 	}
 
 	public void eliminar(int ID) {
@@ -26,14 +31,15 @@ public class DAOPedido implements DAO<TPedido>{
 		
 	}
 
-	public TPedido leer(int Id) {
+	public TPedido leer(String Id) {
 		// TODO Auto-generated method stub
-		return null;
+		return this.BDPedidos.find(Id);
 	}
 
 	public List<TPedido> leerTodos() {
 		// TODO Auto-generated method stub
 		return null;
 	}
+
 
 }

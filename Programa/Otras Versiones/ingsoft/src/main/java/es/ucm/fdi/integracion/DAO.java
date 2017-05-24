@@ -7,7 +7,7 @@ public interface DAO<T> {
 	public void add(T dato, String cod);
 	public void eliminar(int ID);
 	public void actualizar(T datoActualizado);
-	public T leer(int Id);
+	public T leer(String Id);
 	public List<T> leerTodos();
 	
 }

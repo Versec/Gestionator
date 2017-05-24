@@ -53,11 +53,11 @@ public class BDMemoria<T>{
 	 * Encontrar un objeto con un identificador concreto. Devuelve NULL si 
 	 * no se encuentra
 	 * 
-	 * @param id identificador del objeto
+	 * @param string identificador del objeto
 	 * @return El objeto o null si no se encuentra.
 	 */
-	public synchronized T find(String id){
-		return tabla.get(id);
+	public synchronized T find(String string){
+		return tabla.get(string);
 	}
 	
 	/**
