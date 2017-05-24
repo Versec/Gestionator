@@ -36,7 +36,21 @@ public class MetodoPago {
 	    	// Inicializar presentacion  	
 	   	
 	    } */
-	    
+
+		public boolean compruebaEntrada(String valor) {
+			return (valor.equalsIgnoreCase("si") || valor.equalsIgnoreCase("no"));
+		}
+		
+		public boolean chequeaRespuesta(String valor) {
+			if (valor.equalsIgnoreCase("si")){
+				  System.out.println("El pago se efectuado correctamente");					
+			}else if (valor.equalsIgnoreCase("no")){
+				System.out.println("El pago no se a efectuado");
+			}
+			return valor.equalsIgnoreCase("si");
+		}
+	
+	
 	   public boolean realizarPago(MetodoDePago metPago){
 		   boolean pagado = false;
 		   boolean salida = false;
@@ -45,23 +59,13 @@ public class MetodoPago {
 			   //El encargado pone "si" en la aplicación, si el cliente ha efectuado el pago
 			   System.out.println("¿Se ha efectuado el pago en efectivo?Si/No");
 			
-				while(salida==false){
-				//Lee una linea por teclado
-				String linea = sc.nextLine().toLowerCase();
-				if (linea.equals("Si")){
-					  pagado = true;
-					  System.out.println("El pago se efectuado correctamente");
-					  salida = true;  
-					
-				}else if (linea.equals("No")){
-					pagado = false;
-					System.out.println("El pago no se a efectuado");
-					salida = true;
-				}
-				else
+			   String linea = sc.nextLine().toLowerCase();
+				while(!compruebaEntrada(linea)){
 					System.out.println("Introduce Si o No");
+					//Lee una linea por teclado
+					linea = sc.nextLine().toLowerCase();
 				}
-				return pagado;
+				return chequeaRespuesta(linea);
 			  
 			  
 		   }
@@ -71,111 +75,100 @@ public class MetodoPago {
 			   String numTj = "";
 			   String cadTj = "";
 			   String cvcTj = "";
-			   boolean salidaTj = false;
-			   boolean salidaCad = false;
-			   boolean salidaCvc = false;
-			   pagado=true;
 			   
-			   while (salidaTj == false){
-				   System.out.println("Introduzca su número de tarjeta de crédito");
-				   numTj = sc.nextLine().toLowerCase();
-				   
-				   boolean tarjetaValida = validarTarjeta(numTj);
-				   
-				   if(tarjetaValida == true){
-					   
-					   while (salidaCad == false){
-						   System.out.println("Introduzca fecha de caducidad de la tarjeta");
-						   cadTj = sc.nextLine().toLowerCase();
-						   boolean caducidadValida = validarFechaCaducidad(cadTj);
-						   if(caducidadValida == true){
-							   
-							   while (salidaCvc == false){
-								   System.out.println("Introduzca el CVC de la tarjeta");
-								   cvcTj = sc.nextLine().toLowerCase();
-								   boolean cvcValida = validarCvc(cvcTj);
-								   if(cvcValida == true){
-									   salidaCvc = true;
-									   salidaCad = true;
-									   salidaTj = true;
-									   pagado = true;
-									   System.out.println("Se ha pagao");
-								   }else{
-									   salidaCvc = true;
-									   salidaCad = true;
-									   System.out.println("Use otra tarjeta");   
-								   }
-							   }
-							   
-							   
-						   }else{
-							   System.out.println("Fecha de caducidad no valida.");
-							   System.out.println("Use otra tarjeta.");
-							   salidaCad = true;
-						   }
-					   }
-					   
-					   
-				   }else{
-					   System.out.println("Número no valido.");
-				   }
-					   
-					  
-				
-				   
-				   
+			   System.out.println("Introduzca su número de tarjeta de crédito o x para cancelar");
+			   numTj = sc.nextLine().toLowerCase();
+			   do {
+				   if (numTj.equalsIgnoreCase("x"))
+					   salida = true;
+			   } while ( !validarTarjeta(numTj) && !salida );
+			   
+			   if (!salida) {
+				   System.out.println("Introduzca fecha de caducidad de la tarjeta o x para cancelar");
+				   cadTj = sc.nextLine().toLowerCase();
+				   do {
+					   if (cadTj.equalsIgnoreCase("x"))
+						   salida = true;
+				   } while ( !validarFechaCaducidad(cadTj) && !salida );
 			   }
 			   
+			   if (!salida) {
+				   System.out.println("Introduzca el CVC de la tarjeta o x para cancelar");
+				   cvcTj = sc.nextLine().toLowerCase();
+				   do {
+					   if (cvcTj.equalsIgnoreCase("x"))
+						   salida = true;
+				   } while ( !validarCvc(cvcTj) && !salida );
+			   }
 			   
+			   if (salida) {
+				   System.out.println("El pago ha sido cancelado");
+			   } else {
+				   System.out.println("Se ha efectuado la transferencia");
+			   }
 			   
-			   System.out.println("El pago se ha efectuado correctamente");
-			   return pagado;
+			   return !salida;
+				   
 		   }
 		   else if (metPago == MetodoDePago.Contrarembolso){
 			 
-			
-			   pagado = false;
 			   System.out.println("El pago se realizará en la recogida del pedido");
 			   return pagado;
 		   }
 		   else{
-			   pagado=false;
+			   
 			   System.err.println("No se ha elegido ningún método de pago");
 				
 		   } return pagado; 
 	   }
 	   /*Comprueba si los digitos son correctos*/
-	   private boolean validarTarjeta(String numTj){
+	   public boolean validarTarjeta(String numTj){
 		   
-		   if (numTj.length() == 16)
-			   return true;
-		   
+		   if (numTj.length() == 16){
+			   try {
+					Integer.parseInt(numTj);
+					return true;
+				} catch (NumberFormatException nfe) {
+					return false;
+				}
+		   }
 		   
 		   return false;
 		   
 	   }
 	   /*Comprueba la fecha de caducidad de la tarjeta*/
-	   private boolean validarFechaCaducidad(String cadTj){
+	   public boolean validarFechaCaducidad(String cadTj){
 		  
 		   String[] fecha = cadTj.split("/");
-		   int mesAct = Calendar.MONTH;
-		   int agnoAct = Calendar.YEAR;
+		   Calendar rightNow = Calendar.getInstance();
+		   int mesAct = rightNow.get(Calendar.MONTH)+1;
+		   int agnoAct =rightNow.get(Calendar.YEAR);
 		   
-		   if(Integer.parseInt(fecha[0]) == agnoAct)
-			   if (Integer.parseInt(fecha[1]) >= mesAct)
-				   return true;
-		   else if(Integer.parseInt(fecha[0]) > agnoAct)
-			   return true;
-		   
-		   return false;
-		   
+		   try{
+		   		int agnoFecha  = Integer.parseInt(fecha[1]);
+		   		int mesFecha =	Integer.parseInt(fecha[0]);	
+		   		if ((agnoFecha > agnoAct) || (agnoFecha == agnoAct && mesFecha >= mesAct)){
+		   			
+		   			System.out.println(mesFecha);
+		   			System.out.println(mesAct);
+		   			
+		   			return true;}
+		   } catch (NumberFormatException nfe) {
+			   return false;
+		   }
+		   return false;		   
 	   }
 	   /*Comprueba que se introduzca 3 digitos de cvc*/
-	   private boolean validarCvc (String cvcTj){
+	   public boolean validarCvc (String cvcTj){
 		  
-		   if (cvcTj.length() == 3)
-			   return true;
-		   
+		   if (cvcTj.length() == 3){
+			   try {
+					Integer.parseInt(cvcTj);
+					return true;
+				} catch (NumberFormatException nfe) {
+					return false;
+				}
+		   }
 		   
 		   return false;
 		   
