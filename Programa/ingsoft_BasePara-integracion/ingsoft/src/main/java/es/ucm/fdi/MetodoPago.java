@@ -111,10 +111,19 @@ public class MetodoPago {
 				   
 		   }
 		   else if (metPago == MetodoDePago.Contrarembolso){
-			 
-			   System.out.println("El pago se realizará en la recogida del pedido");
-			   return pagado;
+			   System.out.println("¿Se ha efectuado el pago a contrarembolso?Si/No");
+				
+			   String linea = sc.nextLine().toLowerCase();
+				while(!compruebaEntrada(linea)){
+					System.out.println("Introduce Si o No");
+					//Lee una linea por teclado
+					linea = sc.nextLine().toLowerCase();
+				}
+				return chequeaRespuesta(linea);
+			  
+			  
 		   }
+			
 		   else{
 			   
 			   System.err.println("No se ha elegido ningún método de pago");
@@ -122,21 +131,21 @@ public class MetodoPago {
 		   } return pagado; 
 	   }
 	   /*Comprueba si los digitos son correctos*/
-	   public boolean validarTarjeta(String numTj){
+	 
 		   
-		   if (numTj.length() <= 16){
-			   System.out.println(numTj);
-			   try {
-					Integer.parseInt(numTj);
-					System.out.println(numTj);
-					return true;
-				} catch (NumberFormatException nfe) {
-					return false;
-					
-				}
-		   }
-		   
-		   return false;
+		   public boolean validarTarjeta(String numTj){
+			   int i;
+			   boolean valido = false;
+			   if (numTj.length() == 16){
+				   valido=true;
+				   for (i=0; i!= 16; i++) {
+					   valido = valido && (numTj.charAt(i) >='0' && numTj.charAt(i) <= '9');
+				   }   return valido;
+			   }
+			   
+			
+			   
+		   return valido;
 		   
 	   }
 	   /*Comprueba la fecha de caducidad de la tarjeta*/

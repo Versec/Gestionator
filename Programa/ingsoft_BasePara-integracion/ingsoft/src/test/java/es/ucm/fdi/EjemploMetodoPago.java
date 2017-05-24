@@ -15,11 +15,11 @@ public class EjemploMetodoPago
 	{
 		MetodoPago metodo = new MetodoPago();
 		
-		 assertFalse("Si se introduce en efectivo un valor distinto de Si o no deberia devolver false. \n", metodo.compruebaEntrada("otro"));
+		 assertFalse("Si se introduce en efectivo un valor distinto de Si o No deberia devolver false. \n", metodo.compruebaEntrada("otro"));
 		 
-		 assertTrue("Si se introduce en efectivo la cadena si deberia devolver true. \n", metodo.compruebaEntrada("sI"));
+		 assertTrue("Si se introduce en efectivo la cadena Si deberia devolver true. \n", metodo.compruebaEntrada("sI"));
 
-		 assertTrue("Si se introduce en efectivo la cadena no deberia devolver true. \n", metodo.compruebaEntrada("No"));
+		 assertTrue("Si se introduce en efectivo la cadena No deberia devolver true. \n", metodo.compruebaEntrada("No"));
 		
 	}
 	
@@ -77,11 +77,6 @@ public class EjemploMetodoPago
 		
 	}
 	
-	public void testContrareembolso()
-	{
-		MetodoPago metodo = new MetodoPago();
-		assertFalse("contrarreembolso false. \n", metodo.realizarPago(MetodoDePago.Contrarembolso));
-	}
 	
 	public void testEfectivo()
 	{
@@ -95,105 +90,35 @@ public class EjemploMetodoPago
 		ByteArrayInputStream in2 = new ByteArrayInputStream("no".getBytes());
 		System.setIn(in2);
 		metodo = new MetodoPago();
-		assertFalse("Eefectivo debe salir false. \n", metodo.realizarPago(MetodoDePago.Efectivo));
+		assertFalse("Efectivo debe salir false. \n", metodo.realizarPago(MetodoDePago.Efectivo));
 	}
-	//Prueba de unidad DAO
-/*	public void testMetodoPago()
+	public void testTransferencia()
 	{
-		BDMemoria<TPedido> pedido = new BDMemoria<TPedido>();
-		MetodoPago daoPedido = new MetodoPago();
+		ByteArrayInputStream in1 = new ByteArrayInputStream("x".getBytes());
+		System.setIn(in1);
+		MetodoPago metodo = new MetodoPago();
+		assertFalse("Si la operación se cancela debe salir false. \n", metodo.realizarPago(MetodoDePago.Transferencia));
 		
 		
-		assertTrue("La BD debía estar vacía y tiene elementos. \n", pedido.getIds().isEmpty());
-		
-		//inserto nuevos pedidos
-		
-		TPedido pedidoPrueba = new TPedido("Fulgencio",5, true, "Alvaro", "256877" ,MetodoDePago.Efectivo, new TSucursal("28", "Valencia", "Desconocida" , 26841),
-				new TSucursal("28", "Madrid", "Desconocida" , 24811),TipoDeEnvio.Urgente, new TPControl(EstadoPedido.Almacen, Localizacion.SUCURSAL_INICIO),58);
-		
-		daoPedido.add(pedidoPrueba, "2897"); //cambiar codigo a un int
-		
-		assertTrue("La base de datos contiene un elemento",pedido.getIds().size()==1);
-		
-		
-		
-	}*/
-	/**
-	 * Test para comprobar la correcta inserccion de datos mediante los BO
-	 */
-	
-	//Prueba de unidad BO
-/*	public void testAltaPedidoAñadirBuissnesPedido()
-	{
-		BDMemoria<TPedido> pedido=new BDMemoria<TPedido>();
-		
-		
-		
-		assertTrue("La base de datos deberia estar vacia y tiene elementos. \n", pedido.getIds().isEmpty());
-		
-		TPedido pedido1 = new TPedido("Magdalena", 2, true, "Random", "1111", MetodoDePago.Contrarembolso, new TSucursal("123", "Yo", "Calle Oculta", 1234),
-				new TSucursal("123", "El", "Calle Torrijos", 2345), TipoDeEnvio.Normal, new TPControl(EstadoPedido.Perdido, Localizacion.SUCURSAL_INICIO), 9);	
-		
-		DAOPedido daoPedido1 = new DAOPedido(pedido);
-		
-		
-		BuisnessPedido BOPedido = new BuisnessPedido(daoPedido1);
-		
-		BOPedido.Añadir(pedido1, "1111");
-
-		
-		
-		assertTrue("La BD debe tener al menos un elemento. \n" , pedido.getIds().size()==1);
-		
-		TPedido pedido2 = new TPedido("Magdalena", 2, true, "Random", "1112", MetodoDePago.Contrarembolso, new TSucursal("123", "Yo", "Calle Oculta", 1234),
-				new TSucursal("123", "El", "Calle Torrijos", 2345), TipoDeEnvio.Normal, new TPControl(EstadoPedido.Perdido, Localizacion.SUCURSAL_INICIO), 9);
-		
-		DAOPedido daoPedido2 = new DAOPedido(pedido);
-		
-		BOPedido = new BuisnessPedido(daoPedido2);
-		
-		//Introduzco un segundo elemento
-		
-		BOPedido.Añadir(pedido2, "1112");
-		
-		assertTrue("La base de datos contiene mas de un elemento", pedido.getIds().size() >1);
-		
-		//Compruebo que el pedido introducio esta en la base de datos mesiante su codigo
-		assertTrue("La base de datos contiene un pedido con codigo '1112'", pedido.find("1112")!= null);
 	}
 	
-	
-	public void testAltaPedidoAñadirGestionPedidos()
+	public void testContrareembolso()
 	{
-		BDMemoria<TPedido> pedido=new BDMemoria<TPedido>();
-		
-		/*TPedido pedido1 = new TPedido("Magdalena", 2, true, "Random", "1111", MetodoDePago.Contrarembolso, new TSucursal("123", "Yo", "Calle Oculta", 1234),
-				new TSucursal("123", "El", "Calle Torrijos", 2345), TipoDeEnvio.Normal, new TPControl(EstadoPedido.Perdido, Localizacion.SUCURSAL_INICIO), 9);	
-		//
-		DAOPedido daoPedido2 = new DAOPedido(pedido);
-		BuisnessPedido BOPedido1 = new BuisnessPedido(daoPedido2);
-		
-		GestionPedidos GPedido = new GestionPedidos(BOPedido1);
-		BDMemoria<TSucursal> tablaSucursales = new BDMemoria<TSucursal>();
-		TSucursal sucursal1 = new TSucursal("42", "Madrid", "Madrid", 84569); 
-		TSucursal sucursal2 = new TSucursal("43", "Barcelona", "Barcelona", 84569);
-		
-		tablaSucursales.insert(sucursal1, "42");
-		tablaSucursales.insert(sucursal2, "43");
-		
-		assertTrue("La BD de sucursales tiene dos sucursales", tablaSucursales.getIds().size() == 2);
 		
 		
-		GPedido.AñadirPedido("Manuela", "ALfredo", 2, "42", "43", 40,tablaSucursales,1);
+		ByteArrayInputStream in1 = new ByteArrayInputStream("si".getBytes());
+		System.setIn(in1);
+		MetodoPago metodo = new MetodoPago();
+		assertTrue("Contrarembolso debe salir true. \n", metodo.realizarPago(MetodoDePago.Contrarembolso));
 		
-		assertTrue("La BD debe tener al menos un elemento. \n" , pedido.getIds().size()==1);
-		GPedido.AñadirPedido("Manuela", "nop", 1, "42", "43", 82,tablaSucursales,0);
-		GPedido.AñadirPedido("Manuela", "fredo", 0, "42", "43", 7,tablaSucursales,1);
+		System.setIn(System.in);
 		
-		assertTrue("La base de datos contiene tres elementos",pedido.getIds().size()==3);
+		ByteArrayInputStream in2 = new ByteArrayInputStream("no".getBytes());
+		System.setIn(in2);
+		metodo = new MetodoPago();
+		assertFalse("Contrarembolso debe salir false. \n", metodo.realizarPago(MetodoDePago.Contrarembolso));
 		
-		
-		
-	}*/
+	}
+	
 		
 }
