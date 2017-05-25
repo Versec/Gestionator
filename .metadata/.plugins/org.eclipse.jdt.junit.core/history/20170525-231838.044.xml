@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="EjemploAltaPedido" project="ingsoft" tests="4" started="4" failures="1" errors="0" ignored="0">
+  <testsuite name="es.ucm.fdi.EjemploAltaPedido" time="0.01">
+    <testcase name="testAltaPedidoDAOPedido" classname="es.ucm.fdi.EjemploAltaPedido" time="0.0"/>
+    <testcase name="testVacio" classname="es.ucm.fdi.EjemploAltaPedido" time="0.0"/>
+    <testcase name="testAltaPedidoAñadirGestionPedidos" classname="es.ucm.fdi.EjemploAltaPedido" time="0.01">
+      <failure>junit.framework.AssertionFailedError: La base de datos contiene tres elementos&#13;
+	at junit.framework.Assert.fail(Assert.java:57)&#13;
+	at junit.framework.Assert.assertTrue(Assert.java:22)&#13;
+	at junit.framework.TestCase.assertTrue(TestCase.java:192)&#13;
+	at es.ucm.fdi.EjemploAltaPedido.testAltaPedidoAñadirGestionPedidos(EjemploAltaPedido.java:145)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)&#13;
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)&#13;
+	at java.lang.reflect.Method.invoke(Unknown Source)&#13;
+	at junit.framework.TestCase.runTest(TestCase.java:176)&#13;
+	at junit.framework.TestCase.runBare(TestCase.java:141)&#13;
+	at junit.framework.TestResult$1.protect(TestResult.java:122)&#13;
+	at junit.framework.TestResult.runProtected(TestResult.java:142)&#13;
+	at junit.framework.TestResult.run(TestResult.java:125)&#13;
+	at junit.framework.TestCase.run(TestCase.java:129)&#13;
+	at junit.framework.TestSuite.runTest(TestSuite.java:255)&#13;
+	at junit.framework.TestSuite.run(TestSuite.java:250)&#13;
+	at org.eclipse.jdt.internal.junit.runner.junit3.JUnit3TestReference.run(JUnit3TestReference.java:131)&#13;
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)&#13;
+&#13;
+</failure>
+    </testcase>
+    <testcase name="testAltaPedidoAñadirBuissnesPedido" classname="es.ucm.fdi.EjemploAltaPedido" time="0.0"/>
+  </testsuite>
+</testrun>

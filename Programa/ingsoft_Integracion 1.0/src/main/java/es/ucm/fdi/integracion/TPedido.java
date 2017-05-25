@@ -30,7 +30,7 @@ public class TPedido {
 		this.SucursalLlegada=SucursalLlegada;
 		this.SucursalSalida=SucursalSalida;
 		this.tipoDeEnvio=tipoDeEnvio;
-		this.precio  =precio;
+		this.precio = precio;
 	}
 	
 	public TPedido(String emisor2, String string, Boolean valueOf, String receptor2, int parseInt, MetPago valueOf2,
@@ -83,6 +83,10 @@ public class TPedido {
 	{
 		this.precio = precio;
 	}
+	public void setPeso(int peso)
+	{
+		this.peso = peso;
+	}
 	
 	
 	//Getters
@@ -127,6 +131,9 @@ public class TPedido {
 		return this.puntoControl;
 	}
 	public int getPrecio(){
-	return this.precio;
+		return this.precio;
+	}
+	public int getPeso(){
+		return this.peso;
 	}
 }//Class.

@@ -1,8 +1,11 @@
 package es.ucm.fdi.aplicationservice;
 
+import java.util.Date;
+
 import es.ucm.fdi.integracion.DAOPedido;
 import es.ucm.fdi.integracion.DAOSucursal;
 import es.ucm.fdi.integracion.EstadoActual;
+import es.ucm.fdi.integracion.Localizacion;
 import es.ucm.fdi.integracion.TPControl;
 import es.ucm.fdi.integracion.TPedido;
 import es.ucm.fdi.integracion.TSucursal;
@@ -63,14 +66,11 @@ public class GestionPedidos {
 	
     	if (ValidarDatos(pedido))
     	{
-    		
-    		
     		ponerCodigo(pedido);
-    		CalculoDeTarifas();
-    		buscarSucursal(/*tablaSucursales*/);
-    		crearPuntoControl();
+    		CalculoDeTarifas(pedido);
+    		crearPuntoDeControl(pedido);
     		//Comprobar que el pago se ha realizado correctamente(if (correcto) insetro el pedido en la base de datos)
-    		crearPedido();
+    		crearPedido(pedido);
     	}
     	else
     	{
@@ -107,7 +107,9 @@ public class GestionPedidos {
 	  */
 	 public void ponerCodigo(TPedido pedido )
 	 {
-		 pedido.setId(pedido.getEmisor() + pedido.getReceptor());
+		 java.util.Date fecha = new Date();
+		
+		 pedido.setId(pedido.getEmisor() + pedido.getReceptor() + System.currentTimeMillis() + fecha + Math.random()*6);
 		 
 	 }
 	 public void CalculoDeTarifas(TPedido pedido)
@@ -122,15 +124,15 @@ public class GestionPedidos {
 		 }
 		 
 		 
-		 if(this.pesoPaquete >=6 ) //Aumento del precio segun el peso del paquete a enviar
+		 if(pedido.getPeso() >=6 ) //Aumento del precio segun el peso del paquete a enviar
 		 {
 			 precioPeso = 2;
 		 }
-		 else if(this.pesoPaquete >= 15)
+		 else if(pedido.getPeso() >= 15)
 		 {
 			 precioPeso = 4;
 		 }
-		 else if (this.pesoPaquete >= 40)
+		 else if (pedido.getPeso() >= 40)
 		 {
 			 precioPeso = 8;
 		 }
@@ -138,6 +140,17 @@ public class GestionPedidos {
 		 
 		precio = 6 + precioUrgencia + precioPeso;
 		
-		this.precio = precio;
+		pedido.setPrecio(precio);
+	 }
+	 
+	 public void crearPuntoDeControl(TPedido pedido)
+	 {
+		 TPControl puntoControl = new TPControl("En el almacen de la sucursal inicial" ,Localizacion.SUCURSAL_INICIO, EstadoActual.NOENVIADO);
+		 
+		 pedido.setPControl(puntoControl);
+	 }
+	 public void crearPedido(TPedido pedido)
+	 {
+		 negocioPedido.Añadir(pedido, pedido.getId());
 	 }
 }

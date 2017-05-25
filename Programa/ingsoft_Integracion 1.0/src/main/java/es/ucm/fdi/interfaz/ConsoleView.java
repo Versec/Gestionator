@@ -111,7 +111,7 @@ public class ConsoleView {
 			
 			TPedido pedido =  new TPedido(cliente, repartidor, true, receptor, null,
 								MetPago.parsearPago(n), sucursalEnvio, sucursalLlegada,
-								TipoEnvio.parsearTipoEnvio(urgencia), null, 0, peso);
+								TipoEnvio.parsearTipoEnvio(urgencia), null, 0);
 			
 			
 			
@@ -121,7 +121,7 @@ public class ConsoleView {
 			}
 			else
 			{
-				if (this.gPedidos.AñadirPedido(pedido)
+				if (this.gPedidos.AñadirPedido(pedido))
 				{
 					System.out.println("Pedido creado correctamente");
 				}
