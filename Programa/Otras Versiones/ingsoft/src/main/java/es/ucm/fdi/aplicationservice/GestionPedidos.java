@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 
 
+
 /*
 import es.ucm.fdi.datos.BDSucusales;
 import es.ucm.fdi.datos.MetodoDePago;
@@ -17,7 +18,7 @@ import es.ucm.fdi.negocio.BuisnessPedido;
 
 public class GestionPedidos {
  
-	private /*TCliente*/ String emisor;
+	private TCliente emisor;
 	private int repartidor;
 	private boolean pagado;
 	private String receptor;
@@ -33,77 +34,93 @@ public class GestionPedidos {
 	private int precio;
 	private BuisnessPedido BOPedido;
 	
-	/**
-	 * Obtiene los datos introducidos por el usuario
-	 */
+	
 	
 	public GestionPedidos(BuisnessPedido BOPedido){
 		this.BOPedido = BOPedido;
 	}
 
 	
-	
+	/**
+	 * Inicializa los datos , seleciona los metodos de pago y urgencia
+	 * 
+	 * @param nombreCliente
+	 * @param receptor
+	 * @param MPago
+	 * @param dirSEnvio
+	 * @param dirSLlegada
+	 * @param peso
+	 * @param Urgencia
+	 */
 	public void obtencionDeDatos(String nombreCliente,String receptor,int MPago,
 			String dirSEnvio, String dirSLlegada, int peso, int Urgencia)
 	{
-		/*String nombreCliente, DNICliente, direccionCliente;
 		
-		nombreCliente = sc.nextLine();
-		DNICliente =sc.nextLine();
-		direccionCliente =sc.nextLine();*/
-		
-		//this.emisor = new TCliente(nombreCliente, DNICliente, direccionCliente);
-		this.emisor = nombreCliente;
+	
 		this.receptor = receptor;
-		//int MPago = sc.nextInt();
+		
+		
 		switch(MPago)
 		{
-			case 1: 
+			case 1:
 				metPago = es.ucm.fdi.integracion.MetodoDePago.Efectivo;
+				break;
 			case 2:
 				metPago = es.ucm.fdi.integracion.MetodoDePago.Contrarembolso;
+				break;
 			case 3:
 				metPago = es.ucm.fdi.integracion.MetodoDePago.Transferencia;
+				break;
+			default: 
+				metPago = null;
 		}
 		this.dirSucursalEnvio = dirSEnvio;
 		this.dirSucursalLlegada = dirSLlegada;
 		this.pesoPaquete = peso;
 		switch(Urgencia)
 		{
-		case 1:
-			this.UrgenciaPaquete = TipoDeEnvio.Normal;
+			case 1:
+				this.UrgenciaPaquete = TipoDeEnvio.Normal;
+				break;
 		
-		case 2:
-			this.UrgenciaPaquete = TipoDeEnvio.Urgente;
+			case 2:
+				this.UrgenciaPaquete = TipoDeEnvio.Urgente;
+				break;
+			default:
+				this.UrgenciaPaquete = null;
+			
 		}
 	}
-	/*public void AltaPedido()
-	{
-	 
-	 
-	}*/
 	/**
 	 *  Valida los datos introduciodos por el usuario
-	 * @return 
+	 * @return retorna un booleano siendo false si algun dato introducido no es correcto
 	 */
 	 public boolean ValidarDatos() 
 	 {
 		 boolean datosCorrectos = true;
-		 if (!this.emisor.equals(this.emisor.toString()))
+		 if (emisor.getNombre().matches("[0-9]*") || emisor.getDNI().matches("[0-9]*"))
 		 {
 	    	datosCorrectos = false;
 		 }
-		 if (!this.receptor.equals(this.receptor.toString()))
+		 if (!this.receptor.equals(this.receptor.toString())|| receptor.matches("[0-9]*"))
 		 {
 		    	datosCorrectos = false;
 		 }
-		/* if (!this.dirSucursalEnvio.equals(this.dirSucursalEnvio.toString()))
+		 if (!this.dirSucursalEnvio.equals(this.dirSucursalEnvio.toString()))
 		 {
 			 datosCorrectos = false;
 		 }if (!this.dirSucursalLlegada.equals(this.dirSucursalLlegada.toString()))
 		 {
 			 datosCorrectos = false;
-		 }*/
+		 }
+		 if (this.metPago == null)
+		 {
+			 datosCorrectos = false;
+		 }
+		 if(this.UrgenciaPaquete == null)
+		 {
+			 datosCorrectos = false;
+		 }
 			 
 	    return datosCorrectos;	
 	  }
@@ -111,15 +128,16 @@ public class GestionPedidos {
 	  * Mediate el nombre de las sucursales dadas por en usuario se 
 	  * obtiene sus ID para la codificacion del pedido
 	  */
-	 public void buscarSucursal( BDMemoria<TSucursal> tablaSucursales)
-	 { 
+	 public void buscarSucursal()
+	 {  
+		 BDMemoria<TSucursal> tablaSucursales = new BDMemoria<TSucursal>();
 		 this.SucursalLlegada = tablaSucursales.find(this.dirSucursalLlegada);
 		 this.SucursalEnvio = tablaSucursales.find(this.dirSucursalEnvio);
 	 }
 	 /**
 	  *  Calcula el precio final del servicio de envio mediante la urgencia del paquete 
 	  *  y su peso
-	  * @return preio del servicio
+	  * @return precio del servicio
 	  */
 	 public void CalculoDeTarifas()
 	 {
@@ -165,29 +183,34 @@ public class GestionPedidos {
 		 BOPedido.Añadir(newPedido, this.codigo);
 		 
 	 }
+	 /**
+	  * Crea un punto de control a partir del estado y la localizacion del pedido
+	  */
 	 public void crearPuntoControl()
 	 {
 		 es.ucm.fdi.integracion.TPControl newPuntoControl = new es.ucm.fdi.integracion.TPControl(EstadoPedido.Almacen, Localizacion.SUCURSAL_INICIO);
 		 
 		 this.puntoControl =newPuntoControl;
 	 }
-	/* public void RegistrarCliente()
+	public void RegistrarCliente(String nombre, String DNI, int telf)
 	 {
-	 }*/
+		this.emisor = new TCliente(nombre, DNI, telf);
+	 }
 	 
-	 public boolean AñadirPedido(String nombreCliente,String emisor,int MPago,
-				String dirSEnvio, String dirSLlegada, int peso, BDMemoria<TSucursal> tablaSucursales, int urgencia)
+	 public boolean AñadirPedido(String nombreCliente, String DNICliente, int telefonoCliente,String receptor,int MPago,
+				String dirSEnvio, String dirSLlegada, int peso, /*BDMemoria<TSucursal> tablaSucursales,*/ int urgencia)
 	 {
  
-		obtencionDeDatos(nombreCliente, emisor,MPago, dirSEnvio, dirSLlegada, peso,urgencia);
+		RegistrarCliente(nombreCliente, DNICliente, telefonoCliente);
+		obtencionDeDatos(nombreCliente, receptor,MPago, dirSEnvio, dirSLlegada, peso,urgencia);
 	    	
 	    	if (ValidarDatos())
 	    	{
 	    		
 	    		//llamar a la creacion del codigo; 
-	    		ponerCodigo(nombreCliente, emisor, peso);
+	    		ponerCodigo(nombreCliente, receptor, peso);
 	    		CalculoDeTarifas();
-	    		buscarSucursal(tablaSucursales);
+	    		buscarSucursal(/*tablaSucursales*/);
 	    		crearPuntoControl();
 	    		//Comprobar que el pago se ha realizado correctamente(if (correcto) insetro el pedido en la base de datos)
 	    		crearPedido();

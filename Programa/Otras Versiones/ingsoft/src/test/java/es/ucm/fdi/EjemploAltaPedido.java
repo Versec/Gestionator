@@ -7,6 +7,7 @@ import es.ucm.fdi.integracion.DAOPedido;
 import es.ucm.fdi.integracion.EstadoPedido;
 import es.ucm.fdi.integracion.Localizacion;
 import es.ucm.fdi.integracion.MetodoDePago;
+import es.ucm.fdi.integracion.TCliente;
 import es.ucm.fdi.integracion.TPControl;
 import es.ucm.fdi.integracion.TPedido;
 import es.ucm.fdi.integracion.TSucursal;
@@ -43,16 +44,15 @@ public class EjemploAltaPedido
 		assertTrue("La BD debía estar vacía y tiene elementos. \n", pedido.getIds().isEmpty());
 		
 		//inserto nuevos pedidos
+		TCliente cliente1 = new TCliente("Fulgencio", "54068569U", 968515681);
 		
-		TPedido pedidoPrueba = new TPedido("Fulgencio",5, true, "Alvaro", "256877" ,MetodoDePago.Efectivo, new TSucursal("28", "Valencia", "Desconocida" , 26841),
+		TPedido pedidoPrueba = new TPedido(cliente1,5, true, "Alvaro", "256877" ,MetodoDePago.Efectivo, new TSucursal("28", "Valencia", "Desconocida" , 26841),
 				new TSucursal("28", "Madrid", "Desconocida" , 24811),TipoDeEnvio.Urgente, new TPControl(EstadoPedido.Almacen, Localizacion.SUCURSAL_INICIO),58);
 		
 		daoPedido.add(pedidoPrueba, "2897"); //cambiar codigo a un int
 		
 		assertTrue("La base de datos contiene un elemento",pedido.getIds().size()==1);
-		
-		
-		
+
 	}
 	/**
 	 * Test para comprobar la correcta inserccion de datos mediante los BO
@@ -65,9 +65,12 @@ public class EjemploAltaPedido
 		
 		
 		
-		assertTrue("La base de datos deberia estar vacia y tiene elementos. \n", pedido.getIds().isEmpty());
+		assertTrue("La base de datos deberia estar vacia y tiene elementos. \n"
+				, pedido.getIds().isEmpty());
 		
-		TPedido pedido1 = new TPedido("Magdalena", 2, true, "Random", "1111", MetodoDePago.Contrarembolso, new TSucursal("123", "Yo", "Calle Oculta", 1234),
+		TCliente cliente2 = new TCliente("Magdalena", "54015569Z", 968515681);
+		
+		TPedido pedido1 = new TPedido(cliente2, 2, true, "Random", "1111", MetodoDePago.Contrarembolso, new TSucursal("123", "Yo", "Calle Oculta", 1234),
 				new TSucursal("123", "El", "Calle Torrijos", 2345), TipoDeEnvio.Normal, new TPControl(EstadoPedido.Perdido, Localizacion.SUCURSAL_INICIO), 9);	
 		
 		DAOPedido daoPedido1 = new DAOPedido(pedido);
@@ -81,7 +84,7 @@ public class EjemploAltaPedido
 		
 		assertTrue("La BD debe tener al menos un elemento. \n" , pedido.getIds().size()==1);
 		
-		TPedido pedido2 = new TPedido("Magdalena", 2, true, "Random", "1112", MetodoDePago.Contrarembolso, new TSucursal("123", "Yo", "Calle Oculta", 1234),
+		TPedido pedido2 = new TPedido(cliente2, 2, true, "Random", "1112", MetodoDePago.Contrarembolso, new TSucursal("123", "Yo", "Calle Oculta", 1234),
 				new TSucursal("123", "El", "Calle Torrijos", 2345), TipoDeEnvio.Normal, new TPControl(EstadoPedido.Perdido, Localizacion.SUCURSAL_INICIO), 9);
 		
 		DAOPedido daoPedido2 = new DAOPedido(pedido);
@@ -121,12 +124,13 @@ public class EjemploAltaPedido
 		
 		assertTrue("La BD de sucursales tiene dos sucursales", tablaSucursales.getIds().size() == 2);
 		
+		TCliente cliente2 = new TCliente("Magdalena", "54015569Z", 968515681);
 		
-		GPedido.AñadirPedido("Manuela", "ALfredo", 2, "42", "43", 40,tablaSucursales,1);
+		GPedido.AñadirPedido("Manuela", "54015569Z",  968515681, "ALfredo", 3, "42", "43", 40,1);
 		
 		assertTrue("La BD debe tener al menos un elemento. \n" , pedido.getIds().size()==1);
-		GPedido.AñadirPedido("Manuela", "nop", 1, "42", "43", 82,tablaSucursales,0);
-		GPedido.AñadirPedido("Manuela", "fredo", 0, "42", "43", 7,tablaSucursales,1);
+		GPedido.AñadirPedido("Manuela", "54015569Z",  968515681, "nop", 2, "42", "43", 82,1);
+		GPedido.AñadirPedido("Manuela", "54015569Z",  968515681, "fredo", 1, "42", "43", 7,2);
 		
 		assertTrue("La base de datos contiene tres elementos",pedido.getIds().size()==3);
 		
@@ -134,7 +138,39 @@ public class EjemploAltaPedido
 	
 		
 	}
-	
+	public void testFalloAltaPedidoGestionPedidos()
+	{
+		BDMemoria<TPedido> pedido=new BDMemoria<TPedido>();
+		BDMemoria<TSucursal> tablaSucursales = new BDMemoria<TSucursal>();
+		
+		assertTrue("La base de datos deberia estar vacia y tiene elementos. \n", pedido.getIds().isEmpty());
+		
+		DAOPedido daoPedido2 = new DAOPedido(pedido);
+		BuisnessPedido BOPedido1 = new BuisnessPedido(daoPedido2);
+		
+		GestionPedidos GPedido = new GestionPedidos(BOPedido1);
+		
+		//Comprobacion mal tipoDePago
+		
+		GPedido.AñadirPedido("Manuela", "54015569Z",  968515681, "Alfredo", 4, "42", "43", 40,1);
+		
+		assertTrue("La base de datos deberia estar vacia al haber introducido un tipo de pago no valido. \n", pedido.getIds().isEmpty());
+		
+		//comprobacion que el emisor y receptor no deben contener numeros
+		
+		GPedido.AñadirPedido("2", "54015569Z",  968515681, "Alfredo", 1, "42", "43", 40,1);
+		GPedido.AñadirPedido("Alfredo", "54015569Z",  968515681, "2", 1, "42", "43", 40,1);
+		assertTrue("La base de datos deberia estar vacia al haber introducido mal el emisor o el receptor. \n", pedido.getIds().isEmpty());
+		
+		//Comprobar que el DNI sea correcto
+		GPedido.AñadirPedido("Alfredo", "540155698",  968515681, "2", 1, "42", "43", 40,1);
+		assertTrue("La base de datos deberia estar vacia al haber introducido mal el DNI. \n", pedido.getIds().isEmpty());
+		
+		
+		//Comprobacion mal tipoDeEnvio
+		GPedido.AñadirPedido("Manuela", "54015569Z",  968515681, "Alfredo", 1, "42", "43", 40,8);
+		assertTrue("La base de datos deberia estar vacia al haber introducido un tipo de envio no valido. \n", pedido.getIds().isEmpty());
+	}
 	//Añadir test fallo por inpago
 		
 }

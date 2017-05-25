@@ -4,14 +4,40 @@ public class TCliente {
 
 	private String Nombre;
 	private String DNI;
-	private String  Direccion;
+	private int Telefono;
 	
 	
-	public TCliente(String Nombre,String DNI,String Direccion)
+	
+	public TCliente(String Nombre,String DNI,int Telefono)
 	{
 		this.Nombre = Nombre;
 		this.DNI =DNI;
-		this.Direccion = Direccion;
+		this.Telefono = Telefono;
+	}
+	
+	public String getNombre()
+	{
+		return this.Nombre;
+	}
+	public String getDNI()
+	{
+		return this.DNI;
+	}
+	public int getTelefono()
+	{
+		return this.Telefono;
+	}
+	public void setNombre(String Nombre)
+	{
+		this.Nombre =Nombre;
+	}
+	public void setDNI(String DNI)
+	{
+		this.DNI = DNI;
+	}
+	public void setTelefono(int tel)
+	{
+		this.Telefono = tel;
 	}
 	
 	

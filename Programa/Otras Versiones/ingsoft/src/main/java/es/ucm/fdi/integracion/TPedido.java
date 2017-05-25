@@ -3,7 +3,7 @@ package es.ucm.fdi.integracion;
 
 public class TPedido {
 
-	private String emisor;
+	private TCliente emisor;
 	private int repartidor;
 	private boolean pagado;
 	private String receptor;
@@ -16,7 +16,7 @@ public class TPedido {
 	private int precioServicio;
 	
 	
-	public TPedido(String emisor,int repartidor,boolean pagado,
+	public TPedido(TCliente emisor,int repartidor,boolean pagado,
 			String receptor,String codigo,MetodoDePago metPago2,
 			TSucursal SucursalSalida,TSucursal SucursalLlegada,
 			TipoDeEnvio urgenciaPaquete,TPControl puntoControl,int precio)
@@ -38,8 +38,8 @@ public class TPedido {
 		this.repartidor=repartidor;
 	}
 	
-	public void setEmisor(String emisor, String DNI, String Direccion){
-		this.emisor = emisor;//new TCliente(emisor, DNI, Direccion);
+	public void setEmisor(TCliente emisor){
+		this.emisor = emisor;
 	}
 
 
@@ -78,7 +78,7 @@ public class TPedido {
 	
 	
 	//Getters
-	public String getEmisor(){
+	public TCliente getEmisor(){
 		return this.emisor;
 	}
 	
