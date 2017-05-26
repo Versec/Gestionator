@@ -2,10 +2,12 @@ package es.ucm.fdi.aplicationservice;
 
 import java.util.Date;
 
+import java.util.Calendar;
 import es.ucm.fdi.integracion.DAOPedido;
 import es.ucm.fdi.integracion.DAOSucursal;
 import es.ucm.fdi.integracion.EstadoActual;
 import es.ucm.fdi.integracion.Localizacion;
+import es.ucm.fdi.integracion.MetPago;
 import es.ucm.fdi.integracion.TPControl;
 import es.ucm.fdi.integracion.TPedido;
 import es.ucm.fdi.integracion.TSucursal;
@@ -69,8 +71,10 @@ public class GestionPedidos {
     		ponerCodigo(pedido);
     		CalculoDeTarifas(pedido);
     		crearPuntoDeControl(pedido);
-    		//Comprobar que el pago se ha realizado correctamente(if (correcto) insetro el pedido en la base de datos)
-    		crearPedido(pedido);
+    		if (pedido.getPagado())
+    		{
+    			crearPedido(pedido);
+    		}
     	}
     	else
     	{
@@ -153,4 +157,117 @@ public class GestionPedidos {
 	 {
 		 negocioPedido.Añadir(pedido, pedido.getId());
 	 }
+	  public boolean realizarPagoEfectivo(TPedido pedido, String linea){
+		
+		 boolean pagado = false;
+			   //El encargado pone "si" en la aplicaciÃ³n, si el cliente ha efectuado el pago
+			 
+				if(compruebaEntrada(linea)){
+					pagado = chequeaRespuesta(linea); 
+				}
+				pedido. setPagado(pagado);
+				return true;
+		   }
+		public boolean chequeaRespuesta(String valor) {
+			boolean correcto;
+			
+			if (valor.equalsIgnoreCase("si")){
+				 correcto = true;
+			}else 
+			{
+				correcto = false;
+			}
+			return correcto;
+		}
+		public boolean compruebaEntrada(String valor)
+		{
+			return (valor.equalsIgnoreCase("si") || valor.equalsIgnoreCase("no"));
+		}
+		public boolean realizarPagoTransferecia(TPedido pedido, String numTj, String cadTj, String cvcTj){
+
+			boolean salida = false;
+				   do {
+					   if (numTj.equalsIgnoreCase("x"))
+						   salida = true;
+				   } while ( !validarTarjeta(numTj) && !salida );
+				   
+				   if (!salida) {
+					   
+					   do {
+						   if (cadTj.equalsIgnoreCase("x"))
+							   salida = true;
+					   } while ( !validarFechaCaducidad(cadTj) && !salida );
+				   }
+				   
+				   if (!salida) {
+					   
+					   do {
+						   if (cvcTj.equalsIgnoreCase("x"))
+							   salida = true;
+					   } while ( !validarCvc(cvcTj) && !salida );
+				   }
+				   
+				   if (!salida)
+				   {
+					   pedido.setPagado(!salida);
+				   }
+			return salida;
+		}
+		   public boolean validarTarjeta(String numTj){
+			   int i;
+			   boolean valido = false;
+			   if (numTj.length() == 16){
+				   valido=true;
+				   for (i=0; i!= 16; i++) {
+					   valido = valido && (numTj.charAt(i) >='0' && numTj.charAt(i) <= '9');
+				   }   return valido;
+			   }
+			   
+			
+			   
+		   return valido;
+		   
+	   }
+		   /*Comprueba la fecha de caducidad de la tarjeta*/
+		   public boolean validarFechaCaducidad(String cadTj){
+			  
+			   String[] fecha = cadTj.split("/");
+			   Calendar fechaActual = Calendar.getInstance();
+			   int mesAct = fechaActual.get(Calendar.MONTH)+1;
+			   int agnoAct =fechaActual.get(Calendar.YEAR)%100;
+			   
+			   if (fecha.length == 2){
+					 
+				   try{
+				   		int agnoFecha  = Integer.parseInt(fecha[1]);
+				   		int mesFecha =	Integer.parseInt(fecha[0]);	
+				   		if ((agnoFecha > agnoAct) || (agnoFecha == agnoAct && mesFecha >= mesAct)){
+				   			
+				   			return true;}
+				   } catch (NumberFormatException nfe) {
+					   return false;
+				   }
+			   }
+			   return false;		   
+		   }
+		   /*Comprueba que se introduzca 3 digitos de cvc*/
+		   public boolean validarCvc (String cvcTj){
+			  
+			   if (cvcTj.length() == 3){
+				   try {
+						Integer.parseInt(cvcTj);
+						return true;
+					} catch (NumberFormatException nfe) {
+						return false;
+					}
+			   }
+			   
+			   return false;
+			   
+		   }
+		   
+		   
+			   
+
+		
 }

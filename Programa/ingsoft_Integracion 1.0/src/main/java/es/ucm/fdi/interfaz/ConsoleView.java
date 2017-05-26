@@ -5,6 +5,7 @@ import java.util.Scanner;
 import es.ucm.fdi.aplicationservice.GestionPedidos;
 import es.ucm.fdi.integracion.Localizacion;
 import es.ucm.fdi.integracion.MetPago;
+import es.ucm.fdi.integracion.MetodoDePago;
 import es.ucm.fdi.integracion.TCliente;
 import es.ucm.fdi.integracion.TPedido;
 import es.ucm.fdi.integracion.TSucursal;
@@ -107,14 +108,59 @@ public class ConsoleView {
 			TCliente cliente = new TCliente(nombre, DNI, telefono);
 			TSucursal sucursalEnvio = gPedidos.buscarSucursal(dirEnvio);
 			TSucursal sucursalLlegada = gPedidos.buscarSucursal(dirLlegada);
+			MetPago tPago = MetPago.parsearPago(n);
 			
-			
-			TPedido pedido =  new TPedido(cliente, repartidor, true, receptor, null,
-								MetPago.parsearPago(n), sucursalEnvio, sucursalLlegada,
+			TPedido pedido =  new TPedido(cliente, repartidor, false, receptor, null,
+					tPago, sucursalEnvio, sucursalLlegada,
 								TipoEnvio.parsearTipoEnvio(urgencia), null, 0);
 			
 			
-			
+			if (tPago == MetPago.EFECTIVO)
+			{
+				String pago;
+				
+				System.out.println("¿Se ha efectuado el pago en efectivo?Si/No");
+				pago  = leer.nextLine();
+				
+				gPedidos.realizarPagoEfectivo(pedido, pago);
+				
+			}
+			else if (tPago == MetPago.TRASFERNCIA)
+			{
+				String fecha, CVC, numTarjeta;
+				
+				System.out.println("Introduzca su nÃºmero de tarjeta de crÃ©dito o x para cancelar");
+				numTarjeta = leer.nextLine().toLowerCase();
+				   
+				System.out.println("Introduzca fecha de caducidad de la tarjeta o x para cancelar");
+				fecha  = leer.nextLine().toLowerCase();
+				   
+				 System.out.println("Introduzca el CVC de la tarjeta o x para cancelar");
+				 CVC = leer.nextLine().toLowerCase();
+				
+				 if (gPedidos.realizarPagoTransferecia(pedido, numTarjeta, fecha, CVC))
+				 {
+					   System.out.println("Se ha efectuado la transferencia");
+				 }  
+				 else
+				 {
+					 System.out.println("El pago ha sido cancelado");
+				 } 
+			}
+				
+			else if (tPago == MetPago.CONTRA_REEMBOLSO)
+			{
+				String pago;
+				
+				System.out.println("¿Se ha efectuado el pago tras la entrega?Si/No");
+				pago  = leer.nextLine();
+				
+				gPedidos.realizarPagoEfectivo(pedido, pago);
+				
+			}
+				
+
+		
 			if (sucursalEnvio == null || sucursalLlegada == null)
 			{
 				System.out.println("Sucursales no encontradas");

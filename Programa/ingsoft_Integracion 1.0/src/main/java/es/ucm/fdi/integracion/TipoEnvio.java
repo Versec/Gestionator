@@ -7,8 +7,6 @@ public enum TipoEnvio {
 	
 	public static TipoEnvio parsearTipoEnvio(int n)
 	{
-		
-		
 		TipoEnvio modo;
 		switch(n)
 		{

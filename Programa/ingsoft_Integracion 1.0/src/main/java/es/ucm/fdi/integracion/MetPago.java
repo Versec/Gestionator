@@ -3,12 +3,11 @@ package es.ucm.fdi.integracion;
 public enum MetPago {
 	
 	TRASFERNCIA,
-	CONTRA_REEMBOLSO;
+	CONTRA_REEMBOLSO,
+	EFECTIVO;
 	
 	public static MetPago parsearPago(int n)
 	{
-		
-		
 		MetPago modo;
 		switch(n)
 		{
@@ -18,6 +17,8 @@ public enum MetPago {
 		case 2:
 			modo = MetPago.CONTRA_REEMBOLSO;
 			break;
+		case 3:
+			modo = MetPago.EFECTIVO;
 		default: 
 			modo = null;
 		}
