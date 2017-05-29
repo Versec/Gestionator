@@ -1422,7 +1422,7 @@
             <children xmi:type="notation:SemanticListCompartment" xmi:id="_1hbpEBOVEeeE_tvlNdNSSw" type="OperationCompartment"/>
             <children xmi:type="notation:SemanticListCompartment" xmi:id="_1hcQIBOVEeeE_tvlNdNSSw" visible="false" type="SignalCompartment"/>
             <children xmi:type="umlnotation:UMLShapeCompartment" xmi:id="_1hcQIROVEeeE_tvlNdNSSw" visible="false" type="StructureCompartment"/>
-            <element xmi:type="uml:Class" href="platform:/resource/Application%20service/ApplicationService.emx#_1hUUUBOVEeeE_tvlNdNSSw"/>
+            <element xmi:type="uml:Class" href="platform:/resource/Application%20service/ApplicationService.emx#_1hUUUBOVEeeE_tvlNdNSSw?Blank%20Package/Empleado?"/>
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_1hYlwROVEeeE_tvlNdNSSw" x="7656" y="9372" width="4572" height="2403"/>
           </children>
           <children xmi:type="umlnotation:UMLShape" xmi:id="_6uUvQBOWEeeE_tvlNdNSSw" fontName="Segoe UI" fontHeight="8" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
@@ -1440,7 +1440,7 @@
             </children>
             <children xmi:type="notation:SemanticListCompartment" xmi:id="_6uYZoBOWEeeE_tvlNdNSSw" visible="false" type="SignalCompartment"/>
             <children xmi:type="umlnotation:UMLShapeCompartment" xmi:id="_6uZAsBOWEeeE_tvlNdNSSw" visible="false" type="StructureCompartment"/>
-            <element xmi:type="uml:Class" href="platform:/resource/Application%20service/ApplicationService.emx#_6uRE4BOWEeeE_tvlNdNSSw"/>
+            <element xmi:type="uml:Class" href="platform:/resource/Application%20service/ApplicationService.emx#_6uRE4BOWEeeE_tvlNdNSSw?Blank%20Package/Pedido?"/>
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_6uUvQROWEeeE_tvlNdNSSw" x="7920" y="528" width="4573" height="4202"/>
           </children>
           <children xmi:type="umlnotation:UMLShape" xmi:id="_8p2AwBOWEeeE_tvlNdNSSw" fontName="Segoe UI" fontHeight="8" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
@@ -1454,7 +1454,7 @@
             <children xmi:type="notation:SemanticListCompartment" xmi:id="_8p5EEBOWEeeE_tvlNdNSSw" type="OperationCompartment"/>
             <children xmi:type="notation:SemanticListCompartment" xmi:id="_8p5rIBOWEeeE_tvlNdNSSw" visible="false" type="SignalCompartment"/>
             <children xmi:type="umlnotation:UMLShapeCompartment" xmi:id="_8p6SMBOWEeeE_tvlNdNSSw" visible="false" type="StructureCompartment"/>
-            <element xmi:type="uml:Class" href="platform:/resource/Application%20service/ApplicationService.emx#_8pyWYBOWEeeE_tvlNdNSSw"/>
+            <element xmi:type="uml:Class" href="platform:/resource/Application%20service/ApplicationService.emx#_8pyWYBOWEeeE_tvlNdNSSw?Blank%20Package/Sucursal?"/>
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_8p2AwROWEeeE_tvlNdNSSw" x="7656" y="5412" width="4705" height="2085"/>
           </children>
           <children xmi:type="umlnotation:UMLShape" xmi:id="_Dfr60CQ4EeeSRvhOaNa7nA" element="_DYPPACQ4EeeSRvhOaNa7nA" fontName="Segoe UI" fontHeight="8" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
@@ -1563,20 +1563,34 @@
         <ownedOperation xmi:id="_VZRykCQ4EeeSRvhOaNa7nA" name="BajaPedido">
           <ownedParameter xmi:id="_46b_MDSlEeebz4fuew1smA" name="ID"/>
         </ownedOperation>
-        <ownedOperation xmi:id="_XTQzACQ4EeeSRvhOaNa7nA" name="AltaPedido"/>
+        <ownedOperation xmi:id="_XTQzACQ4EeeSRvhOaNa7nA" name="AltaPedido">
+          <ownedParameter xmi:id="_LBfDoESKEeeDzde-nZXDfg" name="pedido" type="_fEExkCmWEeeFA_Z-fScJKQ"/>
+        </ownedOperation>
         <ownedOperation xmi:id="_YwpXACQ4EeeSRvhOaNa7nA" name="CodificacionPedido">
           <ownedParameter xmi:id="_A-iYgDSmEeebz4fuew1smA" name="TPedido"/>
         </ownedOperation>
-        <ownedOperation xmi:id="_bW3yYCQ4EeeSRvhOaNa7nA" name="PagarPedido"/>
+        <ownedOperation xmi:id="_bW3yYCQ4EeeSRvhOaNa7nA" name="PagarPedido">
+          <ownedParameter xmi:id="_U4EuQESKEeeDzde-nZXDfg" name="pedido" type="_fEExkCmWEeeFA_Z-fScJKQ"/>
+        </ownedOperation>
         <ownedOperation xmi:id="_dmGDACQ4EeeSRvhOaNa7nA" name="ActualizarPedido">
           <ownedParameter xmi:id="_asmE8EFFEeeVVsWPwXq9Yw" name="ID"/>
           <ownedParameter xmi:id="_RxLEsDSlEeebz4fuew1smA" name="PuntoControl"/>
         </ownedOperation>
-        <ownedOperation xmi:id="_SemEUERcEeerCNPWJw7whw" name="ValidarDatos"/>
-        <ownedOperation xmi:id="_VllqcERcEeerCNPWJw7whw" name="PonerCodigo"/>
-        <ownedOperation xmi:id="_Z7t9MERcEeerCNPWJw7whw" name="CalculoDeTarifas"/>
-        <ownedOperation xmi:id="_eoM6cERcEeerCNPWJw7whw" name="CrearPuntoDeControl"/>
-        <ownedOperation xmi:id="_nRBKYERcEeerCNPWJw7whw" name="CrearPedido"/>
+        <ownedOperation xmi:id="_SemEUERcEeerCNPWJw7whw" name="ValidarDatos">
+          <ownedParameter xmi:id="_j44bAESKEeeDzde-nZXDfg" name="pedido" type="_fEExkCmWEeeFA_Z-fScJKQ"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_VllqcERcEeerCNPWJw7whw" name="PonerCodigo">
+          <ownedParameter xmi:id="_h1rNIESKEeeDzde-nZXDfg" name="pedido" type="_fEExkCmWEeeFA_Z-fScJKQ"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_Z7t9MERcEeerCNPWJw7whw" name="CalculoDeTarifas">
+          <ownedParameter xmi:id="_o8_OEESKEeeDzde-nZXDfg" name="pedido" type="_fEExkCmWEeeFA_Z-fScJKQ"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_eoM6cERcEeerCNPWJw7whw" name="CrearPuntoDeControl">
+          <ownedParameter xmi:id="_l8ss4ESKEeeDzde-nZXDfg" name="pedido" type="_fEExkCmWEeeFA_Z-fScJKQ"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_nRBKYERcEeerCNPWJw7whw" name="CrearPedido">
+          <ownedParameter xmi:id="_QiCiIESKEeeDzde-nZXDfg" name="pedido" type="_fEExkCmWEeeFA_Z-fScJKQ"/>
+        </ownedOperation>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="_SwkToCQnEeeft8ZT3Q704Q" name="Negocio" clientDependency="_9mUTQCmTEeeO0vg74AqJCA">
         <eAnnotations xmi:id="_SwlhwCQnEeeft8ZT3Q704Q" source="uml2.diagrams" references="_h0VSsCmWEeeO0vg74AqJCA">
@@ -1592,7 +1606,7 @@
               <children xmi:type="notation:SemanticListCompartment" xmi:id="_B1CheCQ5EeeSRvhOaNa7nA" type="OperationCompartment"/>
               <children xmi:type="notation:SemanticListCompartment" xmi:id="_B1CheSQ5EeeSRvhOaNa7nA" visible="false" type="SignalCompartment"/>
               <children xmi:type="umlnotation:UMLShapeCompartment" xmi:id="_B1CheiQ5EeeSRvhOaNa7nA" visible="false" type="StructureCompartment"/>
-              <element xmi:type="uml:Class" href="platform:/resource/Application%20service/ApplicationService.emx#_1hUUUBOVEeeE_tvlNdNSSw"/>
+              <element xmi:type="uml:Class" href="platform:/resource/Application%20service/ApplicationService.emx#_1hUUUBOVEeeE_tvlNdNSSw?Blank%20Package/Empleado?"/>
               <layoutConstraint xmi:type="notation:Bounds" xmi:id="_B1CheyQ5EeeSRvhOaNa7nA" x="7920" y="9372" width="4572" height="2403"/>
             </children>
             <children xmi:type="umlnotation:UMLShape" xmi:id="_B1ChfCQ5EeeSRvhOaNa7nA" fontName="Segoe UI" fontHeight="8" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
@@ -1610,7 +1624,7 @@
               </children>
               <children xmi:type="notation:SemanticListCompartment" xmi:id="_B1ChhiQ5EeeSRvhOaNa7nA" visible="false" type="SignalCompartment"/>
               <children xmi:type="umlnotation:UMLShapeCompartment" xmi:id="_B1ChhyQ5EeeSRvhOaNa7nA" visible="false" type="StructureCompartment"/>
-              <element xmi:type="uml:Class" href="platform:/resource/Application%20service/ApplicationService.emx#_6uRE4BOWEeeE_tvlNdNSSw"/>
+              <element xmi:type="uml:Class" href="platform:/resource/Application%20service/ApplicationService.emx#_6uRE4BOWEeeE_tvlNdNSSw?Blank%20Package/Pedido?"/>
               <layoutConstraint xmi:type="notation:Bounds" xmi:id="_B1ChiCQ5EeeSRvhOaNa7nA" x="7920" y="528" width="4573" height="4202"/>
             </children>
             <children xmi:type="umlnotation:UMLShape" xmi:id="_B1ChiSQ5EeeSRvhOaNa7nA" fontName="Segoe UI" fontHeight="8" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
@@ -1624,7 +1638,7 @@
               <children xmi:type="notation:SemanticListCompartment" xmi:id="_B1ChkCQ5EeeSRvhOaNa7nA" type="OperationCompartment"/>
               <children xmi:type="notation:SemanticListCompartment" xmi:id="_B1DIgCQ5EeeSRvhOaNa7nA" visible="false" type="SignalCompartment"/>
               <children xmi:type="umlnotation:UMLShapeCompartment" xmi:id="_B1DIgSQ5EeeSRvhOaNa7nA" visible="false" type="StructureCompartment"/>
-              <element xmi:type="uml:Class" href="platform:/resource/Application%20service/ApplicationService.emx#_8pyWYBOWEeeE_tvlNdNSSw"/>
+              <element xmi:type="uml:Class" href="platform:/resource/Application%20service/ApplicationService.emx#_8pyWYBOWEeeE_tvlNdNSSw?Blank%20Package/Sucursal?"/>
               <layoutConstraint xmi:type="notation:Bounds" xmi:id="_B1DIgiQ5EeeSRvhOaNa7nA" x="7788" y="5676" width="4705" height="2085"/>
             </children>
             <children xmi:type="umlnotation:UMLShape" xmi:id="_B1DIgyQ5EeeSRvhOaNa7nA" element="_DYPPACQ4EeeSRvhOaNa7nA" fontName="Segoe UI" fontHeight="8" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
@@ -2041,7 +2055,17 @@
         <ownedAttribute xmi:id="_PxGr4CmYEeeFA_Z-fScJKQ" name="ID" visibility="private">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
         </ownedAttribute>
-        <ownedOperation xmi:id="_kdxvQCmYEeeFA_Z-fScJKQ" name="TCliente"/>
+        <ownedOperation xmi:id="_kdxvQCmYEeeFA_Z-fScJKQ" name="TCliente">
+          <ownedParameter xmi:id="_jx7T4ESJEeeDzde-nZXDfg" name="nombre">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_uOxGMESJEeeDzde-nZXDfg" name="telefono">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://CSHARP_LIBRARIES/CSharpPrimitiveTypes.emx#_tsrm8W_rEduZYJFc9dH2KQ?CSharpPrimitiveTypes/int?"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_oHlskESJEeeDzde-nZXDfg" name="DNI">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
         <ownedOperation xmi:id="_lJEvACmYEeeFA_Z-fScJKQ" name="setNombre"/>
         <ownedOperation xmi:id="_lLmekCmYEeeFA_Z-fScJKQ" name="setID"/>
         <ownedOperation xmi:id="_lNYnQCmYEeeFA_Z-fScJKQ" name="getNombre"/>
@@ -2208,7 +2232,11 @@
         <ownedComment xmi:id="_VVg6cA4fEeeMBoBJ3xV9iA" annotatedElement="_yoAg8A4bEeeMBoBJ3xV9iA">
           <body>&lt;p>&lt;b>&lt;span style=&quot;font-size:12pt;&quot;>Ojo con esta clase&lt;/span>&lt;/b>&lt;/p></body>
         </ownedComment>
-        <ownedOperation xmi:id="_-OVQIERbEeerCNPWJw7whw" name="parsearPago"/>
+        <ownedOperation xmi:id="_-OVQIERbEeerCNPWJw7whw" name="parsearPago">
+          <ownedParameter xmi:id="_9_bikESJEeeDzde-nZXDfg" name="intPago">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://ROSE_LIBRARIES/RoseCppDatatypes.emx#_u7MYgFKdEdmRuMDTJ25wMw?RoseCppDatatypes/int?"/>
+          </ownedParameter>
+        </ownedOperation>
       </packagedElement>
       <packagedElement xmi:type="uml:Association" xmi:id="_09X10A4bEeeMBoBJ3xV9iA" memberEnd="_09hm0A4bEeeMBoBJ3xV9iA _09hm0w4bEeeMBoBJ3xV9iA">
         <ownedEnd xmi:id="_09hm0w4bEeeMBoBJ3xV9iA" name="" visibility="private" type="_OwPMYA4bEeeMBoBJ3xV9iA" association="_09X10A4bEeeMBoBJ3xV9iA">
@@ -2300,7 +2328,9 @@
         <ownedOperation xmi:id="_Cn1-UBOZEeeKgrYL_U4VWg" name="updateP.Control">
           <ownedParameter xmi:id="_QuJeQDShEeeqiPPWzihKfA" name="PedidoActualizado"/>
         </ownedOperation>
-        <ownedOperation xmi:id="_XFpRQBkVEeecMq752cHT1A" name="alta"/>
+        <ownedOperation xmi:id="_XFpRQBkVEeecMq752cHT1A" name="alta">
+          <ownedParameter xmi:id="_uPjT4ESKEeeDzde-nZXDfg" name="pedido" type="_fEExkCmWEeeFA_Z-fScJKQ"/>
+        </ownedOperation>
         <ownedOperation xmi:id="_ahUG4BkVEeecMq752cHT1A" name="baja"/>
         <ownedOperation xmi:id="_20fr0BkZEeecMq752cHT1A" name="ComprobacionDePago"/>
         <ownedOperation xmi:id="_zDsicBkTEeecMq752cHT1A" name="CalcTarifa"/>
@@ -2315,28 +2345,28 @@
         <ownedOperation xmi:id="_MxGp4BkWEeecMq752cHT1A" name="baja"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Dependency" xmi:id="_qAAbACmTEeeO0vg74AqJCA" client="_DYPPACQ4EeeSRvhOaNa7nA">
-        <supplier xmi:type="uml:Class" href="platform:/resource/Application%20service/ApplicationService.emx#_6uRE4BOWEeeE_tvlNdNSSw"/>
+        <supplier xmi:type="uml:Class" href="platform:/resource/Application%20service/ApplicationService.emx#_6uRE4BOWEeeE_tvlNdNSSw?Blank%20Package/Pedido?"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Dependency" xmi:id="_sJBV8CmTEeeO0vg74AqJCA" client="_DYPPACQ4EeeSRvhOaNa7nA">
-        <supplier xmi:type="uml:Class" href="platform:/resource/Application%20service/ApplicationService.emx#_8pyWYBOWEeeE_tvlNdNSSw"/>
+        <supplier xmi:type="uml:Class" href="platform:/resource/Application%20service/ApplicationService.emx#_8pyWYBOWEeeE_tvlNdNSSw?Blank%20Package/Sucursal?"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Dependency" xmi:id="_7uRXgCQ4EeeSRvhOaNa7nA" client="_DYPPACQ4EeeSRvhOaNa7nA">
-        <supplier xmi:type="uml:Class" href="platform:/resource/Application%20service/ApplicationService.emx#_8pyWYBOWEeeE_tvlNdNSSw"/>
+        <supplier xmi:type="uml:Class" href="platform:/resource/Application%20service/ApplicationService.emx#_8pyWYBOWEeeE_tvlNdNSSw?Blank%20Package/Sucursal?"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Dependency" xmi:id="_8FFVACQ4EeeSRvhOaNa7nA" client="_DYPPACQ4EeeSRvhOaNa7nA">
-        <supplier xmi:type="uml:Class" href="platform:/resource/Application%20service/ApplicationService.emx#_1hUUUBOVEeeE_tvlNdNSSw"/>
+        <supplier xmi:type="uml:Class" href="platform:/resource/Application%20service/ApplicationService.emx#_1hUUUBOVEeeE_tvlNdNSSw?Blank%20Package/Empleado?"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Dependency" xmi:id="_TuKP8CmbEeeO0vg74AqJCA" client="_DYPPACQ4EeeSRvhOaNa7nA">
-        <supplier xmi:type="uml:Class" href="platform:/resource/Application%20service/ApplicationService.emx#_6uRE4BOWEeeE_tvlNdNSSw"/>
+        <supplier xmi:type="uml:Class" href="platform:/resource/Application%20service/ApplicationService.emx#_6uRE4BOWEeeE_tvlNdNSSw?Blank%20Package/Pedido?"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Dependency" xmi:id="_Rab50CmbEeeO0vg74AqJCA" client="_DYPPACQ4EeeSRvhOaNa7nA">
-        <supplier xmi:type="uml:Class" href="platform:/resource/Application%20service/ApplicationService.emx#_8pyWYBOWEeeE_tvlNdNSSw"/>
+        <supplier xmi:type="uml:Class" href="platform:/resource/Application%20service/ApplicationService.emx#_8pyWYBOWEeeE_tvlNdNSSw?Blank%20Package/Sucursal?"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Dependency" xmi:id="_7UDgsCQ4EeeSRvhOaNa7nA" client="_DYPPACQ4EeeSRvhOaNa7nA">
-        <supplier xmi:type="uml:Class" href="platform:/resource/Application%20service/ApplicationService.emx#_6uRE4BOWEeeE_tvlNdNSSw"/>
+        <supplier xmi:type="uml:Class" href="platform:/resource/Application%20service/ApplicationService.emx#_6uRE4BOWEeeE_tvlNdNSSw?Blank%20Package/Pedido?"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Dependency" xmi:id="_9I1RACQ4EeeSRvhOaNa7nA" client="_OzysUCQ4EeeSRvhOaNa7nA">
-        <supplier xmi:type="uml:Class" href="platform:/resource/Application%20service/ApplicationService.emx#_1hUUUBOVEeeE_tvlNdNSSw"/>
+        <supplier xmi:type="uml:Class" href="platform:/resource/Application%20service/ApplicationService.emx#_1hUUUBOVEeeE_tvlNdNSSw?Blank%20Package/Empleado?"/>
       </packagedElement>
       <packagedElement xmi:type="uml:SendOperationEvent" xmi:id="_7zEUYCs9EeewQs8AISbgzw" name="SendOperationEvent1" operation="_dmGDACQ4EeeSRvhOaNa7nA"/>
       <packagedElement xmi:type="uml:ReceiveOperationEvent" xmi:id="_7zEUYSs9EeewQs8AISbgzw" name="ReceiveOperationEvent1" operation="_dmGDACQ4EeeSRvhOaNa7nA"/>
@@ -5400,7 +5430,7 @@
               <children xmi:type="notation:DecorationNode" xmi:id="_b9UokkRcEeerCNPWJw7whw" type="MessageNameLabel">
                 <children xmi:type="notation:BasicDecorationNode" xmi:id="_b9UolERcEeerCNPWJw7whw" type="Stereotype"/>
                 <children xmi:type="notation:BasicDecorationNode" xmi:id="_b9UolURcEeerCNPWJw7whw" type="Name"/>
-                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_b9Uok0RcEeerCNPWJw7whw" y="-317"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_b9Uok0RcEeerCNPWJw7whw" x="37" y="-2179"/>
               </children>
               <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_b9UokURcEeerCNPWJw7whw" points="[0, 0, 0, -26]$[0, 26, 0, 0]"/>
               <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_b9UolkRcEeerCNPWJw7whw" id="2044:476"/>
@@ -5410,7 +5440,7 @@
               <children xmi:type="notation:DecorationNode" xmi:id="_b9oKlERcEeerCNPWJw7whw" type="MessageNameLabel">
                 <children xmi:type="notation:BasicDecorationNode" xmi:id="_b9oKlkRcEeerCNPWJw7whw" type="Stereotype"/>
                 <children xmi:type="notation:BasicDecorationNode" xmi:id="_b9oKl0RcEeerCNPWJw7whw" type="Name"/>
-                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_b9oKlURcEeerCNPWJw7whw" y="-317"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_b9oKlURcEeerCNPWJw7whw" x="83" y="-2311"/>
               </children>
               <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_b9oKk0RcEeerCNPWJw7whw" points="[0, 0, 0, -10]$[0, 10, 0, 0]"/>
               <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_b9oKmERcEeerCNPWJw7whw" id="2111:767"/>
@@ -5678,7 +5708,11 @@
         <message xmi:id="_uRHJBURcEeerCNPWJw7whw" name="alta" messageSort="reply" receiveEvent="_uRHJBkRcEeerCNPWJw7whw" sendEvent="_uRHJBERcEeerCNPWJw7whw" connector="_uRHJB0RcEeerCNPWJw7whw"/>
         <message xmi:id="_12Um4ERcEeerCNPWJw7whw" name="Crear" receiveEvent="_12Um4kRcEeerCNPWJw7whw" sendEvent="_12Um4URcEeerCNPWJw7whw" connector="_12dw0ERcEeerCNPWJw7whw"/>
         <message xmi:id="_12Um5URcEeerCNPWJw7whw" name="Crear" messageSort="reply" receiveEvent="_12Um5kRcEeerCNPWJw7whw" sendEvent="_12Um5ERcEeerCNPWJw7whw" connector="_12dw0ERcEeerCNPWJw7whw"/>
-        <message xmi:id="_83YO0ERcEeerCNPWJw7whw" name="insert" receiveEvent="_83YO0kRcEeerCNPWJw7whw" sendEvent="_83YO0URcEeerCNPWJw7whw" connector="_83h_0ERcEeerCNPWJw7whw"/>
+        <message xmi:id="_83YO0ERcEeerCNPWJw7whw" name="insert" receiveEvent="_83YO0kRcEeerCNPWJw7whw" sendEvent="_83YO0URcEeerCNPWJw7whw" connector="_83h_0ERcEeerCNPWJw7whw">
+          <eAnnotations xmi:id="_zpf0EESKEeeDzde-nZXDfg" source="com.ibm.xtools.uml.core.displayoptions">
+            <details xmi:id="_zpf0EUSKEeeDzde-nZXDfg" key="EmptyArgumentMessageOption" value="Display Argument as &quot;&lt;parameter name> = -&quot; "/>
+          </eAnnotations>
+        </message>
         <message xmi:id="_83YO1URcEeerCNPWJw7whw" name="insert" messageSort="reply" receiveEvent="_83YO1kRcEeerCNPWJw7whw" sendEvent="_83YO1ERcEeerCNPWJw7whw" connector="_83h_0ERcEeerCNPWJw7whw"/>
       </ownedBehavior>
       <ownedAttribute xmi:id="_M0pOsURbEeerCNPWJw7whw" name="administrador" type="_8kwrgEFAEeeVVsWPwXq9Yw"/>
@@ -5721,6 +5755,717 @@
     <packagedElement xmi:type="uml:ReceiveOperationEvent" xmi:id="_2LovkURcEeerCNPWJw7whw" name="ReceiveOperationEvent20" operation="_8sWo0A4dEeeMBoBJ3xV9iA"/>
     <packagedElement xmi:type="uml:SendOperationEvent" xmi:id="_-odx8URcEeerCNPWJw7whw" name="SendOperationEvent20" operation="_-odx8ERcEeerCNPWJw7whw"/>
     <packagedElement xmi:type="uml:ReceiveOperationEvent" xmi:id="_-odx8kRcEeerCNPWJw7whw" name="ReceiveOperationEvent21" operation="_-odx8ERcEeerCNPWJw7whw"/>
+    <packagedElement xmi:type="uml:Collaboration" xmi:id="_fGFFQESIEeeDzde-nZXDfg" name="Collaboration6">
+      <ownedBehavior xmi:type="uml:Interaction" xmi:id="_fGWyEESIEeeDzde-nZXDfg" name="Interaction1">
+        <eAnnotations xmi:id="_fGaccESIEeeDzde-nZXDfg" source="uml2.diagrams">
+          <contents xmi:type="umlnotation:UMLDiagram" xmi:id="_fGaccUSIEeeDzde-nZXDfg" type="Sequence" element="_fGWyEESIEeeDzde-nZXDfg" name="AltaPedidoFalloSucursales" measurementUnit="Himetric">
+            <children xmi:type="umlnotation:UMLShape" xmi:id="_fGacckSIEeeDzde-nZXDfg" element="_fGWyEESIEeeDzde-nZXDfg" fontName="Segoe UI" fontHeight="8" fillColor="16250871" transparency="0" lineColor="12632258" lineWidth="1" showStereotype="Label">
+              <children xmi:type="umlnotation:UMLShapeCompartment" xmi:id="_fGacc0SIEeeDzde-nZXDfg" type="interaction_compartment">
+                <eAnnotations xmi:id="_kmuDUESIEeeDzde-nZXDfg" source="Himetric"/>
+                <children xmi:type="umlnotation:UMLShape" xmi:id="_knKvQUSIEeeDzde-nZXDfg" element="_km30UUSIEeeDzde-nZXDfg" fontName="Segoe UI" fontHeight="8" fillColor="16116705" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_knKvQkSIEeeDzde-nZXDfg" x="-1" y="1453" height="7196"/>
+                </children>
+                <children xmi:type="umlnotation:UMLShape" xmi:id="_knKvQ0SIEeeDzde-nZXDfg" element="_kmy70USIEeeDzde-nZXDfg" fontName="Segoe UI" fontHeight="8" fillColor="16116705" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
+                  <eAnnotations xmi:id="_knKvRESIEeeDzde-nZXDfg" source="com.ibm.xtools.uml.ui.diagram.internal.styles">
+                    <details xmi:id="_knKvRUSIEeeDzde-nZXDfg" key="LifelineLabelStyle" value="Represents Name and Type Name"/>
+                  </eAnnotations>
+                  <children xmi:type="notation:BasicDecorationNode" xmi:id="_knKvRkSIEeeDzde-nZXDfg" type="Stereotype"/>
+                  <children xmi:type="notation:BasicDecorationNode" xmi:id="_knKvR0SIEeeDzde-nZXDfg" type="Name"/>
+                  <children xmi:type="notation:BasicDecorationNode" xmi:id="_knKvSESIEeeDzde-nZXDfg" type="Parent"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_knKvSUSIEeeDzde-nZXDfg" x="-8146" y="317" width="5608" height="9525"/>
+                </children>
+                <children xmi:type="umlnotation:UMLShape" xmi:id="_knLWUESIEeeDzde-nZXDfg" element="_km5CcUSIEeeDzde-nZXDfg" fontName="Segoe UI" fontHeight="8" fillColor="16116705" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_knLWUUSIEeeDzde-nZXDfg" x="-1" y="1453" height="1453"/>
+                </children>
+                <children xmi:type="umlnotation:UMLShape" xmi:id="_knLWUkSIEeeDzde-nZXDfg" element="_kmzi4ESIEeeDzde-nZXDfg" fontName="Segoe UI" fontHeight="8" fillColor="16116705" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
+                  <eAnnotations xmi:id="_knLWU0SIEeeDzde-nZXDfg" source="com.ibm.xtools.uml.ui.diagram.internal.styles">
+                    <details xmi:id="_knLWVESIEeeDzde-nZXDfg" key="LifelineLabelStyle" value="Represents Name and Type Name"/>
+                  </eAnnotations>
+                  <children xmi:type="notation:BasicDecorationNode" xmi:id="_knLWVUSIEeeDzde-nZXDfg" type="Stereotype"/>
+                  <children xmi:type="notation:BasicDecorationNode" xmi:id="_knLWVkSIEeeDzde-nZXDfg" type="Name"/>
+                  <children xmi:type="notation:BasicDecorationNode" xmi:id="_knLWV0SIEeeDzde-nZXDfg" type="Parent"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_knLWWESIEeeDzde-nZXDfg" x="449" y="396" width="9391" height="9525"/>
+                </children>
+                <children xmi:type="umlnotation:UMLShape" xmi:id="_knLWWUSIEeeDzde-nZXDfg" element="_km7esUSIEeeDzde-nZXDfg" fontName="Segoe UI" fontHeight="8" fillColor="16116705" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_knLWWkSIEeeDzde-nZXDfg" x="-1" y="1453" height="1217"/>
+                </children>
+                <children xmi:type="umlnotation:UMLShape" xmi:id="_knLWW0SIEeeDzde-nZXDfg" element="_kmzi4USIEeeDzde-nZXDfg" fontName="Segoe UI" fontHeight="8" fillColor="16116705" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
+                  <eAnnotations xmi:id="_knLWXESIEeeDzde-nZXDfg" source="com.ibm.xtools.uml.ui.diagram.internal.styles">
+                    <details xmi:id="_knLWXUSIEeeDzde-nZXDfg" key="LifelineLabelStyle" value="Represents Name and Type Name"/>
+                  </eAnnotations>
+                  <children xmi:type="notation:BasicDecorationNode" xmi:id="_knLWXkSIEeeDzde-nZXDfg" type="Stereotype"/>
+                  <children xmi:type="notation:BasicDecorationNode" xmi:id="_knLWX0SIEeeDzde-nZXDfg" type="Name"/>
+                  <children xmi:type="notation:BasicDecorationNode" xmi:id="_knLWYESIEeeDzde-nZXDfg" type="Parent"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_knLWYUSIEeeDzde-nZXDfg" x="-23487" y="317" width="9524" height="9525"/>
+                </children>
+                <children xmi:type="umlnotation:UMLShape" xmi:id="_knLWYkSIEeeDzde-nZXDfg" element="_km968USIEeeDzde-nZXDfg" fontName="Segoe UI" fontHeight="8" fillColor="16116705" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_knLWY0SIEeeDzde-nZXDfg" x="-1" y="1453" height="1825"/>
+                </children>
+                <children xmi:type="umlnotation:UMLShape" xmi:id="_knL9YESIEeeDzde-nZXDfg" element="_km0J8ESIEeeDzde-nZXDfg" fontName="Segoe UI" fontHeight="8" fillColor="16116705" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
+                  <eAnnotations xmi:id="_knL9YUSIEeeDzde-nZXDfg" source="com.ibm.xtools.uml.ui.diagram.internal.styles">
+                    <details xmi:id="_knL9YkSIEeeDzde-nZXDfg" key="LifelineLabelStyle" value="Represents Name and Type Name"/>
+                  </eAnnotations>
+                  <children xmi:type="notation:BasicDecorationNode" xmi:id="_knL9Y0SIEeeDzde-nZXDfg" type="Stereotype"/>
+                  <children xmi:type="notation:BasicDecorationNode" xmi:id="_knL9ZESIEeeDzde-nZXDfg" type="Name"/>
+                  <children xmi:type="notation:BasicDecorationNode" xmi:id="_knL9ZUSIEeeDzde-nZXDfg" type="Parent"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_knL9ZkSIEeeDzde-nZXDfg" x="449" y="396" width="3571" height="11958"/>
+                </children>
+                <children xmi:type="umlnotation:UMLShape" xmi:id="_knL9Z0SIEeeDzde-nZXDfg" element="_knAXMUSIEeeDzde-nZXDfg" fontName="Segoe UI" fontHeight="8" fillColor="16116705" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_knL9aESIEeeDzde-nZXDfg" x="-1" y="1453" height="1453"/>
+                </children>
+                <children xmi:type="umlnotation:UMLShape" xmi:id="_knL9aUSIEeeDzde-nZXDfg" element="_knCzcESIEeeDzde-nZXDfg" fontName="Segoe UI" fontHeight="8" fillColor="16116705" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_knL9akSIEeeDzde-nZXDfg" x="-1" y="1453" height="1640"/>
+                </children>
+                <children xmi:type="umlnotation:UMLShape" xmi:id="_knNykESIEeeDzde-nZXDfg" element="_kmxGoESIEeeDzde-nZXDfg" fontName="Segoe UI" fontHeight="8" fillColor="16116705" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
+                  <eAnnotations xmi:id="_knOZoESIEeeDzde-nZXDfg" source="com.ibm.xtools.uml.ui.diagram.internal.styles">
+                    <details xmi:id="_knPAsESIEeeDzde-nZXDfg" key="LifelineLabelStyle" value="Represents Name and Type Name"/>
+                  </eAnnotations>
+                  <children xmi:type="notation:BasicDecorationNode" xmi:id="_knPAsUSIEeeDzde-nZXDfg" type="Stereotype"/>
+                  <children xmi:type="notation:BasicDecorationNode" xmi:id="_knPAskSIEeeDzde-nZXDfg" type="Name"/>
+                  <children xmi:type="notation:BasicDecorationNode" xmi:id="_knPAs0SIEeeDzde-nZXDfg" type="Parent"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_knNykUSIEeeDzde-nZXDfg"/>
+                </children>
+                <children xmi:type="umlnotation:UMLShape" xmi:id="_knPnwESIEeeDzde-nZXDfg" element="_kmy70ESIEeeDzde-nZXDfg" fontName="Segoe UI" fontHeight="8" fillColor="16116705" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
+                  <eAnnotations xmi:id="_knPnwkSIEeeDzde-nZXDfg" source="com.ibm.xtools.uml.ui.diagram.internal.styles">
+                    <details xmi:id="_knPnw0SIEeeDzde-nZXDfg" key="LifelineLabelStyle" value="Represents Name and Type Name"/>
+                  </eAnnotations>
+                  <children xmi:type="notation:BasicDecorationNode" xmi:id="_knQO0ESIEeeDzde-nZXDfg" type="Stereotype"/>
+                  <children xmi:type="notation:BasicDecorationNode" xmi:id="_knQO0USIEeeDzde-nZXDfg" type="Name"/>
+                  <children xmi:type="notation:BasicDecorationNode" xmi:id="_knQO0kSIEeeDzde-nZXDfg" type="Parent"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_knPnwUSIEeeDzde-nZXDfg"/>
+                </children>
+                <children xmi:type="umlnotation:UMLShape" xmi:id="_knSrEESIEeeDzde-nZXDfg" element="_km0J8USIEeeDzde-nZXDfg" fontName="Segoe UI" fontHeight="8" fillColor="16116705" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
+                  <eAnnotations xmi:id="_knSrEkSIEeeDzde-nZXDfg" source="com.ibm.xtools.uml.ui.diagram.internal.styles">
+                    <details xmi:id="_knSrE0SIEeeDzde-nZXDfg" key="LifelineLabelStyle" value="Represents Name and Type Name"/>
+                  </eAnnotations>
+                  <children xmi:type="notation:BasicDecorationNode" xmi:id="_knSrFESIEeeDzde-nZXDfg" type="Stereotype"/>
+                  <children xmi:type="notation:BasicDecorationNode" xmi:id="_knTSIESIEeeDzde-nZXDfg" type="Name"/>
+                  <children xmi:type="notation:BasicDecorationNode" xmi:id="_knT5MESIEeeDzde-nZXDfg" type="Parent"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_knSrEUSIEeeDzde-nZXDfg"/>
+                </children>
+                <children xmi:type="umlnotation:UMLShape" xmi:id="_lhvhIESIEeeDzde-nZXDfg" element="_lhmXMESIEeeDzde-nZXDfg" fontName="Segoe UI" fontHeight="8" transparency="0" lineColor="12632258" lineWidth="1" showStereotype="Label">
+                  <eAnnotations xmi:id="_lhwvQESIEeeDzde-nZXDfg" source="com.ibm.xtools.uml.ui.diagram.internal.styles">
+                    <details xmi:id="_lhwvQUSIEeeDzde-nZXDfg" key="ImageModeStyle" value="true"/>
+                  </eAnnotations>
+                  <children xmi:type="notation:DecorationNode" xmi:id="_lhxWUESIEeeDzde-nZXDfg" type="ImageCompartment">
+                    <layoutConstraint xmi:type="notation:Size" xmi:id="_lhxWUUSIEeeDzde-nZXDfg" width="1320" height="1320"/>
+                  </children>
+                  <children xmi:type="notation:BasicDecorationNode" xmi:id="_lhx9YESIEeeDzde-nZXDfg" type="Stereotype"/>
+                  <children xmi:type="notation:BasicDecorationNode" xmi:id="_lhzLgESIEeeDzde-nZXDfg" type="CommentBody"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_lhvhIUSIEeeDzde-nZXDfg" x="9632" y="15427" width="12247" height="3121"/>
+                </children>
+              </children>
+              <children xmi:type="notation:BasicDecorationNode" xmi:id="_fGacdESIEeeDzde-nZXDfg" type="Name"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fGacdUSIEeeDzde-nZXDfg" x="793" y="793"/>
+            </children>
+            <edges xmi:type="umlnotation:UMLConnector" xmi:id="_knQO00SIEeeDzde-nZXDfg" element="_knGd00SIEeeDzde-nZXDfg" source="_knNykESIEeeDzde-nZXDfg" target="_knPnwESIEeeDzde-nZXDfg" fontName="Segoe UI" fontHeight="8" lineColor="8421504" lineWidth="1" showStereotype="Text">
+              <children xmi:type="notation:DecorationNode" xmi:id="_knQO1ESIEeeDzde-nZXDfg" type="MessageNameLabel">
+                <children xmi:type="notation:BasicDecorationNode" xmi:id="_knQO1USIEeeDzde-nZXDfg" type="Stereotype"/>
+                <children xmi:type="notation:BasicDecorationNode" xmi:id="_knQO1kSIEeeDzde-nZXDfg" type="Name"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_knQO10SIEeeDzde-nZXDfg" y="-317"/>
+              </children>
+              <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_knQO2ESIEeeDzde-nZXDfg" points="[0, 0, -162, 0]$[162, 0, 0, 0]"/>
+              <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_knQO2USIEeeDzde-nZXDfg" id="-118188580:1748"/>
+              <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_knQO2kSIEeeDzde-nZXDfg" id="1610733182:0"/>
+            </edges>
+            <edges xmi:type="umlnotation:UMLConnector" xmi:id="_knQ14ESIEeeDzde-nZXDfg" element="_knF2wkSIEeeDzde-nZXDfg" source="_knPnwESIEeeDzde-nZXDfg" target="_knNykESIEeeDzde-nZXDfg" fontName="Segoe UI" fontHeight="8" roundedBendpointsRadius="4" routing="Rectilinear" lineColor="8421504" lineWidth="1" showStereotype="Text">
+              <children xmi:type="notation:DecorationNode" xmi:id="_knQ14USIEeeDzde-nZXDfg" type="MessageNameLabel">
+                <children xmi:type="notation:BasicDecorationNode" xmi:id="_knQ14kSIEeeDzde-nZXDfg" type="Stereotype"/>
+                <children xmi:type="notation:BasicDecorationNode" xmi:id="_knQ140SIEeeDzde-nZXDfg" type="Name"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_knQ15ESIEeeDzde-nZXDfg" y="476"/>
+              </children>
+              <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_knQ15USIEeeDzde-nZXDfg" points="[0, 0, 162, 0]$[-162, 0, 0, 0]"/>
+              <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_knQ15kSIEeeDzde-nZXDfg" id="-118573329:1349"/>
+              <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_knQ150SIEeeDzde-nZXDfg" id="-1528749538:0"/>
+            </edges>
+            <edges xmi:type="umlnotation:UMLConnector" xmi:id="_knQ16ESIEeeDzde-nZXDfg" element="_knHE4ESIEeeDzde-nZXDfg" source="_knPnwESIEeeDzde-nZXDfg" target="_knKvQ0SIEeeDzde-nZXDfg" fontName="Segoe UI" fontHeight="8" lineColor="8421504" lineWidth="1" showStereotype="Text">
+              <children xmi:type="notation:DecorationNode" xmi:id="_knQ16USIEeeDzde-nZXDfg" type="MessageNameLabel">
+                <children xmi:type="notation:BasicDecorationNode" xmi:id="_knQ16kSIEeeDzde-nZXDfg" type="Stereotype"/>
+                <children xmi:type="notation:BasicDecorationNode" xmi:id="_knQ160SIEeeDzde-nZXDfg" type="Name"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_knQ17ESIEeeDzde-nZXDfg" y="-317"/>
+              </children>
+              <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_knQ17USIEeeDzde-nZXDfg" points="[0, 0, -174, 0]$[174, 0, 0, 0]"/>
+              <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_knQ17kSIEeeDzde-nZXDfg" id="-118573329:662"/>
+              <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_knQ170SIEeeDzde-nZXDfg" id="-1528749538:0"/>
+            </edges>
+            <edges xmi:type="umlnotation:UMLConnector" xmi:id="_knQ18ESIEeeDzde-nZXDfg" element="_knHE4USIEeeDzde-nZXDfg" source="_knKvQ0SIEeeDzde-nZXDfg" target="_knPnwESIEeeDzde-nZXDfg" fontName="Segoe UI" fontHeight="8" roundedBendpointsRadius="4" routing="Rectilinear" lineColor="8421504" lineWidth="1" showStereotype="Text">
+              <children xmi:type="notation:DecorationNode" xmi:id="_knQ18USIEeeDzde-nZXDfg" type="MessageNameLabel">
+                <children xmi:type="notation:BasicDecorationNode" xmi:id="_knQ18kSIEeeDzde-nZXDfg" type="Stereotype"/>
+                <children xmi:type="notation:BasicDecorationNode" xmi:id="_knQ180SIEeeDzde-nZXDfg" type="Name"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_knQ19ESIEeeDzde-nZXDfg" y="476"/>
+              </children>
+              <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_knQ19USIEeeDzde-nZXDfg" points="[0, 0, 174, 0]$[-174, 0, 0, 0]"/>
+              <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_knQ19kSIEeeDzde-nZXDfg" id="-118573329:1322"/>
+              <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_knQ190SIEeeDzde-nZXDfg" id="-1528749538:0"/>
+            </edges>
+            <edges xmi:type="umlnotation:UMLConnector" xmi:id="_knRc8ESIEeeDzde-nZXDfg" element="_knGd0ESIEeeDzde-nZXDfg" source="_knPnwESIEeeDzde-nZXDfg" target="_knLWUkSIEeeDzde-nZXDfg" fontName="Segoe UI" fontHeight="8" lineColor="8421504" lineWidth="1" showStereotype="Text">
+              <children xmi:type="notation:DecorationNode" xmi:id="_knRc8USIEeeDzde-nZXDfg" type="MessageNameLabel">
+                <children xmi:type="notation:BasicDecorationNode" xmi:id="_knRc8kSIEeeDzde-nZXDfg" type="Stereotype"/>
+                <children xmi:type="notation:BasicDecorationNode" xmi:id="_knRc80SIEeeDzde-nZXDfg" type="Name"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_knRc9ESIEeeDzde-nZXDfg" y="-317"/>
+              </children>
+              <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_knRc9USIEeeDzde-nZXDfg" points="[0, 0, -464, 0]$[464, 0, 0, 0]"/>
+              <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_knRc9kSIEeeDzde-nZXDfg" id="-118573329:926"/>
+              <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_knRc90SIEeeDzde-nZXDfg" id="-1528749538:0"/>
+            </edges>
+            <edges xmi:type="umlnotation:UMLConnector" xmi:id="_knRc-ESIEeeDzde-nZXDfg" element="_knF2w0SIEeeDzde-nZXDfg" source="_knLWUkSIEeeDzde-nZXDfg" target="_knPnwESIEeeDzde-nZXDfg" fontName="Segoe UI" fontHeight="8" roundedBendpointsRadius="4" routing="Rectilinear" lineColor="8421504" lineWidth="1" showStereotype="Text">
+              <children xmi:type="notation:DecorationNode" xmi:id="_knRc-USIEeeDzde-nZXDfg" type="MessageNameLabel">
+                <children xmi:type="notation:BasicDecorationNode" xmi:id="_knRc-kSIEeeDzde-nZXDfg" type="Stereotype"/>
+                <children xmi:type="notation:BasicDecorationNode" xmi:id="_knRc-0SIEeeDzde-nZXDfg" type="Name"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_knRc_ESIEeeDzde-nZXDfg" y="476"/>
+              </children>
+              <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_knRc_USIEeeDzde-nZXDfg" points="[0, 0, 464, 0]$[-464, 0, 0, 0]"/>
+              <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_knRc_kSIEeeDzde-nZXDfg" id="-118573329:1217"/>
+              <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_knRc_0SIEeeDzde-nZXDfg" id="-1528749538:0"/>
+            </edges>
+            <edges xmi:type="umlnotation:UMLConnector" xmi:id="_knRdAESIEeeDzde-nZXDfg" element="_knF2wESIEeeDzde-nZXDfg" source="_knPnwESIEeeDzde-nZXDfg" target="_knLWW0SIEeeDzde-nZXDfg" fontName="Segoe UI" fontHeight="8" lineColor="8421504" lineWidth="1" showStereotype="Text">
+              <children xmi:type="notation:DecorationNode" xmi:id="_knRdAUSIEeeDzde-nZXDfg" type="MessageNameLabel">
+                <children xmi:type="notation:BasicDecorationNode" xmi:id="_knRdAkSIEeeDzde-nZXDfg" type="Stereotype"/>
+                <children xmi:type="notation:BasicDecorationNode" xmi:id="_knRdA0SIEeeDzde-nZXDfg" type="Name"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_knRdBESIEeeDzde-nZXDfg" y="-317"/>
+              </children>
+              <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_knRdBUSIEeeDzde-nZXDfg" points="[0, 0, -828, 0]$[828, 0, 0, 0]"/>
+              <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_knRdBkSIEeeDzde-nZXDfg" id="-118573329:899"/>
+              <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_knRdB0SIEeeDzde-nZXDfg" id="-1528749538:0"/>
+            </edges>
+            <edges xmi:type="umlnotation:UMLConnector" xmi:id="_knSEAESIEeeDzde-nZXDfg" element="_knHE40SIEeeDzde-nZXDfg" source="_knLWW0SIEeeDzde-nZXDfg" target="_knPnwESIEeeDzde-nZXDfg" fontName="Segoe UI" fontHeight="8" roundedBendpointsRadius="4" routing="Rectilinear" lineColor="8421504" lineWidth="1" showStereotype="Text">
+              <children xmi:type="notation:DecorationNode" xmi:id="_knSEAUSIEeeDzde-nZXDfg" type="MessageNameLabel">
+                <children xmi:type="notation:BasicDecorationNode" xmi:id="_knSEAkSIEeeDzde-nZXDfg" type="Stereotype"/>
+                <children xmi:type="notation:BasicDecorationNode" xmi:id="_knSEA0SIEeeDzde-nZXDfg" type="Name"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_knSEBESIEeeDzde-nZXDfg" y="476"/>
+              </children>
+              <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_knSEBUSIEeeDzde-nZXDfg" points="[0, 0, 828, 0]$[-828, 0, 0, 0]"/>
+              <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_knSEBkSIEeeDzde-nZXDfg" id="-118573329:1825"/>
+              <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_knSEB0SIEeeDzde-nZXDfg" id="-1528749538:0"/>
+            </edges>
+            <edges xmi:type="umlnotation:UMLConnector" xmi:id="_knSECESIEeeDzde-nZXDfg" element="_knGd0USIEeeDzde-nZXDfg" source="_knPnwESIEeeDzde-nZXDfg" target="_knL9YESIEeeDzde-nZXDfg" fontName="Segoe UI" fontHeight="8" lineColor="8421504" lineWidth="1" showStereotype="Text">
+              <children xmi:type="notation:DecorationNode" xmi:id="_knSECUSIEeeDzde-nZXDfg" type="MessageNameLabel">
+                <children xmi:type="notation:BasicDecorationNode" xmi:id="_knSECkSIEeeDzde-nZXDfg" type="Stereotype"/>
+                <children xmi:type="notation:BasicDecorationNode" xmi:id="_knSEC0SIEeeDzde-nZXDfg" type="Name"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_knSEDESIEeeDzde-nZXDfg" y="-317"/>
+              </children>
+              <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_knSEDUSIEeeDzde-nZXDfg" points="[0, 0, -1084, 0]$[1084, 0, 0, 0]"/>
+              <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_knSEDkSIEeeDzde-nZXDfg" id="-118573329:1773"/>
+              <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_knSED0SIEeeDzde-nZXDfg" id="-1528749538:0"/>
+            </edges>
+            <edges xmi:type="umlnotation:UMLConnector" xmi:id="_knSEEESIEeeDzde-nZXDfg" element="_knHE4kSIEeeDzde-nZXDfg" source="_knL9YESIEeeDzde-nZXDfg" target="_knPnwESIEeeDzde-nZXDfg" fontName="Segoe UI" fontHeight="8" roundedBendpointsRadius="4" routing="Rectilinear" lineColor="8421504" lineWidth="1" showStereotype="Text">
+              <children xmi:type="notation:DecorationNode" xmi:id="_knSEEUSIEeeDzde-nZXDfg" type="MessageNameLabel">
+                <children xmi:type="notation:BasicDecorationNode" xmi:id="_knSEEkSIEeeDzde-nZXDfg" type="Stereotype"/>
+                <children xmi:type="notation:BasicDecorationNode" xmi:id="_knSEE0SIEeeDzde-nZXDfg" type="Name"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_knSEFESIEeeDzde-nZXDfg" y="476"/>
+              </children>
+              <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_knSEFUSIEeeDzde-nZXDfg" points="[0, 0, 1084, 0]$[-1084, 0, 0, 0]"/>
+              <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_knSEFkSIEeeDzde-nZXDfg" id="-118573329:1322"/>
+              <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_knSEF0SIEeeDzde-nZXDfg" id="-1528749538:0"/>
+            </edges>
+            <edges xmi:type="umlnotation:UMLConnector" xmi:id="_knT5MUSIEeeDzde-nZXDfg" element="_knGd0kSIEeeDzde-nZXDfg" source="_knPnwESIEeeDzde-nZXDfg" target="_knSrEESIEeeDzde-nZXDfg" fontName="Segoe UI" fontHeight="8" lineColor="8421504" lineWidth="1" showStereotype="Text">
+              <children xmi:type="notation:DecorationNode" xmi:id="_knT5MkSIEeeDzde-nZXDfg" type="MessageNameLabel">
+                <children xmi:type="notation:BasicDecorationNode" xmi:id="_knT5M0SIEeeDzde-nZXDfg" type="Stereotype"/>
+                <children xmi:type="notation:BasicDecorationNode" xmi:id="_knT5NESIEeeDzde-nZXDfg" type="Name"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_knT5NUSIEeeDzde-nZXDfg" y="-317"/>
+              </children>
+              <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_knT5NkSIEeeDzde-nZXDfg" points="[0, 0, -1264, 0]$[1264, 0, 0, 0]"/>
+              <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_knT5N0SIEeeDzde-nZXDfg" id="-118573329:793"/>
+              <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_knT5OESIEeeDzde-nZXDfg" id="-1528749538:0"/>
+            </edges>
+            <edges xmi:type="umlnotation:UMLConnector" xmi:id="_knT5OUSIEeeDzde-nZXDfg" element="_knF2wUSIEeeDzde-nZXDfg" source="_knSrEESIEeeDzde-nZXDfg" target="_knPnwESIEeeDzde-nZXDfg" fontName="Segoe UI" fontHeight="8" roundedBendpointsRadius="4" routing="Rectilinear" lineColor="8421504" lineWidth="1" showStereotype="Text">
+              <children xmi:type="notation:DecorationNode" xmi:id="_knT5OkSIEeeDzde-nZXDfg" type="MessageNameLabel">
+                <children xmi:type="notation:BasicDecorationNode" xmi:id="_knT5O0SIEeeDzde-nZXDfg" type="Stereotype"/>
+                <children xmi:type="notation:BasicDecorationNode" xmi:id="_knT5PESIEeeDzde-nZXDfg" type="Name"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_knT5PUSIEeeDzde-nZXDfg" y="476"/>
+              </children>
+              <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_knT5PkSIEeeDzde-nZXDfg" points="[0, 0, 1264, 0]$[-1264, 0, 0, 0]"/>
+              <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_knT5P0SIEeeDzde-nZXDfg" id="-118573329:1640"/>
+              <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_knT5QESIEeeDzde-nZXDfg" id="-1528749538:0"/>
+            </edges>
+            <edges xmi:type="umlnotation:UMLConnector" xmi:id="_4YOe8ESIEeeDzde-nZXDfg" type="Reference" source="_lhvhIESIEeeDzde-nZXDfg" target="_knPnwESIEeeDzde-nZXDfg" fontName="Segoe UI" fontHeight="8" roundedBendpointsRadius="4" routing="Rectilinear" lineColor="8421504" lineWidth="1" showStereotype="Text">
+              <element xsi:nil="true"/>
+              <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_4YOe8USIEeeDzde-nZXDfg" points="[0, 0, 140, 32]$[-135, -550, 5, -518]"/>
+              <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_4YVzsESIEeeDzde-nZXDfg" id="(0.09071609373724178,0.0)"/>
+              <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_4YVzsUSIEeeDzde-nZXDfg" id="(1.0,0.9115732254598319)"/>
+            </edges>
+          </contents>
+        </eAnnotations>
+        <ownedComment xmi:id="_lhmXMESIEeeDzde-nZXDfg" annotatedElement="_kmy70ESIEeeDzde-nZXDfg">
+          <body>&lt;p>Los id de las sucursales introducidas por los cliente no corresponden a las existentes en las base de datos.&lt;/p>&lt;p>Se mostrara un mensaje informando de este error.&lt;/p></body>
+        </ownedComment>
+        <ownedConnector xmi:id="_knITA0SIEeeDzde-nZXDfg">
+          <end xmi:id="_knI6EESIEeeDzde-nZXDfg" role="_knITAUSIEeeDzde-nZXDfg"/>
+          <end xmi:id="_knI6EUSIEeeDzde-nZXDfg" role="_km1YEESIEeeDzde-nZXDfg"/>
+        </ownedConnector>
+        <ownedConnector xmi:id="_knI6EkSIEeeDzde-nZXDfg">
+          <end xmi:id="_knI6E0SIEeeDzde-nZXDfg" role="_knITAkSIEeeDzde-nZXDfg"/>
+          <end xmi:id="_knI6FESIEeeDzde-nZXDfg" role="_knITAUSIEeeDzde-nZXDfg"/>
+        </ownedConnector>
+        <ownedConnector xmi:id="_knJhIESIEeeDzde-nZXDfg">
+          <end xmi:id="_knJhIUSIEeeDzde-nZXDfg" role="_knITAUSIEeeDzde-nZXDfg"/>
+          <end xmi:id="_knJhIkSIEeeDzde-nZXDfg" role="_knITAESIEeeDzde-nZXDfg"/>
+        </ownedConnector>
+        <ownedConnector xmi:id="_knJhI0SIEeeDzde-nZXDfg">
+          <end xmi:id="_knJhJESIEeeDzde-nZXDfg" role="_km1_IUSIEeeDzde-nZXDfg"/>
+          <end xmi:id="_knJhJUSIEeeDzde-nZXDfg" role="_knITAUSIEeeDzde-nZXDfg"/>
+        </ownedConnector>
+        <ownedConnector xmi:id="_knKIMESIEeeDzde-nZXDfg">
+          <end xmi:id="_knKIMUSIEeeDzde-nZXDfg" role="_knITAUSIEeeDzde-nZXDfg"/>
+          <end xmi:id="_knKIMkSIEeeDzde-nZXDfg" role="_km1YEUSIEeeDzde-nZXDfg"/>
+        </ownedConnector>
+        <ownedConnector xmi:id="_knKIM0SIEeeDzde-nZXDfg">
+          <end xmi:id="_knKINESIEeeDzde-nZXDfg" role="_knITAUSIEeeDzde-nZXDfg"/>
+          <end xmi:id="_knKvQESIEeeDzde-nZXDfg" role="_km1_IESIEeeDzde-nZXDfg"/>
+        </ownedConnector>
+        <lifeline xmi:id="_kmxGoESIEeeDzde-nZXDfg" name="administrador" represents="_knITAESIEeeDzde-nZXDfg" coveredBy="_km2mMESIEeeDzde-nZXDfg _knEooESIEeeDzde-nZXDfg"/>
+        <lifeline xmi:id="_kmy70ESIEeeDzde-nZXDfg" name="interfaz" represents="_knITAUSIEeeDzde-nZXDfg" coveredBy="_km30UESIEeeDzde-nZXDfg _km30UUSIEeeDzde-nZXDfg _km4bYESIEeeDzde-nZXDfg _km6QkESIEeeDzde-nZXDfg _km63oESIEeeDzde-nZXDfg _km8s0ESIEeeDzde-nZXDfg _km9T4ESIEeeDzde-nZXDfg _km_JEESIEeeDzde-nZXDfg _km_wIESIEeeDzde-nZXDfg _knBlUESIEeeDzde-nZXDfg _knBlUUSIEeeDzde-nZXDfg _knDagESIEeeDzde-nZXDfg _knEBkESIEeeDzde-nZXDfg"/>
+        <lifeline xmi:id="_kmy70USIEeeDzde-nZXDfg" name="tCliente" represents="_km1_IESIEeeDzde-nZXDfg" coveredBy="_km5CcESIEeeDzde-nZXDfg _km5CcUSIEeeDzde-nZXDfg _km5pgESIEeeDzde-nZXDfg"/>
+        <lifeline xmi:id="_kmzi4ESIEeeDzde-nZXDfg" name="SucursalEnvio" represents="_km1_IUSIEeeDzde-nZXDfg" coveredBy="_km7esESIEeeDzde-nZXDfg _km7esUSIEeeDzde-nZXDfg _km8FwESIEeeDzde-nZXDfg"/>
+        <lifeline xmi:id="_kmzi4USIEeeDzde-nZXDfg" name="SucursalLLegada" represents="_km1YEESIEeeDzde-nZXDfg" coveredBy="_km968ESIEeeDzde-nZXDfg _km968USIEeeDzde-nZXDfg _km-iAESIEeeDzde-nZXDfg"/>
+        <lifeline xmi:id="_km0J8ESIEeeDzde-nZXDfg" name="metPago" represents="_km1YEUSIEeeDzde-nZXDfg" coveredBy="_knAXMESIEeeDzde-nZXDfg _knAXMUSIEeeDzde-nZXDfg _knA-QESIEeeDzde-nZXDfg"/>
+        <lifeline xmi:id="_km0J8USIEeeDzde-nZXDfg" name="tPedido" represents="_knITAkSIEeeDzde-nZXDfg" coveredBy="_knCMYESIEeeDzde-nZXDfg _knCzcESIEeeDzde-nZXDfg _knCzcUSIEeeDzde-nZXDfg"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_km2mMESIEeeDzde-nZXDfg" covered="_kmxGoESIEeeDzde-nZXDfg" event="_SGwokURbEeerCNPWJw7whw" message="_knGd00SIEeeDzde-nZXDfg"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_km30UESIEeeDzde-nZXDfg" covered="_kmy70ESIEeeDzde-nZXDfg" event="_SGwokkRbEeerCNPWJw7whw" message="_knGd00SIEeeDzde-nZXDfg"/>
+        <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_km30UUSIEeeDzde-nZXDfg" covered="_kmy70ESIEeeDzde-nZXDfg" start="_km30UESIEeeDzde-nZXDfg" finish="_knEBkESIEeeDzde-nZXDfg"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_km4bYESIEeeDzde-nZXDfg" covered="_kmy70ESIEeeDzde-nZXDfg" event="_W1trAERbEeerCNPWJw7whw" message="_knHE4ESIEeeDzde-nZXDfg"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_km5CcESIEeeDzde-nZXDfg" covered="_kmy70USIEeeDzde-nZXDfg" event="_W1trAURbEeerCNPWJw7whw" message="_knHE4ESIEeeDzde-nZXDfg"/>
+        <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_km5CcUSIEeeDzde-nZXDfg" covered="_kmy70USIEeeDzde-nZXDfg" start="_km5CcESIEeeDzde-nZXDfg" finish="_km5pgESIEeeDzde-nZXDfg"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_km5pgESIEeeDzde-nZXDfg" covered="_kmy70USIEeeDzde-nZXDfg" event="_W1trAERbEeerCNPWJw7whw" message="_knHE4USIEeeDzde-nZXDfg"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_km6QkESIEeeDzde-nZXDfg" covered="_kmy70ESIEeeDzde-nZXDfg" event="_W1trAURbEeerCNPWJw7whw" message="_knHE4USIEeeDzde-nZXDfg"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_km63oESIEeeDzde-nZXDfg" covered="_kmy70ESIEeeDzde-nZXDfg" event="_n2HQ8ERbEeerCNPWJw7whw" message="_knGd0ESIEeeDzde-nZXDfg"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_km7esESIEeeDzde-nZXDfg" covered="_kmzi4ESIEeeDzde-nZXDfg" event="_n2HQ8URbEeerCNPWJw7whw" message="_knGd0ESIEeeDzde-nZXDfg"/>
+        <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_km7esUSIEeeDzde-nZXDfg" covered="_kmzi4ESIEeeDzde-nZXDfg" start="_km7esESIEeeDzde-nZXDfg" finish="_km8FwESIEeeDzde-nZXDfg"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_km8FwESIEeeDzde-nZXDfg" covered="_kmzi4ESIEeeDzde-nZXDfg" event="_n2HQ8ERbEeerCNPWJw7whw" message="_knF2w0SIEeeDzde-nZXDfg"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_km8s0ESIEeeDzde-nZXDfg" covered="_kmy70ESIEeeDzde-nZXDfg" event="_n2HQ8URbEeerCNPWJw7whw" message="_knF2w0SIEeeDzde-nZXDfg"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_km9T4ESIEeeDzde-nZXDfg" covered="_kmy70ESIEeeDzde-nZXDfg" event="_n2HQ8ERbEeerCNPWJw7whw" message="_knF2wESIEeeDzde-nZXDfg"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_km968ESIEeeDzde-nZXDfg" covered="_kmzi4USIEeeDzde-nZXDfg" event="_n2HQ8URbEeerCNPWJw7whw" message="_knF2wESIEeeDzde-nZXDfg"/>
+        <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_km968USIEeeDzde-nZXDfg" covered="_kmzi4USIEeeDzde-nZXDfg" start="_km968ESIEeeDzde-nZXDfg" finish="_km-iAESIEeeDzde-nZXDfg"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_km-iAESIEeeDzde-nZXDfg" covered="_kmzi4USIEeeDzde-nZXDfg" event="_n2HQ8ERbEeerCNPWJw7whw" message="_knHE40SIEeeDzde-nZXDfg"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_km_JEESIEeeDzde-nZXDfg" covered="_kmy70ESIEeeDzde-nZXDfg" event="_n2HQ8URbEeerCNPWJw7whw" message="_knHE40SIEeeDzde-nZXDfg"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_km_wIESIEeeDzde-nZXDfg" covered="_kmy70ESIEeeDzde-nZXDfg" event="_-OVQIURbEeerCNPWJw7whw" message="_knGd0USIEeeDzde-nZXDfg"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_knAXMESIEeeDzde-nZXDfg" covered="_km0J8ESIEeeDzde-nZXDfg" event="_-OVQIkRbEeerCNPWJw7whw" message="_knGd0USIEeeDzde-nZXDfg"/>
+        <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_knAXMUSIEeeDzde-nZXDfg" covered="_km0J8ESIEeeDzde-nZXDfg" start="_knAXMESIEeeDzde-nZXDfg" finish="_knA-QESIEeeDzde-nZXDfg"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_knA-QESIEeeDzde-nZXDfg" covered="_km0J8ESIEeeDzde-nZXDfg" event="_-OVQIURbEeerCNPWJw7whw" message="_knHE4kSIEeeDzde-nZXDfg"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_knBlUESIEeeDzde-nZXDfg" covered="_kmy70ESIEeeDzde-nZXDfg" event="_-OVQIkRbEeerCNPWJw7whw" message="_knHE4kSIEeeDzde-nZXDfg"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_knBlUUSIEeeDzde-nZXDfg" covered="_kmy70ESIEeeDzde-nZXDfg" event="_pa_A4DSgEeeqiPPWzihKfA" message="_knGd0kSIEeeDzde-nZXDfg"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_knCMYESIEeeDzde-nZXDfg" covered="_km0J8USIEeeDzde-nZXDfg" event="_EExfEERcEeerCNPWJw7whw" message="_knGd0kSIEeeDzde-nZXDfg"/>
+        <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_knCzcESIEeeDzde-nZXDfg" covered="_km0J8USIEeeDzde-nZXDfg" start="_knCMYESIEeeDzde-nZXDfg" finish="_knCzcUSIEeeDzde-nZXDfg"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_knCzcUSIEeeDzde-nZXDfg" covered="_km0J8USIEeeDzde-nZXDfg" event="_pa_A4DSgEeeqiPPWzihKfA" message="_knF2wUSIEeeDzde-nZXDfg"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_knDagESIEeeDzde-nZXDfg" covered="_kmy70ESIEeeDzde-nZXDfg" event="_EExfEERcEeerCNPWJw7whw" message="_knF2wUSIEeeDzde-nZXDfg"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_knEBkESIEeeDzde-nZXDfg" covered="_kmy70ESIEeeDzde-nZXDfg" event="_SGwokURbEeerCNPWJw7whw" message="_knF2wkSIEeeDzde-nZXDfg"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_knEooESIEeeDzde-nZXDfg" covered="_kmxGoESIEeeDzde-nZXDfg" event="_SGwokkRbEeerCNPWJw7whw" message="_knF2wkSIEeeDzde-nZXDfg"/>
+        <message xmi:id="_knF2wESIEeeDzde-nZXDfg" name="TSucursal" receiveEvent="_km968ESIEeeDzde-nZXDfg" sendEvent="_km9T4ESIEeeDzde-nZXDfg" connector="_knITA0SIEeeDzde-nZXDfg"/>
+        <message xmi:id="_knF2wUSIEeeDzde-nZXDfg" name="TPedido" messageSort="reply" receiveEvent="_knDagESIEeeDzde-nZXDfg" sendEvent="_knCzcUSIEeeDzde-nZXDfg" connector="_knI6EkSIEeeDzde-nZXDfg"/>
+        <message xmi:id="_knF2wkSIEeeDzde-nZXDfg" name="AltaPedido" messageSort="reply" receiveEvent="_knEooESIEeeDzde-nZXDfg" sendEvent="_knEBkESIEeeDzde-nZXDfg" connector="_knJhIESIEeeDzde-nZXDfg"/>
+        <message xmi:id="_knF2w0SIEeeDzde-nZXDfg" name="TSucursal" messageSort="reply" receiveEvent="_km8s0ESIEeeDzde-nZXDfg" sendEvent="_km8FwESIEeeDzde-nZXDfg" connector="_knJhI0SIEeeDzde-nZXDfg"/>
+        <message xmi:id="_knGd0ESIEeeDzde-nZXDfg" name="TSucursal" receiveEvent="_km7esESIEeeDzde-nZXDfg" sendEvent="_km63oESIEeeDzde-nZXDfg" connector="_knJhI0SIEeeDzde-nZXDfg"/>
+        <message xmi:id="_knGd0USIEeeDzde-nZXDfg" name="parsearPago" receiveEvent="_knAXMESIEeeDzde-nZXDfg" sendEvent="_km_wIESIEeeDzde-nZXDfg" connector="_knKIMESIEeeDzde-nZXDfg"/>
+        <message xmi:id="_knGd0kSIEeeDzde-nZXDfg" name="TPedido" receiveEvent="_knCMYESIEeeDzde-nZXDfg" sendEvent="_knBlUUSIEeeDzde-nZXDfg" connector="_knI6EkSIEeeDzde-nZXDfg"/>
+        <message xmi:id="_knGd00SIEeeDzde-nZXDfg" name="AltaPedido" receiveEvent="_km30UESIEeeDzde-nZXDfg" sendEvent="_km2mMESIEeeDzde-nZXDfg" connector="_knJhIESIEeeDzde-nZXDfg"/>
+        <message xmi:id="_knHE4ESIEeeDzde-nZXDfg" name="TCliente" receiveEvent="_km5CcESIEeeDzde-nZXDfg" sendEvent="_km4bYESIEeeDzde-nZXDfg" connector="_knKIM0SIEeeDzde-nZXDfg"/>
+        <message xmi:id="_knHE4USIEeeDzde-nZXDfg" name="TCliente" messageSort="reply" receiveEvent="_km6QkESIEeeDzde-nZXDfg" sendEvent="_km5pgESIEeeDzde-nZXDfg" connector="_knKIM0SIEeeDzde-nZXDfg"/>
+        <message xmi:id="_knHE4kSIEeeDzde-nZXDfg" name="parsearPago" messageSort="reply" receiveEvent="_knBlUESIEeeDzde-nZXDfg" sendEvent="_knA-QESIEeeDzde-nZXDfg" connector="_knKIMESIEeeDzde-nZXDfg"/>
+        <message xmi:id="_knHE40SIEeeDzde-nZXDfg" name="TSucursal" messageSort="reply" receiveEvent="_km_JEESIEeeDzde-nZXDfg" sendEvent="_km-iAESIEeeDzde-nZXDfg" connector="_knITA0SIEeeDzde-nZXDfg"/>
+      </ownedBehavior>
+      <ownedAttribute xmi:id="_km1YEESIEeeDzde-nZXDfg" name="&lt;&lt;TransferObject>>TSucursal2" type="_jM_c0CmYEeeFA_Z-fScJKQ"/>
+      <ownedAttribute xmi:id="_km1YEUSIEeeDzde-nZXDfg" name="metPago" type="_yoAg8A4bEeeMBoBJ3xV9iA"/>
+      <ownedAttribute xmi:id="_km1_IESIEeeDzde-nZXDfg" name="tCliente" type="_L8E7ECmYEeeFA_Z-fScJKQ"/>
+      <ownedAttribute xmi:id="_km1_IUSIEeeDzde-nZXDfg" name="&lt;&lt;TransferObject>>TSucursal" type="_jM_c0CmYEeeFA_Z-fScJKQ"/>
+      <ownedAttribute xmi:id="_knITAESIEeeDzde-nZXDfg" name="administrador" type="_8kwrgEFAEeeVVsWPwXq9Yw"/>
+      <ownedAttribute xmi:id="_knITAUSIEeeDzde-nZXDfg" name="interfaz" type="_ce98wDSoEeebz4fuew1smA"/>
+      <ownedAttribute xmi:id="_knITAkSIEeeDzde-nZXDfg" name="tPedido" type="_fEExkCmWEeeFA_Z-fScJKQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Collaboration" xmi:id="_6l7soESIEeeDzde-nZXDfg" name="Collaboration7">
+      <ownedBehavior xmi:type="uml:Interaction" xmi:id="_6l9h0ESIEeeDzde-nZXDfg" name="Interaction1">
+        <eAnnotations xmi:id="_6mAlIESIEeeDzde-nZXDfg" source="uml2.diagrams">
+          <contents xmi:type="umlnotation:UMLDiagram" xmi:id="_6mAlIUSIEeeDzde-nZXDfg" type="Sequence" element="_6l9h0ESIEeeDzde-nZXDfg" name="AltaPedidoFalloDatos" measurementUnit="Himetric">
+            <children xmi:type="umlnotation:UMLShape" xmi:id="_6mAlIkSIEeeDzde-nZXDfg" element="_6l9h0ESIEeeDzde-nZXDfg" fontName="Segoe UI" fontHeight="8" fillColor="16250871" transparency="0" lineColor="12632258" lineWidth="1" showStereotype="Label">
+              <children xmi:type="umlnotation:UMLShapeCompartment" xmi:id="_6mAlI0SIEeeDzde-nZXDfg" type="interaction_compartment">
+                <eAnnotations xmi:id="_BVsJMESJEeeDzde-nZXDfg" source="Himetric"/>
+                <children xmi:type="umlnotation:UMLShape" xmi:id="_BWCug0SJEeeDzde-nZXDfg" element="_BVvzkUSJEeeDzde-nZXDfg" fontName="Segoe UI" fontHeight="8" fillColor="16116705" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BWCuhESJEeeDzde-nZXDfg" x="-1" y="1453" height="7196"/>
+                </children>
+                <children xmi:type="umlnotation:UMLShape" xmi:id="_BWDVkESJEeeDzde-nZXDfg" element="_BVtXUUSJEeeDzde-nZXDfg" fontName="Segoe UI" fontHeight="8" fillColor="16116705" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
+                  <eAnnotations xmi:id="_BWDVkUSJEeeDzde-nZXDfg" source="com.ibm.xtools.uml.ui.diagram.internal.styles">
+                    <details xmi:id="_BWDVkkSJEeeDzde-nZXDfg" key="LifelineLabelStyle" value="Represents Name and Type Name"/>
+                  </eAnnotations>
+                  <children xmi:type="notation:BasicDecorationNode" xmi:id="_BWDVk0SJEeeDzde-nZXDfg" type="Stereotype"/>
+                  <children xmi:type="notation:BasicDecorationNode" xmi:id="_BWDVlESJEeeDzde-nZXDfg" type="Name"/>
+                  <children xmi:type="notation:BasicDecorationNode" xmi:id="_BWDVlUSJEeeDzde-nZXDfg" type="Parent"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BWDVlkSJEeeDzde-nZXDfg" x="-107" y="158" width="5608" height="9525"/>
+                </children>
+                <children xmi:type="umlnotation:UMLShape" xmi:id="_BWDVl0SJEeeDzde-nZXDfg" element="_BVxBsUSJEeeDzde-nZXDfg" fontName="Segoe UI" fontHeight="8" fillColor="16116705" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BWDVmESJEeeDzde-nZXDfg" x="-1" y="1453" height="1453"/>
+                </children>
+                <children xmi:type="umlnotation:UMLShape" xmi:id="_BWDVmUSJEeeDzde-nZXDfg" element="_BVtXUkSJEeeDzde-nZXDfg" fontName="Segoe UI" fontHeight="8" fillColor="16116705" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
+                  <eAnnotations xmi:id="_BWDVmkSJEeeDzde-nZXDfg" source="com.ibm.xtools.uml.ui.diagram.internal.styles">
+                    <details xmi:id="_BWDVm0SJEeeDzde-nZXDfg" key="LifelineLabelStyle" value="Represents Name and Type Name"/>
+                  </eAnnotations>
+                  <children xmi:type="notation:BasicDecorationNode" xmi:id="_BWDVnESJEeeDzde-nZXDfg" type="Stereotype"/>
+                  <children xmi:type="notation:BasicDecorationNode" xmi:id="_BWDVnUSJEeeDzde-nZXDfg" type="Name"/>
+                  <children xmi:type="notation:BasicDecorationNode" xmi:id="_BWDVnkSJEeeDzde-nZXDfg" type="Parent"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BWDVn0SJEeeDzde-nZXDfg" x="449" y="396" width="9391" height="9525"/>
+                </children>
+                <children xmi:type="umlnotation:UMLShape" xmi:id="_BWDVoESJEeeDzde-nZXDfg" element="_BVy24USJEeeDzde-nZXDfg" fontName="Segoe UI" fontHeight="8" fillColor="16116705" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BWDVoUSJEeeDzde-nZXDfg" x="-1" y="1453" height="1217"/>
+                </children>
+                <children xmi:type="umlnotation:UMLShape" xmi:id="_BWDVokSJEeeDzde-nZXDfg" element="_BVt-YESJEeeDzde-nZXDfg" fontName="Segoe UI" fontHeight="8" fillColor="16116705" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
+                  <eAnnotations xmi:id="_BWDVo0SJEeeDzde-nZXDfg" source="com.ibm.xtools.uml.ui.diagram.internal.styles">
+                    <details xmi:id="_BWDVpESJEeeDzde-nZXDfg" key="LifelineLabelStyle" value="Represents Name and Type Name"/>
+                  </eAnnotations>
+                  <children xmi:type="notation:BasicDecorationNode" xmi:id="_BWDVpUSJEeeDzde-nZXDfg" type="Stereotype"/>
+                  <children xmi:type="notation:BasicDecorationNode" xmi:id="_BWDVpkSJEeeDzde-nZXDfg" type="Name"/>
+                  <children xmi:type="notation:BasicDecorationNode" xmi:id="_BWDVp0SJEeeDzde-nZXDfg" type="Parent"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BWDVqESJEeeDzde-nZXDfg" x="-23487" y="317" width="9524" height="9525"/>
+                </children>
+                <children xmi:type="umlnotation:UMLShape" xmi:id="_BWD8oESJEeeDzde-nZXDfg" element="_BV0sEUSJEeeDzde-nZXDfg" fontName="Segoe UI" fontHeight="8" fillColor="16116705" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BWD8oUSJEeeDzde-nZXDfg" x="-1" y="1453" height="1825"/>
+                </children>
+                <children xmi:type="umlnotation:UMLShape" xmi:id="_BWD8okSJEeeDzde-nZXDfg" element="_BVt-YUSJEeeDzde-nZXDfg" fontName="Segoe UI" fontHeight="8" fillColor="16116705" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
+                  <eAnnotations xmi:id="_BWD8o0SJEeeDzde-nZXDfg" source="com.ibm.xtools.uml.ui.diagram.internal.styles">
+                    <details xmi:id="_BWD8pESJEeeDzde-nZXDfg" key="LifelineLabelStyle" value="Represents Name and Type Name"/>
+                  </eAnnotations>
+                  <children xmi:type="notation:BasicDecorationNode" xmi:id="_BWD8pUSJEeeDzde-nZXDfg" type="Stereotype"/>
+                  <children xmi:type="notation:BasicDecorationNode" xmi:id="_BWD8pkSJEeeDzde-nZXDfg" type="Name"/>
+                  <children xmi:type="notation:BasicDecorationNode" xmi:id="_BWD8p0SJEeeDzde-nZXDfg" type="Parent"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BWD8qESJEeeDzde-nZXDfg" x="449" y="396" width="3571" height="11958"/>
+                </children>
+                <children xmi:type="umlnotation:UMLShape" xmi:id="_BWD8qUSJEeeDzde-nZXDfg" element="_BV2hQUSJEeeDzde-nZXDfg" fontName="Segoe UI" fontHeight="8" fillColor="16116705" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BWD8qkSJEeeDzde-nZXDfg" x="-1" y="1453" height="1453"/>
+                </children>
+                <children xmi:type="umlnotation:UMLShape" xmi:id="_BWD8q0SJEeeDzde-nZXDfg" element="_BVt-YkSJEeeDzde-nZXDfg" fontName="Segoe UI" fontHeight="8" fillColor="16116705" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
+                  <eAnnotations xmi:id="_BWD8rESJEeeDzde-nZXDfg" source="com.ibm.xtools.uml.ui.diagram.internal.styles">
+                    <details xmi:id="_BWD8rUSJEeeDzde-nZXDfg" key="LifelineLabelStyle" value="Represents Name and Type Name"/>
+                  </eAnnotations>
+                  <children xmi:type="notation:BasicDecorationNode" xmi:id="_BWD8rkSJEeeDzde-nZXDfg" type="Stereotype"/>
+                  <children xmi:type="notation:BasicDecorationNode" xmi:id="_BWD8r0SJEeeDzde-nZXDfg" type="Name"/>
+                  <children xmi:type="notation:BasicDecorationNode" xmi:id="_BWD8sESJEeeDzde-nZXDfg" type="Parent"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BWD8sUSJEeeDzde-nZXDfg" x="449" y="396" width="5608" height="14048"/>
+                </children>
+                <children xmi:type="umlnotation:UMLShape" xmi:id="_BWD8skSJEeeDzde-nZXDfg" element="_BV4WcESJEeeDzde-nZXDfg" fontName="Segoe UI" fontHeight="8" fillColor="16116705" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BWD8s0SJEeeDzde-nZXDfg" x="-1" y="1453" height="1640"/>
+                </children>
+                <children xmi:type="umlnotation:UMLShape" xmi:id="_BWEjsESJEeeDzde-nZXDfg" element="_BV6LoESJEeeDzde-nZXDfg" fontName="Segoe UI" fontHeight="8" fillColor="16116705" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BWEjsUSJEeeDzde-nZXDfg" x="-1" y="1453" height="555"/>
+                </children>
+                <children xmi:type="umlnotation:UMLShape" xmi:id="_BWEjskSJEeeDzde-nZXDfg" element="_BV6ysUSJEeeDzde-nZXDfg" fontName="Segoe UI" fontHeight="8" fillColor="16116705" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BWEjs0SJEeeDzde-nZXDfg" x="-1" y="1453" height="1453"/>
+                </children>
+                <children xmi:type="umlnotation:UMLShape" xmi:id="_BWEjtESJEeeDzde-nZXDfg" element="_BVswQESJEeeDzde-nZXDfg" fontName="Segoe UI" fontHeight="8" fillColor="16116705" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
+                  <eAnnotations xmi:id="_BWFKwESJEeeDzde-nZXDfg" source="com.ibm.xtools.uml.ui.diagram.internal.styles">
+                    <details xmi:id="_BWFKwUSJEeeDzde-nZXDfg" key="LifelineLabelStyle" value="Represents Name and Type Name"/>
+                  </eAnnotations>
+                  <children xmi:type="notation:BasicDecorationNode" xmi:id="_BWFKwkSJEeeDzde-nZXDfg" type="Stereotype"/>
+                  <children xmi:type="notation:BasicDecorationNode" xmi:id="_BWFKw0SJEeeDzde-nZXDfg" type="Name"/>
+                  <children xmi:type="notation:BasicDecorationNode" xmi:id="_BWFx0ESJEeeDzde-nZXDfg" type="Parent"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BWEjtUSJEeeDzde-nZXDfg"/>
+                </children>
+                <children xmi:type="umlnotation:UMLShape" xmi:id="_BWFx0USJEeeDzde-nZXDfg" element="_BVtXUESJEeeDzde-nZXDfg" fontName="Segoe UI" fontHeight="8" fillColor="16116705" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
+                  <eAnnotations xmi:id="_BWFx00SJEeeDzde-nZXDfg" source="com.ibm.xtools.uml.ui.diagram.internal.styles">
+                    <details xmi:id="_BWFx1ESJEeeDzde-nZXDfg" key="LifelineLabelStyle" value="Represents Name and Type Name"/>
+                  </eAnnotations>
+                  <children xmi:type="notation:BasicDecorationNode" xmi:id="_BWGY4ESJEeeDzde-nZXDfg" type="Stereotype"/>
+                  <children xmi:type="notation:BasicDecorationNode" xmi:id="_BWGY4USJEeeDzde-nZXDfg" type="Name"/>
+                  <children xmi:type="notation:BasicDecorationNode" xmi:id="_BWGY4kSJEeeDzde-nZXDfg" type="Parent"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BWFx0kSJEeeDzde-nZXDfg"/>
+                </children>
+                <children xmi:type="umlnotation:UMLShape" xmi:id="_BWI1IESJEeeDzde-nZXDfg" element="_BVt-Y0SJEeeDzde-nZXDfg" fontName="Segoe UI" fontHeight="8" fillColor="16116705" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
+                  <eAnnotations xmi:id="_BWI1IkSJEeeDzde-nZXDfg" source="com.ibm.xtools.uml.ui.diagram.internal.styles">
+                    <details xmi:id="_BWI1I0SJEeeDzde-nZXDfg" key="LifelineLabelStyle" value="Represents Name and Type Name"/>
+                  </eAnnotations>
+                  <children xmi:type="notation:BasicDecorationNode" xmi:id="_BWJcMESJEeeDzde-nZXDfg" type="Stereotype"/>
+                  <children xmi:type="notation:BasicDecorationNode" xmi:id="_BWJcMUSJEeeDzde-nZXDfg" type="Name"/>
+                  <children xmi:type="notation:BasicDecorationNode" xmi:id="_BWJcMkSJEeeDzde-nZXDfg" type="Parent"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BWI1IUSJEeeDzde-nZXDfg" x="185" y="132" width="7857" height="18546"/>
+                </children>
+                <children xmi:type="umlnotation:UMLShape" xmi:id="_FKFA0ESJEeeDzde-nZXDfg" element="_FJ-TIESJEeeDzde-nZXDfg" fontName="Segoe UI" fontHeight="8" transparency="0" lineColor="12632258" lineWidth="1" showStereotype="Label">
+                  <eAnnotations xmi:id="_FKFn4ESJEeeDzde-nZXDfg" source="com.ibm.xtools.uml.ui.diagram.internal.styles">
+                    <details xmi:id="_FKFn4USJEeeDzde-nZXDfg" key="ImageModeStyle" value="true"/>
+                  </eAnnotations>
+                  <children xmi:type="notation:DecorationNode" xmi:id="_FKGO8ESJEeeDzde-nZXDfg" type="ImageCompartment">
+                    <layoutConstraint xmi:type="notation:Size" xmi:id="_FKGO8USJEeeDzde-nZXDfg" width="1320" height="1320"/>
+                  </children>
+                  <children xmi:type="notation:BasicDecorationNode" xmi:id="_FKGO8kSJEeeDzde-nZXDfg" type="Stereotype"/>
+                  <children xmi:type="notation:BasicDecorationNode" xmi:id="_FKHdEESJEeeDzde-nZXDfg" type="CommentBody"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FKFA0USJEeeDzde-nZXDfg" x="45356" y="19985" width="6346" height="3015"/>
+                </children>
+              </children>
+              <children xmi:type="notation:BasicDecorationNode" xmi:id="_6mAlJESIEeeDzde-nZXDfg" type="Name"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_6mAlJUSIEeeDzde-nZXDfg" x="793" y="793"/>
+            </children>
+            <edges xmi:type="umlnotation:UMLConnector" xmi:id="_BWGY40SJEeeDzde-nZXDfg" element="_BV_EIUSJEeeDzde-nZXDfg" source="_BWEjtESJEeeDzde-nZXDfg" target="_BWFx0USJEeeDzde-nZXDfg" fontName="Segoe UI" fontHeight="8" lineColor="8421504" lineWidth="1" showStereotype="Text">
+              <children xmi:type="notation:DecorationNode" xmi:id="_BWGY5ESJEeeDzde-nZXDfg" type="MessageNameLabel">
+                <children xmi:type="notation:BasicDecorationNode" xmi:id="_BWGY5USJEeeDzde-nZXDfg" type="Stereotype"/>
+                <children xmi:type="notation:BasicDecorationNode" xmi:id="_BWGY5kSJEeeDzde-nZXDfg" type="Name"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BWGY50SJEeeDzde-nZXDfg" y="-317"/>
+              </children>
+              <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_BWGY6ESJEeeDzde-nZXDfg" points="[0, 0, -162, 0]$[162, 0, 0, 0]"/>
+              <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_BWGY6USJEeeDzde-nZXDfg" id="1011173680:1772"/>
+              <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_BWGY6kSJEeeDzde-nZXDfg" id="-70952390:0"/>
+            </edges>
+            <edges xmi:type="umlnotation:UMLConnector" xmi:id="_BWGY60SJEeeDzde-nZXDfg" element="_BV-dEUSJEeeDzde-nZXDfg" source="_BWFx0USJEeeDzde-nZXDfg" target="_BWEjtESJEeeDzde-nZXDfg" fontName="Segoe UI" fontHeight="8" roundedBendpointsRadius="4" routing="Rectilinear" lineColor="8421504" lineWidth="1" showStereotype="Text">
+              <children xmi:type="notation:DecorationNode" xmi:id="_BWGY7ESJEeeDzde-nZXDfg" type="MessageNameLabel">
+                <children xmi:type="notation:BasicDecorationNode" xmi:id="_BWGY7USJEeeDzde-nZXDfg" type="Stereotype"/>
+                <children xmi:type="notation:BasicDecorationNode" xmi:id="_BWGY7kSJEeeDzde-nZXDfg" type="Name"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BWGY70SJEeeDzde-nZXDfg" y="476"/>
+              </children>
+              <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_BWGY8ESJEeeDzde-nZXDfg" points="[0, 0, 162, 0]$[-162, 0, 0, 0]"/>
+              <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_BWGY8USJEeeDzde-nZXDfg" id="1011173680:1349"/>
+              <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_BWGY8kSJEeeDzde-nZXDfg" id="-70952390:0"/>
+            </edges>
+            <edges xmi:type="umlnotation:UMLConnector" xmi:id="_BWG_8ESJEeeDzde-nZXDfg" element="_BV_EIkSJEeeDzde-nZXDfg" source="_BWFx0USJEeeDzde-nZXDfg" target="_BWDVkESJEeeDzde-nZXDfg" fontName="Segoe UI" fontHeight="8" lineColor="8421504" lineWidth="1" showStereotype="Text">
+              <children xmi:type="notation:DecorationNode" xmi:id="_BWG_8USJEeeDzde-nZXDfg" type="MessageNameLabel">
+                <children xmi:type="notation:BasicDecorationNode" xmi:id="_BWG_8kSJEeeDzde-nZXDfg" type="Stereotype"/>
+                <children xmi:type="notation:BasicDecorationNode" xmi:id="_BWG_80SJEeeDzde-nZXDfg" type="Name"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BWG_9ESJEeeDzde-nZXDfg" y="-317"/>
+              </children>
+              <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_BWG_9USJEeeDzde-nZXDfg" points="[0, 0, -174, 0]$[174, 0, 0, 0]"/>
+              <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_BWG_9kSJEeeDzde-nZXDfg" id="1011173680:662"/>
+              <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_BWG_90SJEeeDzde-nZXDfg" id="-70952390:0"/>
+            </edges>
+            <edges xmi:type="umlnotation:UMLConnector" xmi:id="_BWG_-ESJEeeDzde-nZXDfg" element="_BV_EJESJEeeDzde-nZXDfg" source="_BWDVkESJEeeDzde-nZXDfg" target="_BWFx0USJEeeDzde-nZXDfg" fontName="Segoe UI" fontHeight="8" roundedBendpointsRadius="4" routing="Rectilinear" lineColor="8421504" lineWidth="1" showStereotype="Text">
+              <children xmi:type="notation:DecorationNode" xmi:id="_BWG_-USJEeeDzde-nZXDfg" type="MessageNameLabel">
+                <children xmi:type="notation:BasicDecorationNode" xmi:id="_BWG_-kSJEeeDzde-nZXDfg" type="Stereotype"/>
+                <children xmi:type="notation:BasicDecorationNode" xmi:id="_BWG_-0SJEeeDzde-nZXDfg" type="Name"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BWG__ESJEeeDzde-nZXDfg" y="476"/>
+              </children>
+              <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_BWG__USJEeeDzde-nZXDfg" points="[0, 0, 174, 0]$[-174, 0, 0, 0]"/>
+              <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_BWG__kSJEeeDzde-nZXDfg" id="1011173680:1322"/>
+              <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_BWG__0SJEeeDzde-nZXDfg" id="-70952390:0"/>
+            </edges>
+            <edges xmi:type="umlnotation:UMLConnector" xmi:id="_BWHAAESJEeeDzde-nZXDfg" element="_BV-dE0SJEeeDzde-nZXDfg" source="_BWFx0USJEeeDzde-nZXDfg" target="_BWDVmUSJEeeDzde-nZXDfg" fontName="Segoe UI" fontHeight="8" lineColor="8421504" lineWidth="1" showStereotype="Text">
+              <children xmi:type="notation:DecorationNode" xmi:id="_BWHAAUSJEeeDzde-nZXDfg" type="MessageNameLabel">
+                <children xmi:type="notation:BasicDecorationNode" xmi:id="_BWHAAkSJEeeDzde-nZXDfg" type="Stereotype"/>
+                <children xmi:type="notation:BasicDecorationNode" xmi:id="_BWHAA0SJEeeDzde-nZXDfg" type="Name"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BWHABESJEeeDzde-nZXDfg" y="-317"/>
+              </children>
+              <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_BWHABUSJEeeDzde-nZXDfg" points="[0, 0, -464, 0]$[464, 0, 0, 0]"/>
+              <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_BWHABkSJEeeDzde-nZXDfg" id="1011173680:926"/>
+              <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_BWHAB0SJEeeDzde-nZXDfg" id="-70952390:0"/>
+            </edges>
+            <edges xmi:type="umlnotation:UMLConnector" xmi:id="_BWHnAESJEeeDzde-nZXDfg" element="_BV-dEkSJEeeDzde-nZXDfg" source="_BWDVmUSJEeeDzde-nZXDfg" target="_BWFx0USJEeeDzde-nZXDfg" fontName="Segoe UI" fontHeight="8" roundedBendpointsRadius="4" routing="Rectilinear" lineColor="8421504" lineWidth="1" showStereotype="Text">
+              <children xmi:type="notation:DecorationNode" xmi:id="_BWHnAUSJEeeDzde-nZXDfg" type="MessageNameLabel">
+                <children xmi:type="notation:BasicDecorationNode" xmi:id="_BWHnAkSJEeeDzde-nZXDfg" type="Stereotype"/>
+                <children xmi:type="notation:BasicDecorationNode" xmi:id="_BWHnA0SJEeeDzde-nZXDfg" type="Name"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BWHnBESJEeeDzde-nZXDfg" y="476"/>
+              </children>
+              <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_BWHnBUSJEeeDzde-nZXDfg" points="[0, 0, 464, 0]$[-464, 0, 0, 0]"/>
+              <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_BWHnBkSJEeeDzde-nZXDfg" id="1011173680:1217"/>
+              <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_BWHnB0SJEeeDzde-nZXDfg" id="-70952390:0"/>
+            </edges>
+            <edges xmi:type="umlnotation:UMLConnector" xmi:id="_BWHnCESJEeeDzde-nZXDfg" element="_BV92AUSJEeeDzde-nZXDfg" source="_BWFx0USJEeeDzde-nZXDfg" target="_BWDVokSJEeeDzde-nZXDfg" fontName="Segoe UI" fontHeight="8" lineColor="8421504" lineWidth="1" showStereotype="Text">
+              <children xmi:type="notation:DecorationNode" xmi:id="_BWHnCUSJEeeDzde-nZXDfg" type="MessageNameLabel">
+                <children xmi:type="notation:BasicDecorationNode" xmi:id="_BWHnCkSJEeeDzde-nZXDfg" type="Stereotype"/>
+                <children xmi:type="notation:BasicDecorationNode" xmi:id="_BWHnC0SJEeeDzde-nZXDfg" type="Name"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BWHnDESJEeeDzde-nZXDfg" y="-317"/>
+              </children>
+              <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_BWHnDUSJEeeDzde-nZXDfg" points="[0, 0, -828, 0]$[828, 0, 0, 0]"/>
+              <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_BWHnDkSJEeeDzde-nZXDfg" id="1011173680:899"/>
+              <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_BWHnD0SJEeeDzde-nZXDfg" id="-70952390:0"/>
+            </edges>
+            <edges xmi:type="umlnotation:UMLConnector" xmi:id="_BWHnEESJEeeDzde-nZXDfg" element="_BV_rMUSJEeeDzde-nZXDfg" source="_BWDVokSJEeeDzde-nZXDfg" target="_BWFx0USJEeeDzde-nZXDfg" fontName="Segoe UI" fontHeight="8" roundedBendpointsRadius="4" routing="Rectilinear" lineColor="8421504" lineWidth="1" showStereotype="Text">
+              <children xmi:type="notation:DecorationNode" xmi:id="_BWHnEUSJEeeDzde-nZXDfg" type="MessageNameLabel">
+                <children xmi:type="notation:BasicDecorationNode" xmi:id="_BWHnEkSJEeeDzde-nZXDfg" type="Stereotype"/>
+                <children xmi:type="notation:BasicDecorationNode" xmi:id="_BWHnE0SJEeeDzde-nZXDfg" type="Name"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BWHnFESJEeeDzde-nZXDfg" y="476"/>
+              </children>
+              <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_BWHnFUSJEeeDzde-nZXDfg" points="[0, 0, 828, 0]$[-828, 0, 0, 0]"/>
+              <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_BWHnFkSJEeeDzde-nZXDfg" id="1011173680:1825"/>
+              <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_BWHnF0SJEeeDzde-nZXDfg" id="-70952390:0"/>
+            </edges>
+            <edges xmi:type="umlnotation:UMLConnector" xmi:id="_BWIOEESJEeeDzde-nZXDfg" element="_BV-dFESJEeeDzde-nZXDfg" source="_BWFx0USJEeeDzde-nZXDfg" target="_BWD8okSJEeeDzde-nZXDfg" fontName="Segoe UI" fontHeight="8" lineColor="8421504" lineWidth="1" showStereotype="Text">
+              <children xmi:type="notation:DecorationNode" xmi:id="_BWIOEUSJEeeDzde-nZXDfg" type="MessageNameLabel">
+                <children xmi:type="notation:BasicDecorationNode" xmi:id="_BWIOEkSJEeeDzde-nZXDfg" type="Stereotype"/>
+                <children xmi:type="notation:BasicDecorationNode" xmi:id="_BWIOE0SJEeeDzde-nZXDfg" type="Name"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BWIOFESJEeeDzde-nZXDfg" y="-317"/>
+              </children>
+              <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_BWIOFUSJEeeDzde-nZXDfg" points="[0, 0, -1084, 0]$[1084, 0, 0, 0]"/>
+              <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_BWIOFkSJEeeDzde-nZXDfg" id="1011173680:1773"/>
+              <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_BWIOF0SJEeeDzde-nZXDfg" id="-70952390:0"/>
+            </edges>
+            <edges xmi:type="umlnotation:UMLConnector" xmi:id="_BWIOGESJEeeDzde-nZXDfg" element="_BV_rMESJEeeDzde-nZXDfg" source="_BWD8okSJEeeDzde-nZXDfg" target="_BWFx0USJEeeDzde-nZXDfg" fontName="Segoe UI" fontHeight="8" roundedBendpointsRadius="4" routing="Rectilinear" lineColor="8421504" lineWidth="1" showStereotype="Text">
+              <children xmi:type="notation:DecorationNode" xmi:id="_BWIOGUSJEeeDzde-nZXDfg" type="MessageNameLabel">
+                <children xmi:type="notation:BasicDecorationNode" xmi:id="_BWIOGkSJEeeDzde-nZXDfg" type="Stereotype"/>
+                <children xmi:type="notation:BasicDecorationNode" xmi:id="_BWIOG0SJEeeDzde-nZXDfg" type="Name"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BWIOHESJEeeDzde-nZXDfg" y="476"/>
+              </children>
+              <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_BWIOHUSJEeeDzde-nZXDfg" points="[0, 0, 1084, 0]$[-1084, 0, 0, 0]"/>
+              <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_BWIOHkSJEeeDzde-nZXDfg" id="1011173680:1322"/>
+              <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_BWIOH0SJEeeDzde-nZXDfg" id="-70952390:0"/>
+            </edges>
+            <edges xmi:type="umlnotation:UMLConnector" xmi:id="_BWIOIESJEeeDzde-nZXDfg" element="_BV_EIESJEeeDzde-nZXDfg" source="_BWFx0USJEeeDzde-nZXDfg" target="_BWD8q0SJEeeDzde-nZXDfg" fontName="Segoe UI" fontHeight="8" lineColor="8421504" lineWidth="1" showStereotype="Text">
+              <children xmi:type="notation:DecorationNode" xmi:id="_BWIOIUSJEeeDzde-nZXDfg" type="MessageNameLabel">
+                <children xmi:type="notation:BasicDecorationNode" xmi:id="_BWIOIkSJEeeDzde-nZXDfg" type="Stereotype"/>
+                <children xmi:type="notation:BasicDecorationNode" xmi:id="_BWIOI0SJEeeDzde-nZXDfg" type="Name"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BWIOJESJEeeDzde-nZXDfg" y="-317"/>
+              </children>
+              <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_BWIOJUSJEeeDzde-nZXDfg" points="[0, 0, -1264, 0]$[1264, 0, 0, 0]"/>
+              <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_BWIOJkSJEeeDzde-nZXDfg" id="1011173680:793"/>
+              <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_BWIOJ0SJEeeDzde-nZXDfg" id="-70952390:0"/>
+            </edges>
+            <edges xmi:type="umlnotation:UMLConnector" xmi:id="_BWIOKESJEeeDzde-nZXDfg" element="_BV-dEESJEeeDzde-nZXDfg" source="_BWD8q0SJEeeDzde-nZXDfg" target="_BWFx0USJEeeDzde-nZXDfg" fontName="Segoe UI" fontHeight="8" roundedBendpointsRadius="4" routing="Rectilinear" lineColor="8421504" lineWidth="1" showStereotype="Text">
+              <children xmi:type="notation:DecorationNode" xmi:id="_BWIOKUSJEeeDzde-nZXDfg" type="MessageNameLabel">
+                <children xmi:type="notation:BasicDecorationNode" xmi:id="_BWIOKkSJEeeDzde-nZXDfg" type="Stereotype"/>
+                <children xmi:type="notation:BasicDecorationNode" xmi:id="_BWIOK0SJEeeDzde-nZXDfg" type="Name"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BWIOLESJEeeDzde-nZXDfg" y="476"/>
+              </children>
+              <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_BWIOLUSJEeeDzde-nZXDfg" points="[0, 0, 1264, 0]$[-1264, 0, 0, 0]"/>
+              <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_BWIOLkSJEeeDzde-nZXDfg" id="1011173680:1640"/>
+              <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_BWIOL0SJEeeDzde-nZXDfg" id="-70952390:0"/>
+            </edges>
+            <edges xmi:type="umlnotation:UMLConnector" xmi:id="_BWJcM0SJEeeDzde-nZXDfg" element="_BV92AkSJEeeDzde-nZXDfg" source="_BWFx0USJEeeDzde-nZXDfg" target="_BWI1IESJEeeDzde-nZXDfg" fontName="Segoe UI" fontHeight="8" lineColor="8421504" lineWidth="1" showStereotype="Text">
+              <children xmi:type="notation:DecorationNode" xmi:id="_BWJcNESJEeeDzde-nZXDfg" type="MessageNameLabel">
+                <children xmi:type="notation:BasicDecorationNode" xmi:id="_BWJcNUSJEeeDzde-nZXDfg" type="Stereotype"/>
+                <children xmi:type="notation:BasicDecorationNode" xmi:id="_BWJcNkSJEeeDzde-nZXDfg" type="Name"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BWJcN0SJEeeDzde-nZXDfg" y="-317"/>
+              </children>
+              <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_BWJcOESJEeeDzde-nZXDfg" points="[0, 0, -1526, 0]$[1526, 0, 0, 0]"/>
+              <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_BWJcOUSJEeeDzde-nZXDfg" id="1011173680:1561"/>
+              <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_BWJcOkSJEeeDzde-nZXDfg" id="-70952390:0"/>
+            </edges>
+            <edges xmi:type="umlnotation:UMLConnector" xmi:id="_BWKDQESJEeeDzde-nZXDfg" element="_BV_EI0SJEeeDzde-nZXDfg" source="_BWI1IESJEeeDzde-nZXDfg" target="_BWFx0USJEeeDzde-nZXDfg" fontName="Segoe UI" fontHeight="8" roundedBendpointsRadius="4" routing="Rectilinear" lineColor="8421504" lineWidth="1" showStereotype="Text">
+              <children xmi:type="notation:DecorationNode" xmi:id="_BWKDQUSJEeeDzde-nZXDfg" type="MessageNameLabel">
+                <children xmi:type="notation:BasicDecorationNode" xmi:id="_BWKDQkSJEeeDzde-nZXDfg" type="Stereotype"/>
+                <children xmi:type="notation:BasicDecorationNode" xmi:id="_BWKDQ0SJEeeDzde-nZXDfg" type="Name"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BWKDRESJEeeDzde-nZXDfg" y="476"/>
+              </children>
+              <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_BWKDRUSJEeeDzde-nZXDfg" points="[0, 0, 1526, 0]$[-1526, 0, 0, 0]"/>
+              <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_BWKDRkSJEeeDzde-nZXDfg" id="1011173680:555"/>
+              <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_BWKDR0SJEeeDzde-nZXDfg" id="-70952390:0"/>
+            </edges>
+            <edges xmi:type="umlnotation:UMLConnector" xmi:id="_BWKDSESJEeeDzde-nZXDfg" element="_BV_rMkSJEeeDzde-nZXDfg" source="_BWI1IESJEeeDzde-nZXDfg" target="_BWI1IESJEeeDzde-nZXDfg" fontName="Segoe UI" fontHeight="8" lineColor="8421504" lineWidth="1" showStereotype="Text">
+              <children xmi:type="notation:DecorationNode" xmi:id="_BWKDSUSJEeeDzde-nZXDfg" type="MessageNameLabel">
+                <children xmi:type="notation:BasicDecorationNode" xmi:id="_BWKDSkSJEeeDzde-nZXDfg" type="Stereotype"/>
+                <children xmi:type="notation:BasicDecorationNode" xmi:id="_BWKDS0SJEeeDzde-nZXDfg" type="Name"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BWKDTESJEeeDzde-nZXDfg" x="27" y="-1452"/>
+              </children>
+              <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_BWKDTUSJEeeDzde-nZXDfg" points="[0, 0, 0, -22]$[0, 22, 0, 0]"/>
+              <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_BWKDTkSJEeeDzde-nZXDfg" id="1011173680:609"/>
+              <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_BWKDT0SJEeeDzde-nZXDfg" id="-70952390:582"/>
+            </edges>
+            <edges xmi:type="umlnotation:UMLConnector" xmi:id="_BWKDUESJEeeDzde-nZXDfg" element="_BV92A0SJEeeDzde-nZXDfg" source="_BWI1IESJEeeDzde-nZXDfg" target="_BWI1IESJEeeDzde-nZXDfg" fontName="Segoe UI" fontHeight="8" roundedBendpointsRadius="4" routing="Rectilinear" lineColor="8421504" lineWidth="1" showStereotype="Text">
+              <children xmi:type="notation:DecorationNode" xmi:id="_BWKDUUSJEeeDzde-nZXDfg" type="MessageNameLabel">
+                <children xmi:type="notation:BasicDecorationNode" xmi:id="_BWKDUkSJEeeDzde-nZXDfg" type="Stereotype"/>
+                <children xmi:type="notation:BasicDecorationNode" xmi:id="_BWKDU0SJEeeDzde-nZXDfg" type="Name"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BWKDVESJEeeDzde-nZXDfg" x="-3" y="-1452"/>
+              </children>
+              <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_BWKDVUSJEeeDzde-nZXDfg" points="[0, 0, 0, -10]$[0, 10, 0, 0]"/>
+              <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_BWKDVkSJEeeDzde-nZXDfg" id="1011173680:1322"/>
+              <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_BWKDV0SJEeeDzde-nZXDfg" id="-70952390:264"/>
+            </edges>
+            <edges xmi:type="umlnotation:UMLConnector" xmi:id="_M1vsAESJEeeDzde-nZXDfg" type="Reference" source="_FKFA0ESJEeeDzde-nZXDfg" target="_BWEjsESJEeeDzde-nZXDfg" fontName="Segoe UI" fontHeight="8" roundedBendpointsRadius="4" routing="Rectilinear" lineColor="8421504" lineWidth="1" showStereotype="Text">
+              <element xsi:nil="true"/>
+              <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_M1vsAUSJEeeDzde-nZXDfg" points="[-22, -114, 8, 42]$[-29, -151, 1, 5]"/>
+              <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_M1z9cESJEeeDzde-nZXDfg" id="(0.545225338796092,1.0)"/>
+              <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_M1z9cUSJEeeDzde-nZXDfg" id="(0.15,0.9604079184163168)"/>
+            </edges>
+          </contents>
+        </eAnnotations>
+        <ownedComment xmi:id="_FJ-TIESJEeeDzde-nZXDfg" annotatedElement="_BV6LoESJEeeDzde-nZXDfg">
+          <body>&lt;p>Los Datos introducidos no son validos&lt;/p>&lt;p>se mostrara un error y se dentendra la creacion del pedido&lt;/p></body>
+        </ownedComment>
+        <ownedConnector xmi:id="_BWASQ0SJEeeDzde-nZXDfg">
+          <end xmi:id="_BWASRESJEeeDzde-nZXDfg" role="_BWASQUSJEeeDzde-nZXDfg"/>
+          <end xmi:id="_BWA5UESJEeeDzde-nZXDfg" role="_BVulcESJEeeDzde-nZXDfg"/>
+        </ownedConnector>
+        <ownedConnector xmi:id="_BWA5UUSJEeeDzde-nZXDfg">
+          <end xmi:id="_BWA5UkSJEeeDzde-nZXDfg" role="_BWASQUSJEeeDzde-nZXDfg"/>
+          <end xmi:id="_BWA5U0SJEeeDzde-nZXDfg" role="_BWASQkSJEeeDzde-nZXDfg"/>
+        </ownedConnector>
+        <ownedConnector xmi:id="_BWA5VESJEeeDzde-nZXDfg">
+          <end xmi:id="_BWA5VUSJEeeDzde-nZXDfg" role="_BWASQkSJEeeDzde-nZXDfg"/>
+          <end xmi:id="_BWA5VkSJEeeDzde-nZXDfg" role="_BWASQkSJEeeDzde-nZXDfg"/>
+        </ownedConnector>
+        <ownedConnector xmi:id="_BWBgYESJEeeDzde-nZXDfg">
+          <end xmi:id="_BWBgYUSJEeeDzde-nZXDfg" role="_BVulc0SJEeeDzde-nZXDfg"/>
+          <end xmi:id="_BWBgYkSJEeeDzde-nZXDfg" role="_BWASQUSJEeeDzde-nZXDfg"/>
+        </ownedConnector>
+        <ownedConnector xmi:id="_BWBgY0SJEeeDzde-nZXDfg">
+          <end xmi:id="_BWBgZESJEeeDzde-nZXDfg" role="_BWASQUSJEeeDzde-nZXDfg"/>
+          <end xmi:id="_BWBgZUSJEeeDzde-nZXDfg" role="_BWASQESJEeeDzde-nZXDfg"/>
+        </ownedConnector>
+        <ownedConnector xmi:id="_BWCHcESJEeeDzde-nZXDfg">
+          <end xmi:id="_BWCHcUSJEeeDzde-nZXDfg" role="_BVvMgESJEeeDzde-nZXDfg"/>
+          <end xmi:id="_BWCHckSJEeeDzde-nZXDfg" role="_BWASQUSJEeeDzde-nZXDfg"/>
+        </ownedConnector>
+        <ownedConnector xmi:id="_BWCHc0SJEeeDzde-nZXDfg">
+          <end xmi:id="_BWCHdESJEeeDzde-nZXDfg" role="_BWASQUSJEeeDzde-nZXDfg"/>
+          <end xmi:id="_BWCHdUSJEeeDzde-nZXDfg" role="_BVulcUSJEeeDzde-nZXDfg"/>
+        </ownedConnector>
+        <ownedConnector xmi:id="_BWCugESJEeeDzde-nZXDfg">
+          <end xmi:id="_BWCugUSJEeeDzde-nZXDfg" role="_BWASQUSJEeeDzde-nZXDfg"/>
+          <end xmi:id="_BWCugkSJEeeDzde-nZXDfg" role="_BVulckSJEeeDzde-nZXDfg"/>
+        </ownedConnector>
+        <lifeline xmi:id="_BVswQESJEeeDzde-nZXDfg" name="administrador" represents="_BWASQESJEeeDzde-nZXDfg" coveredBy="_BVvMgUSJEeeDzde-nZXDfg _BV92AESJEeeDzde-nZXDfg"/>
+        <lifeline xmi:id="_BVtXUESJEeeDzde-nZXDfg" name="interfaz" represents="_BWASQUSJEeeDzde-nZXDfg" coveredBy="_BVvzkESJEeeDzde-nZXDfg _BVvzkUSJEeeDzde-nZXDfg _BV9O8ESJEeeDzde-nZXDfg _BVwaoESJEeeDzde-nZXDfg _BVxowUSJEeeDzde-nZXDfg _BVyP0ESJEeeDzde-nZXDfg _BVzd8ESJEeeDzde-nZXDfg _BV0FAESJEeeDzde-nZXDfg _BV1TIESJEeeDzde-nZXDfg _BV16MESJEeeDzde-nZXDfg _BV3IUESJEeeDzde-nZXDfg _BV3vYESJEeeDzde-nZXDfg _BV49gESJEeeDzde-nZXDfg _BV5kkESJEeeDzde-nZXDfg _BV8n4USJEeeDzde-nZXDfg"/>
+        <lifeline xmi:id="_BVtXUUSJEeeDzde-nZXDfg" name="tCliente" represents="_BVulckSJEeeDzde-nZXDfg" coveredBy="_BVxBsESJEeeDzde-nZXDfg _BVxBsUSJEeeDzde-nZXDfg _BVxowESJEeeDzde-nZXDfg"/>
+        <lifeline xmi:id="_BVtXUkSJEeeDzde-nZXDfg" name="SucursalEnvio" represents="_BVvMgESJEeeDzde-nZXDfg" coveredBy="_BVy24ESJEeeDzde-nZXDfg _BVy24USJEeeDzde-nZXDfg _BVy24kSJEeeDzde-nZXDfg"/>
+        <lifeline xmi:id="_BVt-YESJEeeDzde-nZXDfg" name="SucursalLLegada" represents="_BVulcESJEeeDzde-nZXDfg" coveredBy="_BV0sEESJEeeDzde-nZXDfg _BV0sEUSJEeeDzde-nZXDfg _BV0sEkSJEeeDzde-nZXDfg"/>
+        <lifeline xmi:id="_BVt-YUSJEeeDzde-nZXDfg" name="metPago" represents="_BVulcUSJEeeDzde-nZXDfg" coveredBy="_BV2hQESJEeeDzde-nZXDfg _BV2hQUSJEeeDzde-nZXDfg _BV2hQkSJEeeDzde-nZXDfg"/>
+        <lifeline xmi:id="_BVt-YkSJEeeDzde-nZXDfg" name="tPedido" represents="_BVulc0SJEeeDzde-nZXDfg" coveredBy="_BV3vYUSJEeeDzde-nZXDfg _BV4WcESJEeeDzde-nZXDfg _BV4WcUSJEeeDzde-nZXDfg"/>
+        <lifeline xmi:id="_BVt-Y0SJEeeDzde-nZXDfg" name="gestionPedido" represents="_BWASQkSJEeeDzde-nZXDfg" coveredBy="_BV5kkUSJEeeDzde-nZXDfg _BV6LoESJEeeDzde-nZXDfg _BV6LoUSJEeeDzde-nZXDfg _BV6ysESJEeeDzde-nZXDfg _BV6ysUSJEeeDzde-nZXDfg _BV7ZwESJEeeDzde-nZXDfg _BV8A0ESJEeeDzde-nZXDfg _BV8n4ESJEeeDzde-nZXDfg"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_BVvMgUSJEeeDzde-nZXDfg" covered="_BVswQESJEeeDzde-nZXDfg" event="_SGwokURbEeerCNPWJw7whw" message="_BV_EIUSJEeeDzde-nZXDfg"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_BVvzkESJEeeDzde-nZXDfg" covered="_BVtXUESJEeeDzde-nZXDfg" event="_SGwokkRbEeerCNPWJw7whw" message="_BV_EIUSJEeeDzde-nZXDfg"/>
+        <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_BVvzkUSJEeeDzde-nZXDfg" covered="_BVtXUESJEeeDzde-nZXDfg" start="_BVvzkESJEeeDzde-nZXDfg" finish="_BV9O8ESJEeeDzde-nZXDfg"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_BVwaoESJEeeDzde-nZXDfg" covered="_BVtXUESJEeeDzde-nZXDfg" event="_W1trAERbEeerCNPWJw7whw" message="_BV_EIkSJEeeDzde-nZXDfg"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_BVxBsESJEeeDzde-nZXDfg" covered="_BVtXUUSJEeeDzde-nZXDfg" event="_W1trAURbEeerCNPWJw7whw" message="_BV_EIkSJEeeDzde-nZXDfg"/>
+        <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_BVxBsUSJEeeDzde-nZXDfg" covered="_BVtXUUSJEeeDzde-nZXDfg" start="_BVxBsESJEeeDzde-nZXDfg" finish="_BVxowESJEeeDzde-nZXDfg"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_BVxowESJEeeDzde-nZXDfg" covered="_BVtXUUSJEeeDzde-nZXDfg" event="_W1trAERbEeerCNPWJw7whw" message="_BV_EJESJEeeDzde-nZXDfg"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_BVxowUSJEeeDzde-nZXDfg" covered="_BVtXUESJEeeDzde-nZXDfg" event="_W1trAURbEeerCNPWJw7whw" message="_BV_EJESJEeeDzde-nZXDfg"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_BVyP0ESJEeeDzde-nZXDfg" covered="_BVtXUESJEeeDzde-nZXDfg" event="_n2HQ8ERbEeerCNPWJw7whw" message="_BV-dE0SJEeeDzde-nZXDfg"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_BVy24ESJEeeDzde-nZXDfg" covered="_BVtXUkSJEeeDzde-nZXDfg" event="_n2HQ8URbEeerCNPWJw7whw" message="_BV-dE0SJEeeDzde-nZXDfg"/>
+        <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_BVy24USJEeeDzde-nZXDfg" covered="_BVtXUkSJEeeDzde-nZXDfg" start="_BVy24ESJEeeDzde-nZXDfg" finish="_BVy24kSJEeeDzde-nZXDfg"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_BVy24kSJEeeDzde-nZXDfg" covered="_BVtXUkSJEeeDzde-nZXDfg" event="_n2HQ8ERbEeerCNPWJw7whw" message="_BV-dEkSJEeeDzde-nZXDfg"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_BVzd8ESJEeeDzde-nZXDfg" covered="_BVtXUESJEeeDzde-nZXDfg" event="_n2HQ8URbEeerCNPWJw7whw" message="_BV-dEkSJEeeDzde-nZXDfg"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_BV0FAESJEeeDzde-nZXDfg" covered="_BVtXUESJEeeDzde-nZXDfg" event="_n2HQ8ERbEeerCNPWJw7whw" message="_BV92AUSJEeeDzde-nZXDfg"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_BV0sEESJEeeDzde-nZXDfg" covered="_BVt-YESJEeeDzde-nZXDfg" event="_n2HQ8URbEeerCNPWJw7whw" message="_BV92AUSJEeeDzde-nZXDfg"/>
+        <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_BV0sEUSJEeeDzde-nZXDfg" covered="_BVt-YESJEeeDzde-nZXDfg" start="_BV0sEESJEeeDzde-nZXDfg" finish="_BV0sEkSJEeeDzde-nZXDfg"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_BV0sEkSJEeeDzde-nZXDfg" covered="_BVt-YESJEeeDzde-nZXDfg" event="_n2HQ8ERbEeerCNPWJw7whw" message="_BV_rMUSJEeeDzde-nZXDfg"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_BV1TIESJEeeDzde-nZXDfg" covered="_BVtXUESJEeeDzde-nZXDfg" event="_n2HQ8URbEeerCNPWJw7whw" message="_BV_rMUSJEeeDzde-nZXDfg"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_BV16MESJEeeDzde-nZXDfg" covered="_BVtXUESJEeeDzde-nZXDfg" event="_-OVQIURbEeerCNPWJw7whw" message="_BV-dFESJEeeDzde-nZXDfg"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_BV2hQESJEeeDzde-nZXDfg" covered="_BVt-YUSJEeeDzde-nZXDfg" event="_-OVQIkRbEeerCNPWJw7whw" message="_BV-dFESJEeeDzde-nZXDfg"/>
+        <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_BV2hQUSJEeeDzde-nZXDfg" covered="_BVt-YUSJEeeDzde-nZXDfg" start="_BV2hQESJEeeDzde-nZXDfg" finish="_BV2hQkSJEeeDzde-nZXDfg"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_BV2hQkSJEeeDzde-nZXDfg" covered="_BVt-YUSJEeeDzde-nZXDfg" event="_-OVQIURbEeerCNPWJw7whw" message="_BV_rMESJEeeDzde-nZXDfg"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_BV3IUESJEeeDzde-nZXDfg" covered="_BVtXUESJEeeDzde-nZXDfg" event="_-OVQIkRbEeerCNPWJw7whw" message="_BV_rMESJEeeDzde-nZXDfg"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_BV3vYESJEeeDzde-nZXDfg" covered="_BVtXUESJEeeDzde-nZXDfg" event="_pa_A4DSgEeeqiPPWzihKfA" message="_BV_EIESJEeeDzde-nZXDfg"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_BV3vYUSJEeeDzde-nZXDfg" covered="_BVt-YkSJEeeDzde-nZXDfg" event="_EExfEERcEeerCNPWJw7whw" message="_BV_EIESJEeeDzde-nZXDfg"/>
+        <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_BV4WcESJEeeDzde-nZXDfg" covered="_BVt-YkSJEeeDzde-nZXDfg" start="_BV3vYUSJEeeDzde-nZXDfg" finish="_BV4WcUSJEeeDzde-nZXDfg"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_BV4WcUSJEeeDzde-nZXDfg" covered="_BVt-YkSJEeeDzde-nZXDfg" event="_pa_A4DSgEeeqiPPWzihKfA" message="_BV-dEESJEeeDzde-nZXDfg"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_BV49gESJEeeDzde-nZXDfg" covered="_BVtXUESJEeeDzde-nZXDfg" event="_EExfEERcEeerCNPWJw7whw" message="_BV-dEESJEeeDzde-nZXDfg"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_BV5kkESJEeeDzde-nZXDfg" covered="_BVtXUESJEeeDzde-nZXDfg" event="_Oxs70ERcEeerCNPWJw7whw" message="_BV92AkSJEeeDzde-nZXDfg"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_BV5kkUSJEeeDzde-nZXDfg" covered="_BVt-Y0SJEeeDzde-nZXDfg" event="_Oxs70URcEeerCNPWJw7whw" message="_BV92AkSJEeeDzde-nZXDfg"/>
+        <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_BV6LoESJEeeDzde-nZXDfg" covered="_BVt-Y0SJEeeDzde-nZXDfg" start="_BV5kkUSJEeeDzde-nZXDfg" finish="_BV8n4ESJEeeDzde-nZXDfg"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_BV6LoUSJEeeDzde-nZXDfg" covered="_BVt-Y0SJEeeDzde-nZXDfg" event="_SemEUURcEeerCNPWJw7whw" message="_BV_rMkSJEeeDzde-nZXDfg"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_BV6ysESJEeeDzde-nZXDfg" covered="_BVt-Y0SJEeeDzde-nZXDfg" event="_SemEUkRcEeerCNPWJw7whw" message="_BV_rMkSJEeeDzde-nZXDfg"/>
+        <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_BV6ysUSJEeeDzde-nZXDfg" covered="_BVt-Y0SJEeeDzde-nZXDfg" start="_BV6ysESJEeeDzde-nZXDfg" finish="_BV7ZwESJEeeDzde-nZXDfg"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_BV7ZwESJEeeDzde-nZXDfg" covered="_BVt-Y0SJEeeDzde-nZXDfg" event="_SemEUURcEeerCNPWJw7whw" message="_BV92A0SJEeeDzde-nZXDfg"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_BV8A0ESJEeeDzde-nZXDfg" covered="_BVt-Y0SJEeeDzde-nZXDfg" event="_SemEUkRcEeerCNPWJw7whw" message="_BV92A0SJEeeDzde-nZXDfg"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_BV8n4ESJEeeDzde-nZXDfg" covered="_BVt-Y0SJEeeDzde-nZXDfg" event="_Oxs70ERcEeerCNPWJw7whw" message="_BV_EI0SJEeeDzde-nZXDfg"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_BV8n4USJEeeDzde-nZXDfg" covered="_BVtXUESJEeeDzde-nZXDfg" event="_Oxs70URcEeerCNPWJw7whw" message="_BV_EI0SJEeeDzde-nZXDfg"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_BV9O8ESJEeeDzde-nZXDfg" covered="_BVtXUESJEeeDzde-nZXDfg" event="_SGwokURbEeerCNPWJw7whw" message="_BV-dEUSJEeeDzde-nZXDfg"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_BV92AESJEeeDzde-nZXDfg" covered="_BVswQESJEeeDzde-nZXDfg" event="_SGwokkRbEeerCNPWJw7whw" message="_BV-dEUSJEeeDzde-nZXDfg"/>
+        <message xmi:id="_BV92AUSJEeeDzde-nZXDfg" name="TSucursal" receiveEvent="_BV0sEESJEeeDzde-nZXDfg" sendEvent="_BV0FAESJEeeDzde-nZXDfg" connector="_BWASQ0SJEeeDzde-nZXDfg"/>
+        <message xmi:id="_BV92AkSJEeeDzde-nZXDfg" name="AltaPedido" receiveEvent="_BV5kkUSJEeeDzde-nZXDfg" sendEvent="_BV5kkESJEeeDzde-nZXDfg" connector="_BWA5UUSJEeeDzde-nZXDfg"/>
+        <message xmi:id="_BV92A0SJEeeDzde-nZXDfg" name="ValidarDatos" messageSort="reply" receiveEvent="_BV8A0ESJEeeDzde-nZXDfg" sendEvent="_BV7ZwESJEeeDzde-nZXDfg" connector="_BWA5VESJEeeDzde-nZXDfg"/>
+        <message xmi:id="_BV-dEESJEeeDzde-nZXDfg" name="TPedido" messageSort="reply" receiveEvent="_BV49gESJEeeDzde-nZXDfg" sendEvent="_BV4WcUSJEeeDzde-nZXDfg" connector="_BWBgYESJEeeDzde-nZXDfg"/>
+        <message xmi:id="_BV-dEUSJEeeDzde-nZXDfg" name="AltaPedido" messageSort="reply" receiveEvent="_BV92AESJEeeDzde-nZXDfg" sendEvent="_BV9O8ESJEeeDzde-nZXDfg" connector="_BWBgY0SJEeeDzde-nZXDfg"/>
+        <message xmi:id="_BV-dEkSJEeeDzde-nZXDfg" name="TSucursal" messageSort="reply" receiveEvent="_BVzd8ESJEeeDzde-nZXDfg" sendEvent="_BVy24kSJEeeDzde-nZXDfg" connector="_BWCHcESJEeeDzde-nZXDfg"/>
+        <message xmi:id="_BV-dE0SJEeeDzde-nZXDfg" name="TSucursal" receiveEvent="_BVy24ESJEeeDzde-nZXDfg" sendEvent="_BVyP0ESJEeeDzde-nZXDfg" connector="_BWCHcESJEeeDzde-nZXDfg"/>
+        <message xmi:id="_BV-dFESJEeeDzde-nZXDfg" name="parsearPago" receiveEvent="_BV2hQESJEeeDzde-nZXDfg" sendEvent="_BV16MESJEeeDzde-nZXDfg" connector="_BWCHc0SJEeeDzde-nZXDfg"/>
+        <message xmi:id="_BV_EIESJEeeDzde-nZXDfg" name="TPedido" receiveEvent="_BV3vYUSJEeeDzde-nZXDfg" sendEvent="_BV3vYESJEeeDzde-nZXDfg" connector="_BWBgYESJEeeDzde-nZXDfg"/>
+        <message xmi:id="_BV_EIUSJEeeDzde-nZXDfg" name="AltaPedido" receiveEvent="_BVvzkESJEeeDzde-nZXDfg" sendEvent="_BVvMgUSJEeeDzde-nZXDfg" connector="_BWBgY0SJEeeDzde-nZXDfg"/>
+        <message xmi:id="_BV_EIkSJEeeDzde-nZXDfg" name="TCliente" receiveEvent="_BVxBsESJEeeDzde-nZXDfg" sendEvent="_BVwaoESJEeeDzde-nZXDfg" connector="_BWCugESJEeeDzde-nZXDfg"/>
+        <message xmi:id="_BV_EI0SJEeeDzde-nZXDfg" name="AltaPedido" messageSort="reply" receiveEvent="_BV8n4USJEeeDzde-nZXDfg" sendEvent="_BV8n4ESJEeeDzde-nZXDfg" connector="_BWA5UUSJEeeDzde-nZXDfg"/>
+        <message xmi:id="_BV_EJESJEeeDzde-nZXDfg" name="TCliente" messageSort="reply" receiveEvent="_BVxowUSJEeeDzde-nZXDfg" sendEvent="_BVxowESJEeeDzde-nZXDfg" connector="_BWCugESJEeeDzde-nZXDfg"/>
+        <message xmi:id="_BV_rMESJEeeDzde-nZXDfg" name="parsearPago" messageSort="reply" receiveEvent="_BV3IUESJEeeDzde-nZXDfg" sendEvent="_BV2hQkSJEeeDzde-nZXDfg" connector="_BWCHc0SJEeeDzde-nZXDfg"/>
+        <message xmi:id="_BV_rMUSJEeeDzde-nZXDfg" name="TSucursal" messageSort="reply" receiveEvent="_BV1TIESJEeeDzde-nZXDfg" sendEvent="_BV0sEkSJEeeDzde-nZXDfg" connector="_BWASQ0SJEeeDzde-nZXDfg"/>
+        <message xmi:id="_BV_rMkSJEeeDzde-nZXDfg" name="ValidarDatos" receiveEvent="_BV6ysESJEeeDzde-nZXDfg" sendEvent="_BV6LoUSJEeeDzde-nZXDfg" connector="_BWA5VESJEeeDzde-nZXDfg"/>
+      </ownedBehavior>
+      <ownedAttribute xmi:id="_BVulcESJEeeDzde-nZXDfg" name="&lt;&lt;TransferObject>>TSucursal2" type="_jM_c0CmYEeeFA_Z-fScJKQ"/>
+      <ownedAttribute xmi:id="_BVulcUSJEeeDzde-nZXDfg" name="metPago" type="_yoAg8A4bEeeMBoBJ3xV9iA"/>
+      <ownedAttribute xmi:id="_BVulckSJEeeDzde-nZXDfg" name="tCliente" type="_L8E7ECmYEeeFA_Z-fScJKQ"/>
+      <ownedAttribute xmi:id="_BVulc0SJEeeDzde-nZXDfg" name="tPedido" type="_fEExkCmWEeeFA_Z-fScJKQ"/>
+      <ownedAttribute xmi:id="_BVvMgESJEeeDzde-nZXDfg" name="&lt;&lt;TransferObject>>TSucursal" type="_jM_c0CmYEeeFA_Z-fScJKQ"/>
+      <ownedAttribute xmi:id="_BWASQESJEeeDzde-nZXDfg" name="administrador" type="_8kwrgEFAEeeVVsWPwXq9Yw"/>
+      <ownedAttribute xmi:id="_BWASQUSJEeeDzde-nZXDfg" name="interfaz" type="_ce98wDSoEeebz4fuew1smA"/>
+      <ownedAttribute xmi:id="_BWASQkSJEeeDzde-nZXDfg" name="gestionPedido" type="_DYPPACQ4EeeSRvhOaNa7nA"/>
+    </packagedElement>
     <profileApplication xmi:id="_W_kpVCs7EeewQs8AISbgzw">
       <eAnnotations xmi:id="_W_kpVSs7EeewQs8AISbgzw" source="http://www.eclipse.org/uml2/2.0.0/UML">
         <references xmi:type="ecore:EPackage" href="pathmap://UML_PROFILES/Standard.profile.uml#_yzU58YinEdqtvbnfB2L_5w"/>
