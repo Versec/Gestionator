@@ -1,0 +1,7 @@
+Jaime 12 false RamonSuarez 15p Trasferencia 17 AlmacenesRey CalledelaEstrellanº13 2547 14 AlmacenesReina CalleLunanº10 2587 Urgente Encallegipuzcua SUCURSAL_INTERMEDIA REPARTO 63
+Pepe 17 false RamonSuarez 17p Trasferencia 17 AlmacenesRey CalledelaEstrellanº13 2547 14 AlmacenesReina CalleLunanº10 2587 Urgente Encallegipuzcua SUCURSAL_INTERMEDIA REPARTO 66
+JoseRamón 18 false RamonSuarez 19p Trasferencia 17 AlmacenesRey CalledelaEstrellanº13 2547 14 AlmacenesReina CalleLunanº10 2587 Urgente Encallegipuzcua SUCURSAL_INTERMEDIA REPARTO 68
+Rudolf 19 false RamonSuarez 20p Trasferencia 17 AlmacenesRey CalledelaEstrellanº13 2547 14 AlmacenesReina CalleLunanº10 2587 Urgente Encallegipuzcua SUCURSAL_INTERMEDIA REPARTO 64
+JaimitoElValiente 10 false RamonSuarez 22p Trasferencia 17 AlmacenesRey CalledelaEstrellanº13 2547 14 AlmacenesReina CalleLunanº10 2587 Urgente Encallegipuzcua SUCURSAL_INTERMEDIA REPARTO 60
+Arancha 7 false RamonSuarez 1p Trasferencia 17 AlmacenesRey CalledelaEstrellanº13 2598 14 AlmacenesReina CalleLunanº10 2587 Normal Encallegipuzcua SUCURSAL_INICIO REPARTO 67
+
