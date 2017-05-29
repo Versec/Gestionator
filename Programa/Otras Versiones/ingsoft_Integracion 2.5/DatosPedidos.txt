@@ -1,0 +1,7 @@
+15p Roberto 51234447O 8573728  12 false Jaime  15 TRANSFERENCIA 17 AlmacenesRey CalledelaEstrellan�13 2547 14 AlmacenesReina CalleLunan�10 2587 Urgente Encallegipuzcua SUCURSAL_INTERMEDIA REPARTO 63
+17p Luisa 512344471 8544355  17  false Pepe  17 TRANSFERENCIA 17 AlmacenesRey CalledelaEstrellan�13 2547 14 AlmacenesReina CalleLunan�10 2587 Urgente Encallegipuzcua SUCURSAL_INTERMEDIA REPARTO 66
+19p Josefina 512344472 5422647  18  false JoseRam�n  19 TRANSFERENCIA 17 AlmacenesRey CalledelaEstrellan�13 2547 14 AlmacenesReina CalleLunan�10 2587 Urgente Encallegipuzcua SUCURSAL_INTERMEDIA REPARTO 68
+20p Jacinto 512344473 9999999  19  false Rudolf  20 TRANSFERENCIA 17 AlmacenesRey CalledelaEstrellan�13 2547 14 AlmacenesReina CalleLunan�10 2587 Urgente Encallegipuzcua SUCURSAL_INTERMEDIA REPARTO 64
+22p JaimitoElValiente 512344474 8888888  10  false  RamonSuarez 22 TRANSFERENCIA 17 AlmacenesRey CalledelaEstrellan�13 2547 14 AlmacenesReina CalleLunan�10 2587 Urgente Encallegipuzcua SUCURSAL_INTERMEDIA REPARTO 60
+1p  Robert 512344475 85555555 7  false Arancha  1 TRANSFERENCIA 17 AlmacenesRey CalledelaEstrellan�13 2598 14 AlmacenesReina CalleLunan�10 2587 Normal Encallegipuzcua SUCURSAL_INICIO REPARTO 67
+
