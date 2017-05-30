@@ -33,6 +33,10 @@ public class TestIntegracionAltaPedidoyMetodoDePago extends TestCase{
 	
 	GestionPedidos GPedido = new GestionPedidos(BP, BS, daoPedido);
 	
+	
+	//Insercion de secursales con el fin de comprobar el correcto funcionamiento del tranferObject de sucursal
+	//y su uso necesario en el test de insercion de pedido
+	
 	TSucursal sucursal1 = new TSucursal("42", "Madrid", "Madrid", 84569); 
 	TSucursal sucursal2 = new TSucursal("43", "Barcelona", "Barcelona", 84569);
 	
@@ -41,10 +45,13 @@ public class TestIntegracionAltaPedidoyMetodoDePago extends TestCase{
 	
 	assertTrue("La BD de sucursales tiene dos sucursales", sucursal.getIds().size() == 2);
 	
+	//Creacion de 3 clientes distintos
+	
 	TCliente cliente2 = new TCliente("Magdalena", "54015569Z", 968515661);
 	TCliente cliente3 = new TCliente("Fer", "12345678l", 968515381);
 	TCliente cliente4 = new TCliente("Er", "22345678q", 968515681);
 	
+	// Creacion de 3 pedidos distintos
 	
 	TPedido pedido1 = new TPedido(cliente2, 2, false, "Random", "1111", MetPago.EFECTIVO, new TSucursal("123", "Yo", "Calle Oculta", 1234),
 			new TSucursal("123", "El", "Calle Torrijos", 2345), TipoEnvio.NORMAL, new TPControl("Mimente no da para mas",Localizacion.SUCURSAL_INICIO, EstadoActual.NOENVIADO ), 9);	
