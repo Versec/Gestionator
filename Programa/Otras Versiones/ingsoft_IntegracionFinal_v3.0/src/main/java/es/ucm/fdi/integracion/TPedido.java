@@ -136,7 +136,7 @@ public class TPedido {
 	
 	public String toStringPedido(){
 		String s= "Cliente: " + this.emisor.toStringCliente()+ "Repartidor: "+this.repartidor +" Pagado: "+this.pagado
-				+"Receptor: "+this.receptor+ " Id: "+Id+" Metodo de Pago: "+this.metPago+System.getProperty("line.separator")
+				+" Receptor: "+this.receptor+ " Id: "+Id+" Metodo de Pago: "+this.metPago+System.getProperty("line.separator")
 				+"SucursalSalida: "+this.SucursalSalida.toStringSucursal()+"SucursalLlegada: "+this.SucursalLlegada.toStringSucursal()
 				+"Tipo de Envio: " +this.tipoDeEnvio+" Punto Control: "+this.puntoControl.toStringPControl()
 				+"Precio: "+this.precio+System.getProperty("line.separator");

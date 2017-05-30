@@ -36,28 +36,28 @@ public class EjemploAltaPedido
 	}
 	
 	
-	//Prueba de unidad DAO
+	//Prueba de unidad DAOPedido
 	public void testAltaPedidoDAOPedido()
 	{
 		BDMemoria<TPedido> pedido = new BDMemoria<TPedido>();
 		DAOPedido daoPedido = new DAOPedido(pedido);
 		
-		
+		//Comprobacion de la no existencia de no elementos en la base de datos
 		assertTrue("La BD debía estar vacía y tiene elementos. \n", pedido.getIds().isEmpty());
 		
-		//inserto nuevos pedidos
+		//Creacion de un pedido
 		TCliente cliente1 = new TCliente("Fulgencio", "54068569U", 968515681);
 		
 		TPedido pedidoPrueba = new TPedido(cliente1,5, true, "Alvaro", "256877" ,MetPago.CONTRA_REEMBOLSO, new TSucursal("28", "Valencia", "Desconocida" , 26841),
 				new TSucursal("28", "Madrid", "Desconocida" , 24811),TipoEnvio.URGENTE, new TPControl("Desconocido", Localizacion.SUCURSAL_INICIO ,EstadoActual.NOENVIADO),58);
-		
-		daoPedido.add(pedidoPrueba, "2897"); //cambiar codigo a un int
-		
+		//insercion del pedido a traves de la DAO
+		daoPedido.add(pedidoPrueba, "2897");
+		//Comprobacion se la existencia del pedido en la base de datos
 		assertTrue("La base de datos contiene un elemento",pedido.getIds().size()==1);
 
 	}
 	
-	
+	//Pruebas de unidad DAOSucursal
 	public void testAltaPedidoDAOSucursal()
 	{
 		BDMemoria<TSucursal> sucursal = new BDMemoria<TSucursal>();
@@ -65,11 +65,12 @@ public class EjemploAltaPedido
 		
 		TSucursal sucursal1 = new TSucursal("42", "Madrid", "Madrid", 84569); 
 		TSucursal sucursal2 = new TSucursal("43", "Barcelona", "Barcelona", 84569);
-		
+		//Comprobacion de la no existencia de no elementos en la base de datos
 		assertTrue("La BD de sucursales esta vacia", sucursal.getIds().isEmpty());
-		sucursal.insert(sucursal1, "42");
-		sucursal.insert(sucursal2, "43");
+		daoSucursal.add(sucursal1, "42");
+		daoSucursal.add(sucursal2, "43");
 		
+		//Comprobacion de la existencia de las sucursales en las bases de datos
 		assertTrue("La BD de sucursales tiene dos sucursales", sucursal.getIds().size() == 2);
 		
 	}
@@ -84,6 +85,7 @@ public class EjemploAltaPedido
 		DAOPedido daoPedido = new DAOPedido(pedido);
 		BusinessPedido BP = new BusinessPedido(daoPedido);
 		
+		//Comprobacion de la no existencia de no elementos en la base de datos
 		assertTrue("La base de datos deberia estar vacia y tiene elementos. \n"
 				, pedido.getIds().isEmpty());
 		
@@ -92,24 +94,24 @@ public class EjemploAltaPedido
 		TPedido pedido1 = new TPedido(cliente2, 2, true, "Random", "1111", MetPago.CONTRA_REEMBOLSO, new TSucursal("123", "Yo", "Calle Oculta", 1234),
 				new TSucursal("123", "El", "Calle Torrijos", 2345), TipoEnvio.NORMAL, new TPControl("Mimente no da para mas",Localizacion.SUCURSAL_INICIO, EstadoActual.NOENVIADO ), 9);	
 		
-		
+		//Creacioin de un pedido a traves del buisnessObjectPedido
 		BP.Añadir(pedido1, "1111");
 
 		
-		
+		//Comprueba que el pedido se ha registrado en la base de datos
 		assertTrue("La BD debe tener al menos un elemento. \n" , pedido.getIds().size()==1);
 		
 		
 		TPedido pedido2 = new TPedido(cliente2, 2, true, "Random", "1112", MetPago.TRANSFERENCIA, new TSucursal("123", "Yo", "Calle Oculta", 1234),
 				new TSucursal("123", "El", "Calle Torrijos", 2345), TipoEnvio.NORMAL, new TPControl("Me estan Robando",Localizacion.SUCURSAL_INICIO, EstadoActual.NOENVIADO), 9);
 		
-		DAOPedido daoPedido2 = new DAOPedido(pedido);
 		
 		
-		//Introduzco un segundo elemento
+		//Introduzco un segundo pedido
 		
 		BP.Añadir(pedido2, "1112");
 		
+		//Comprobacion de la iserccion del segundo pedido
 		assertTrue("La base de datos contiene mas de un elemento", pedido.getIds().size() >1);
 		
 		//Compruebo que el pedido introducio esta en la base de datos mesiante su codigo
@@ -118,6 +120,7 @@ public class EjemploAltaPedido
 	
 	}
 
+	//Pruebas de sistema : GestionPedidos
 	
 	public void testAltaPedidoAñadirGestionPedidos()
 	{
@@ -137,6 +140,7 @@ public class EjemploAltaPedido
 		sucursal.insert(sucursal1, "42");
 		sucursal.insert(sucursal2, "43");
 		
+		//Comprobacion de la existencia de las sucursales en la base de datos
 		assertTrue("La BD de sucursales debe tener dos sucursales", sucursal.getIds().size() == 2);
 		
 		TCliente cliente2 = new TCliente("Magdalena", "54015569Z", 968515661);
@@ -151,7 +155,7 @@ public class EjemploAltaPedido
 		TPedido pedido3 = new TPedido(cliente4, 2, true, "Random", "1113", MetPago.CONTRA_REEMBOLSO, new TSucursal("123", "Yo", "Calle Oculta", 1234),
 				new TSucursal("123", "El", "Calle Torrijos", 2345), TipoEnvio.NORMAL, new TPControl("Mimente no da para mas",Localizacion.SUCURSAL_INICIO, EstadoActual.NOENVIADO ), 9);	
 		
-		
+		//Comprobacion de la insercion correcta de los elementos a traves de la aplication service
 		GPedido.AñadirPedido(pedido1);
 		assertTrue("La BD debe tener al menos un elemento. \n" , pedido.getIds().size()==1);
 		
@@ -167,6 +171,7 @@ public class EjemploAltaPedido
 		BDMemoria<TPedido> pedido=new BDMemoria<TPedido>();
 		BDMemoria<TSucursal> sucursal = new BDMemoria<TSucursal>();
 		
+		//Comprobacion de la creacion de una base de datos vacia
 		assertTrue("La base de datos deberia estar vacia y tiene elementos. \n", pedido.getIds().isEmpty());
 		
 		DAOPedido daoPedido = new DAOPedido(pedido);
@@ -177,7 +182,6 @@ public class EjemploAltaPedido
 		GestionPedidos GPedido = new GestionPedidos(BP, BS, daoPedido);
 		
 		//Comprobacion mal tipoDePago
-		
 		TCliente cliente2 = new TCliente("Magdalena", "54015569Z", 968515681);
 		TPedido pedido1 = new TPedido(cliente2, 2, true, "Random", "1111", null, new TSucursal("123", "Yo", "Calle Oculta", 1234),
 				new TSucursal("123", "El", "Calle Torrijos", 2345), TipoEnvio.NORMAL, new TPControl("Mimente no da para mas",Localizacion.SUCURSAL_INICIO, EstadoActual.NOENVIADO ), 9);
@@ -187,7 +191,6 @@ public class EjemploAltaPedido
 		assertTrue("La base de datos deberia estar vacia al haber introducido un tipo de pago no valido. \n", pedido.getIds().isEmpty());
 		
 		//comprobacion que el emisor y receptor no deben contener numeros
-		
 		cliente2 = new TCliente("2", "54015569Z", 968515681);
 		
 		pedido1 = new TPedido(cliente2, 2, true, "Random", "1111", MetPago.CONTRA_REEMBOLSO, new TSucursal("123", "Yo", "Calle Oculta", 1234),
@@ -219,7 +222,5 @@ public class EjemploAltaPedido
 		GPedido.AñadirPedido(pedido1);
 		assertTrue("La base de datos deberia estar vacia al haber introducido un tipo de envio no valido. \n", pedido.getIds().isEmpty());
 	}
-	
-	
-	//Añadir test fallo por inpago
+
 }

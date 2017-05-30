@@ -151,7 +151,7 @@ public class ConsoleView {
 				else if (tPago == MetPago.TRANSFERENCIA)
 				{
 					String fecha, CVC, numTarjeta;
-					boolean salida;
+					boolean salida=false;
 					
 					do{
 					
@@ -166,7 +166,7 @@ public class ConsoleView {
 					 CVC = leer.next().toLowerCase();
 					 
 					 salida=numTarjeta.equalsIgnoreCase("X")||fecha.equalsIgnoreCase("X")||CVC.equalsIgnoreCase("X");
-					}while (!gPedidos.realizarPagoTransferencia(pedido, numTarjeta, fecha, CVC) || salida);
+					}while (!gPedidos.realizarPagoTransferencia(pedido, numTarjeta, fecha, CVC) && !salida);
 					
 					 if (gPedidos.realizarPagoTransferencia(pedido, numTarjeta, fecha, CVC))
 					 {
@@ -246,7 +246,7 @@ public class ConsoleView {
 	}
 	
 	public String PedirEstado(){
-		System.out.print("Escribe los detalles que creas convenientes sobre el estado del pedido: ");
+		System.out.print("Escribe los detalles que creas convenientes sobre el estado del pedido, sin espacios: ");
 		String s = this.leer.next();
 		return s;
 		

@@ -34,7 +34,7 @@ public enum MetPago {
 		if(s.equalsIgnoreCase("TRANSFERENCIA")){
 			modo = MetPago.TRANSFERENCIA;
 		}
-		else if(s.equalsIgnoreCase("CONTRAREEMBOLSO")){
+		else if(s.equalsIgnoreCase("CONTRA_REEMBOLSO")){
 			modo = MetPago.CONTRA_REEMBOLSO;
 		}
 		else if(s.equalsIgnoreCase("EFECTIVO")){

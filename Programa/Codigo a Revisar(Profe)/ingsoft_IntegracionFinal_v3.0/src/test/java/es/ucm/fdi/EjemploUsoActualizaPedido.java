@@ -22,16 +22,20 @@ public class EjemploUsoActualizaPedido extends TestCase {
 	 * Compruebo el funcionamiento de la dao y del BuisnessObject.
 	 * */
 	public void testUnidades(){
-		int i=0;
+		
 		BDMemoria<TPedido> bdCadenas=new BDMemoria<TPedido>();
 		DAOPedido daoPedido = new DAOPedido(bdCadenas);
-		//2 elementos a la BD.
+		//Añado 2 elementos a la BD.
 		insertTwoElements(bdCadenas);
 		
 		TPedido datoActualizado=daoPedido.leer("0p");
+		TPedido datoActualizado2=daoPedido.leer("1p");
 		//Compruebo si se han introducido los datos.
 		assertTrue("No se ha encontrado el elemento y si esta "+bdCadenas,datoActualizado!=null);
+		assertTrue("No se ha encontrado el elemento y si esta "+bdCadenas,datoActualizado2!=null);
 		
+		
+		//Realizo cambios en el Atributo PuntoDeControl de uno de los pedidos de la BD.
 		datoActualizado.setPControl(new TPControl("Calle joseRamons 13",
 				Localizacion.SUCURSAL_INICIO,EstadoActual.REPARTO));
 		daoPedido.actualizar(datoActualizado);
@@ -45,7 +49,7 @@ public class EjemploUsoActualizaPedido extends TestCase {
 		//Compruebo si se actualiza usando el buisnessPedido.
 		BusinessPedido BPedido =new BusinessPedido(daoPedido);
 		datoActualizado.setPControl(new TPControl("En calle lugo nº 1, llega hoy",
-				Localizacion.SUCURSAL_INTERMEDIA,EstadoActual.REPARTO));
+				Localizacion.SUCURSAL_INTERMEDIA,EstadoActual.NOENVIADO));
 		BPedido.updatePControl(datoActualizado);
 		
 		//Vuelvo a comprobar si esta el dato.
@@ -55,14 +59,16 @@ public class EjemploUsoActualizaPedido extends TestCase {
 		control=daoPedido.leer("0p").getPControl();
 		assertTrue("La dao no ha actualizado el dato \n"+bdCadenas,
 					control.getEstado().equalsIgnoreCase("En calle lugo nº 1, llega hoy") 
-					&& control.getLocaclizacionActual() == Localizacion.SUCURSAL_INTERMEDIA); 
+					&& control.getLocaclizacionActual() == Localizacion.SUCURSAL_INTERMEDIA
+					&& control.getEstadoActual()==EstadoActual.NOENVIADO); 
 		
 	}
 	
-	//Integracion
+	//Integracion, la integracion se desarrolla en un archivo aparte junto con bajaPedido.
+	//Vease TestIntegracionBajayActualizarPedido.
 	
 	/**
-	 * Sistema, compruebo todo el proceso.
+	 * Sistema, compruebo todo el proceso partiendo desde el aplicantionService GestionPedido.
 	 * */
 	
 	public void testActualizar(){
@@ -70,7 +76,7 @@ public class EjemploUsoActualizaPedido extends TestCase {
 		BDMemoria<TPedido> bdCadenas=new BDMemoria<TPedido>();
 		DAOPedido daoPedido = new DAOPedido(bdCadenas);
 		
-		//2 elementos a la BD.
+		//Añado 2 elementos a la BD.
 		insertTwoElements(bdCadenas);
 		
 		GestionPedidos GPedidos = new GestionPedidos(new BusinessPedido(daoPedido),null ,daoPedido);
@@ -96,6 +102,9 @@ public class EjemploUsoActualizaPedido extends TestCase {
 	}
 	
 	
+	/**
+	 *Funcion que añade dos pedidos a la Base de datos.
+	 * */
 	private void insertTwoElements(BDMemoria<TPedido>bdCadenas){
 		int i=0;
 		while(i<2){
