@@ -32,6 +32,7 @@ public class TestIntegracionBajayActualizarPedido extends TestCase{
 		GestionPedidos gestion = new GestionPedidos(BOPedido, BOSucursal, daoPedido);
 		gestion.eliminar("0p");
 		gestion.eliminar("1p");
+		//Comprobamos que se eliminan correctamente los dos elementos insertados:
 		assertTrue("La BD debía estar vacía y tiene elementos.\n", bdCadenas.getIds().isEmpty());
 		insertTwoElements(bdCadenas);
 		gestion.eliminar("0p");

@@ -27,12 +27,15 @@ public class EjemploUsoEliminarPedido extends TestCase{
 	
 	public void testEliminarDAOPedido(){
 		BDMemoria<TPedido> pedidos=new BDMemoria<TPedido>();
+		//Comprobamos que la lista de pedidos esta vacia:
 		assertTrue("La BD debía estar vacía y tiene elementos. \n", pedidos.getIds().isEmpty());
 		TPedido pedido1 = new TPedido(new TCliente("Ernesto", "0394356", 123987456), 2, true, "Él", "1111", MetPago.CONTRA_REEMBOLSO, new TSucursal("1234", "Yo", "Calle Ocaña", 1234), new TSucursal("123", "El", "Calle Torrijos", 2345), TipoEnvio.NORMAL, new TPControl("No enviado", Localizacion.SUCURSAL_INICIO, EstadoActual.NOENVIADO), 20);
     	pedidos.insert(pedido1, "1111");		
     	DAOPedido daoPedido1 = new DAOPedido(pedidos);
+    	//Comprobamos que inserta corractamente un elemento:
     	assertTrue("La BD debe tener sólo un elemento. \n" , pedidos.getIds().size()==1);
     	daoPedido1.eliminar("1111");
+    	//Comprobamos que elimina correctamente un elemento:
     	assertTrue("La BD debía estar vacía y tiene elementos.\n", pedidos.getIds().isEmpty());    
     
 	}
@@ -40,11 +43,14 @@ public class EjemploUsoEliminarPedido extends TestCase{
 	public void testLeerDAOPedido(){
 		BDMemoria<TPedido> pedidos=new BDMemoria<TPedido>();
 		TPedido pedido1 = new TPedido(new TCliente("Ernesto", "0394356", 123987456), 2, true, "Él", "1111", MetPago.CONTRA_REEMBOLSO, new TSucursal("1234", "Yo", "Calle Ocaña", 1234), new TSucursal("123", "El", "Calle Torrijos", 2345), TipoEnvio.NORMAL, new TPControl("No enviado", Localizacion.SUCURSAL_INICIO, EstadoActual.NOENVIADO), 20);
-    	assertTrue("La BD debía estar vacía y tiene elementos. \n", pedidos.getIds().isEmpty());
+		//Comprobamos que la lista de pedidos esta vacia:
+		assertTrue("La BD debía estar vacía y tiene elementos. \n", pedidos.getIds().isEmpty());
     	pedidos.insert(pedido1, "1111");	
     	DAOPedido daoPedido1 = new DAOPedido(pedidos);
-    	assertTrue("La BD debe tener sólo un elemento. \n", pedidos.getIds().size()==1);    	
-    	assertTrue("La BD debía contener la cadena \"hola\" y no está \n", daoPedido1.leer("1111")!=null && daoPedido1.leer("1111").equals(pedido1)); 
+    	//Comprobamos que inserta correctamente un elemento:
+    	assertTrue("La BD debe tener sólo un elemento. \n", pedidos.getIds().size()==1);  
+    	//Comprobamos que lee correctamente el pedido con el id especificado:
+    	assertTrue("La BD debía contener el pedido con id = 1111 y no está \n", daoPedido1.leer("1111")!=null && daoPedido1.leer("1111").equals(pedido1)); 
 		
 	}
 	
@@ -54,13 +60,16 @@ public class EjemploUsoEliminarPedido extends TestCase{
 	
 	public void testEliminarBusinessPedido(){
 		BDMemoria<TPedido> pedidos=new BDMemoria<TPedido>();
+		//Comprobamos que la lista de pedidos esta vacia:
 		assertTrue("La BD debía estar vacía y tiene elementos. \n", pedidos.getIds().isEmpty());
 		TPedido pedido1 = new TPedido(new TCliente("Ernesto", "0394356", 123987456), 2, true, "Él", "1111", MetPago.CONTRA_REEMBOLSO, new TSucursal("1234", "Yo", "Calle Ocaña", 1234), new TSucursal("123", "El", "Calle Torrijos", 2345), TipoEnvio.NORMAL, new TPControl("No enviado", Localizacion.SUCURSAL_INICIO, EstadoActual.NOENVIADO), 20);
 		pedidos.insert(pedido1, "1111");
 		DAOPedido daoPedido1 = new DAOPedido(pedidos);
 		BusinessPedido BOPedido = new BusinessPedido(daoPedido1);
+		//Comprobamos que inserta correctamente un elemento:
 		assertTrue("La BD debe tener sólo un elemento. \n" , pedidos.getIds().size()==1);
 		BOPedido.eliminar("1111");
+		//Comprobamos que elimina correctamente un elemento:
     	assertTrue("La BD debía estar vacía y tiene elementos.\n", pedidos.getIds().isEmpty());  
 		
 	}
@@ -69,17 +78,20 @@ public class EjemploUsoEliminarPedido extends TestCase{
 	public void testLeerBusinessPedido(){
 		BDMemoria<TPedido> pedidos=new BDMemoria<TPedido>();
 		TPedido pedido1 = new TPedido(new TCliente("Ernesto", "0394356", 123987456), 2, true, "Él", "1111", MetPago.CONTRA_REEMBOLSO, new TSucursal("1234", "Yo", "Calle Ocaña", 1234), new TSucursal("123", "El", "Calle Torrijos", 2345), TipoEnvio.NORMAL, new TPControl("No enviado", Localizacion.SUCURSAL_INICIO, EstadoActual.NOENVIADO), 20);
-    	assertTrue("La BD debía estar vacía y tiene elementos. \n", pedidos.getIds().isEmpty());
+		//Comprobamos que la lista de pedidos esta vacia:
+		assertTrue("La BD debía estar vacía y tiene elementos. \n", pedidos.getIds().isEmpty());
     	pedidos.insert(pedido1, "1111");	
     	DAOPedido daoPedido1 = new DAOPedido(pedidos);
     	BusinessPedido BOPedido = new BusinessPedido(daoPedido1);
-    	assertTrue("La BD debe tener sólo un elemento. \n", pedidos.getIds().size()==1);    	
-    	assertTrue("La BD debía contener la cadena \"hola\" y no está \n", BOPedido.leer("1111")!=null && BOPedido.leer("1111").equals(pedido1)); 
+    	//Comprobamos que inserta correctamente un elemento:
+    	assertTrue("La BD debe tener sólo un elemento. \n", pedidos.getIds().size()==1);  
+    	//Comprobamos que lee correctamente el pedido con el id especificado:
+    	assertTrue("La BD debía contener el pedido con el id = 1111 y no está \n", BOPedido.leer("1111")!=null && BOPedido.leer("1111").equals(pedido1)); 
 		
 		
 	}
 	
-	//Pruebas de sistema GestionPedidos(AS):
+	//Pruebas de sistema : GestionPedidos(AS):
 	
 	public void testEliminarGestionPedidos(){
 		BDMemoria<TSucursal> sucursales=new BDMemoria<TSucursal>();

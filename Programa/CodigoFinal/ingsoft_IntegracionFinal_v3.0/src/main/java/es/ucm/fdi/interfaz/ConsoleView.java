@@ -221,7 +221,6 @@ public class ConsoleView {
 				System.out.println("Pedido en reparto o ya entregado, imposible de eliminar. \n");
 			else 
 				System.out.println("El pedido con el codigo introducido no existe. \n");
-			this.menu();
 			
 		break;
 		
